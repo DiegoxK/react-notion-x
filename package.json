@@ -1,6 +1,6 @@
 {
   "name": "react-notion-x",
-  "version": "6.16.1",
+  "version": "6.16.0",
   "type": "module",
   "description": "Fast and accurate React renderer for Notion.",
   "repository": "NotionX/react-notion-x",
@@ -34,8 +34,7 @@
     "react-lazy-images": "^1.1.0",
     "react-modal": "^3.14.3",
     "react-pdf": "^5.7.1",
-    "react-use": "^17.3.1",
-    "tsup": "^8.0.2"
+    "react-use": "^17.3.1"
   },
   "devDependencies": {
     "@types/lodash.throttle": "^4.1.6",
@@ -46,11 +45,11 @@
     "format-number": "^3.0.0",
     "lodash.throttle": "^4.1.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^5.3.3"
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16"
-  }
+  },
+  "gitHead": "2a48b29554b4ecf3cf49db808c8660726717e255"
 }

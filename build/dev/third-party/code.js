@@ -45,17 +45,9 @@ var __copyProps = (to, from, except, desc) => {
   return to;
 };
 var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
-var __publicField = (obj, key, value) => {
-  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
-  return value;
-};
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -77,9 +69,9 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 
-// node_modules/.pnpm/clipboard-copy@4.0.1/node_modules/clipboard-copy/index.js
+// ../../node_modules/clipboard-copy/index.js
 var require_clipboard_copy = __commonJS({
-  "node_modules/.pnpm/clipboard-copy@4.0.1/node_modules/clipboard-copy/index.js"(exports, module) {
+  "../../node_modules/clipboard-copy/index.js"(exports, module) {
     module.exports = clipboardCopy;
     function makeError() {
       return new DOMException("The request is not allowed", "NotAllowedError");
@@ -132,9 +124,9 @@ var require_clipboard_copy = __commonJS({
   }
 });
 
-// node_modules/.pnpm/lodash.throttle@4.1.1/node_modules/lodash.throttle/index.js
+// ../../node_modules/lodash.throttle/index.js
 var require_lodash = __commonJS({
-  "node_modules/.pnpm/lodash.throttle@4.1.1/node_modules/lodash.throttle/index.js"(exports, module) {
+  "../../node_modules/lodash.throttle/index.js"(exports, module) {
     var FUNC_ERROR_TEXT = "Expected a function";
     var NAN = 0 / 0;
     var symbolTag = "[object Symbol]";
@@ -282,7 +274,7 @@ var require_lodash = __commonJS({
 
 // src/third-party/code.tsx
 var import_clipboard_copy = __toESM(require_clipboard_copy(), 1);
-import * as React23 from "react";
+import * as React22 from "react";
 import { getBlockTitle as getBlockTitle4 } from "notion-utils";
 import { highlightElement } from "prismjs";
 import "prismjs/components/prism-clike.min.js";
@@ -296,14 +288,14 @@ import "prismjs/components/prism-tsx.min.js";
 import "prismjs/components/prism-typescript.min.js";
 
 // src/components/text.tsx
-import * as React21 from "react";
+import * as React20 from "react";
 import { parsePageId as parsePageId2 } from "notion-utils";
 
 // src/context.tsx
-import * as React20 from "react";
+import * as React19 from "react";
 
 // src/components/asset-wrapper.tsx
-import * as React16 from "react";
+import * as React15 from "react";
 import { parsePageId } from "notion-utils";
 
 // src/utils.ts
@@ -385,41 +377,19 @@ var getYoutubeId = (url) => {
 };
 
 // src/components/eoi.tsx
-import * as React3 from "react";
+import * as React2 from "react";
 
 // src/icons/type-github.tsx
 import * as React from "react";
 function SvgTypeGitHub(props) {
-  return /* @__PURE__ */ React.createElement("svg", __spreadValues({ viewBox: "0 0 260 260" }, props), /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement(
-    "path",
-    {
-      d: "M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z",
-      fill: "#161614"
-    }
-  )));
+  return /* @__PURE__ */ React.createElement("svg", __spreadValues({
+    viewBox: "0 0 260 260"
+  }, props), /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement("path", {
+    d: "M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z",
+    fill: "#161614"
+  })));
 }
 var type_github_default = SvgTypeGitHub;
-
-// src/components/mention-preview-card.tsx
-import React2 from "react";
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-var MentionPreviewCard = ({ owner, lastUpdated, externalImage, title, domain }) => {
-  return /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle" }, externalImage && /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-domain-warp" }, /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-logo" }, externalImage), /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-domain" }, capitalizeFirstLetter(domain.split(".")[0]))), /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-title" }, title), owner && /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item" }, /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item-name" }, "Owner"), /* @__PURE__ */ React2.createElement("span", { className: "notion-external-subtitle-item-desc" }, owner)), lastUpdated && /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item" }, /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item-name" }, "Updated"), /* @__PURE__ */ React2.createElement("span", { className: "notion-external-subtitle-item-desc" }, lastUpdated)), domain === "github.com" && /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-github-shields" }, /* @__PURE__ */ React2.createElement(
-    "img",
-    {
-      src: `https://img.shields.io/github/stars/${owner}/${title}?logo=github`,
-      alt: ""
-    }
-  ), /* @__PURE__ */ React2.createElement(
-    "img",
-    {
-      src: `https://img.shields.io/github/last-commit/${owner}/${title}`,
-      alt: ""
-    }
-  )));
-};
 
 // src/components/eoi.tsx
 var EOI = ({ block, inline, className }) => {
@@ -436,7 +406,7 @@ var EOI = ({ block, inline, className }) => {
   let externalImage;
   switch (domain) {
     case "github.com":
-      externalImage = /* @__PURE__ */ React3.createElement(type_github_default, null);
+      externalImage = /* @__PURE__ */ React2.createElement(type_github_default, null);
       if (owner) {
         const parts = owner.split("/");
         owner = parts[parts.length - 1];
@@ -451,45 +421,39 @@ var EOI = ({ block, inline, className }) => {
       }
       return null;
   }
-  return /* @__PURE__ */ React3.createElement(
-    components.Link,
-    {
-      target: "_blank",
-      rel: "noopener noreferrer",
-      href: original_url,
-      className: cs(
-        "notion-external",
-        inline ? "notion-external-mention" : "notion-external-block notion-row",
-        className
-      )
-    },
-    externalImage && /* @__PURE__ */ React3.createElement("div", { className: "notion-external-image" }, externalImage),
-    /* @__PURE__ */ React3.createElement("div", { className: "notion-external-description" }, /* @__PURE__ */ React3.createElement("div", { className: "notion-external-title" }, title), (owner || lastUpdated) && /* @__PURE__ */ React3.createElement(
-      MentionPreviewCard,
-      {
-        title,
-        owner,
-        lastUpdated,
-        domain,
-        externalImage
-      }
-    ))
-  );
+  return /* @__PURE__ */ React2.createElement(components.Link, {
+    target: "_blank",
+    rel: "noopener noreferrer",
+    href: original_url,
+    className: cs(
+      "notion-external",
+      inline ? "notion-external-mention" : "notion-external-block notion-row",
+      className
+    )
+  }, externalImage && /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-image"
+  }, externalImage), /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-description"
+  }, /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-title"
+  }, title), (owner || lastUpdated) && /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-subtitle"
+  }, owner && /* @__PURE__ */ React2.createElement("span", null, owner), owner && lastUpdated && /* @__PURE__ */ React2.createElement("span", null, " \u2022 "), lastUpdated && /* @__PURE__ */ React2.createElement("span", null, "Updated ", lastUpdated))));
 };
 
 // src/components/graceful-image.tsx
-import * as React4 from "react";
+import * as React3 from "react";
 import { Img } from "react-image";
 var GracefulImage = (props) => {
   if (isBrowser) {
-    return /* @__PURE__ */ React4.createElement(Img, __spreadValues({}, props));
+    return /* @__PURE__ */ React3.createElement(Img, __spreadValues({}, props));
   } else {
-    return /* @__PURE__ */ React4.createElement("img", __spreadValues({}, props));
+    return /* @__PURE__ */ React3.createElement("img", __spreadValues({}, props));
   }
 };
 
 // src/components/lazy-image.tsx
-import * as React5 from "react";
+import * as React4 from "react";
 import { normalizeUrl } from "notion-utils";
 import { ImageState, LazyImageFull } from "react-lazy-images";
 var LazyImage = (_a) => {
@@ -512,9 +476,9 @@ var LazyImage = (_a) => {
   ]);
   var _a2, _b2, _c;
   const { recordMap, zoom, previewImages, forceCustomImages, components } = useNotionContext();
-  const zoomRef = React5.useRef(zoom ? zoom.clone() : null);
+  const zoomRef = React4.useRef(zoom ? zoom.clone() : null);
   const previewImage = previewImages ? (_c = (_a2 = recordMap == null ? void 0 : recordMap.preview_images) == null ? void 0 : _a2[src]) != null ? _c : (_b2 = recordMap == null ? void 0 : recordMap.preview_images) == null ? void 0 : _b2[normalizeUrl(src)] : null;
-  const onLoad = React5.useCallback(
+  const onLoad = React4.useCallback(
     (e) => {
       if (zoomable && (e.target.src || e.target.srcset)) {
         if (zoomRef.current) {
@@ -525,7 +489,7 @@ var LazyImage = (_a) => {
     },
     [zoomRef, zoomable]
   );
-  const attachZoom = React5.useCallback(
+  const attachZoom = React4.useCallback(
     (image) => {
       if (zoomRef.current && image) {
         ;
@@ -534,30 +498,31 @@ var LazyImage = (_a) => {
     },
     [zoomRef]
   );
-  const attachZoomRef = React5.useMemo(
+  const attachZoomRef = React4.useMemo(
     () => zoomable ? attachZoom : void 0,
     [zoomable, attachZoom]
   );
   if (previewImage) {
     const aspectRatio = previewImage.originalHeight / previewImage.originalWidth;
     if (components.Image) {
-      return /* @__PURE__ */ React5.createElement(
-        components.Image,
-        {
-          src,
-          alt,
-          style,
-          className,
-          width: previewImage.originalWidth,
-          height: previewImage.originalHeight,
-          blurDataURL: previewImage.dataURIBase64,
-          placeholder: "blur",
-          priority,
-          onLoad
-        }
-      );
+      return /* @__PURE__ */ React4.createElement(components.Image, {
+        src,
+        alt,
+        style,
+        className,
+        width: previewImage.originalWidth,
+        height: previewImage.originalHeight,
+        blurDataURL: previewImage.dataURIBase64,
+        placeholder: "blur",
+        priority,
+        onLoad
+      });
     }
-    return /* @__PURE__ */ React5.createElement(LazyImageFull, __spreadProps(__spreadValues({ src }, rest), { experimentalDecode: true }), ({ imageState, ref }) => {
+    return /* @__PURE__ */ React4.createElement(LazyImageFull, __spreadProps(__spreadValues({
+      src
+    }, rest), {
+      experimentalDecode: true
+    }), ({ imageState, ref }) => {
       const isLoaded = imageState === ImageState.LoadSuccess;
       const wrapperStyle = {
         width: "100%"
@@ -569,83 +534,73 @@ var LazyImage = (_a) => {
         imgStyle.position = "absolute";
         wrapperStyle.paddingBottom = `${aspectRatio * 100}%`;
       }
-      return /* @__PURE__ */ React5.createElement(
-        "div",
-        {
-          className: cs(
-            "lazy-image-wrapper",
-            isLoaded && "lazy-image-loaded",
-            className
-          ),
-          style: wrapperStyle
-        },
-        /* @__PURE__ */ React5.createElement(
-          "img",
-          {
-            className: "lazy-image-preview",
-            src: previewImage.dataURIBase64,
-            alt,
-            ref,
-            style,
-            decoding: "async"
-          }
+      return /* @__PURE__ */ React4.createElement("div", {
+        className: cs(
+          "lazy-image-wrapper",
+          isLoaded && "lazy-image-loaded",
+          className
         ),
-        /* @__PURE__ */ React5.createElement(
-          "img",
-          {
-            className: "lazy-image-real",
-            src,
-            alt,
-            ref: attachZoomRef,
-            style: __spreadValues(__spreadValues({}, style), imgStyle),
-            width: previewImage.originalWidth,
-            height: previewImage.originalHeight,
-            decoding: "async",
-            loading: "lazy"
-          }
-        )
-      );
-    });
-  } else {
-    if (components.Image && forceCustomImages) {
-      return /* @__PURE__ */ React5.createElement(
-        components.Image,
-        {
-          src,
-          alt,
-          className,
-          style,
-          width: null,
-          height: height || null,
-          priority,
-          onLoad
-        }
-      );
-    }
-    return /* @__PURE__ */ React5.createElement(
-      "img",
-      __spreadValues({
-        className,
+        style: wrapperStyle
+      }, /* @__PURE__ */ React4.createElement("img", {
+        className: "lazy-image-preview",
+        src: previewImage.dataURIBase64,
+        alt,
+        ref,
         style,
+        decoding: "async"
+      }), /* @__PURE__ */ React4.createElement("img", {
+        className: "lazy-image-real",
         src,
         alt,
         ref: attachZoomRef,
-        loading: "lazy",
-        decoding: "async"
-      }, rest)
-    );
+        style: __spreadValues(__spreadValues({}, style), imgStyle),
+        width: previewImage.originalWidth,
+        height: previewImage.originalHeight,
+        decoding: "async",
+        loading: "lazy"
+      }));
+    });
+  } else {
+    if (components.Image && forceCustomImages) {
+      return /* @__PURE__ */ React4.createElement(components.Image, {
+        src,
+        alt,
+        className,
+        style,
+        width: null,
+        height: height || null,
+        priority,
+        onLoad
+      });
+    }
+    return /* @__PURE__ */ React4.createElement("img", __spreadValues({
+      className,
+      style,
+      src,
+      alt,
+      ref: attachZoomRef,
+      loading: "lazy",
+      decoding: "async"
+    }, rest));
   }
 };
 
 // src/components/page-icon.tsx
-import * as React7 from "react";
+import * as React6 from "react";
 import { getBlockIcon, getBlockTitle } from "notion-utils";
 
 // src/icons/default-page-icon.tsx
-import * as React6 from "react";
+import * as React5 from "react";
 var DefaultPageIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React6.createElement("svg", __spreadProps(__spreadValues({ className }, rest), { viewBox: "0 0 30 30", width: "16" }), /* @__PURE__ */ React6.createElement("path", { d: "M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z" }));
+  return /* @__PURE__ */ React5.createElement("svg", __spreadProps(__spreadValues({
+    className
+  }, rest), {
+    viewBox: "0 0 30 30",
+    width: "16"
+  }), /* @__PURE__ */ React5.createElement("path", {
+    d: "M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z"
+  }));
 };
 
 // src/components/page-icon.tsx
@@ -669,66 +624,49 @@ var PageIconImpl = ({
     if (icon && isUrl(icon)) {
       const url = mapImageUrl(icon, block);
       isImage = true;
-      content = /* @__PURE__ */ React7.createElement(
-        LazyImage,
-        {
-          src: url,
-          alt: title || "page icon",
-          className: cs(className, "notion-page-icon")
-        }
-      );
+      content = /* @__PURE__ */ React6.createElement(LazyImage, {
+        src: url,
+        alt: title || "page icon",
+        className: cs(className, "notion-page-icon")
+      });
     } else if (icon && icon.startsWith("/icons/")) {
       const url = "https://www.notion.so" + icon + "?mode=" + (darkMode ? "dark" : "light");
-      content = /* @__PURE__ */ React7.createElement(
-        LazyImage,
-        {
-          src: url,
-          alt: title || "page icon",
-          className: cs(className, "notion-page-icon")
-        }
-      );
+      content = /* @__PURE__ */ React6.createElement(LazyImage, {
+        src: url,
+        alt: title || "page icon",
+        className: cs(className, "notion-page-icon")
+      });
     } else if (!icon) {
       if (!hideDefaultIcon) {
         isImage = true;
-        content = /* @__PURE__ */ React7.createElement(
-          DefaultPageIcon,
-          {
-            className: cs(className, "notion-page-icon"),
-            alt: title ? title : "page icon"
-          }
-        );
+        content = /* @__PURE__ */ React6.createElement(DefaultPageIcon, {
+          className: cs(className, "notion-page-icon"),
+          alt: title ? title : "page icon"
+        });
       }
     } else {
       isImage = false;
-      content = /* @__PURE__ */ React7.createElement(
-        "span",
-        {
-          className: cs(className, "notion-page-icon"),
-          role: "img",
-          "aria-label": icon
-        },
-        icon
-      );
+      content = /* @__PURE__ */ React6.createElement("span", {
+        className: cs(className, "notion-page-icon"),
+        role: "img",
+        "aria-label": icon
+      }, icon);
     }
   }
   if (!content) {
     return null;
   }
-  return /* @__PURE__ */ React7.createElement(
-    "div",
-    {
-      className: cs(
-        inline ? "notion-page-icon-inline" : "notion-page-icon-hero",
-        isImage ? "notion-page-icon-image" : "notion-page-icon-span"
-      )
-    },
-    content
-  );
+  return /* @__PURE__ */ React6.createElement("div", {
+    className: cs(
+      inline ? "notion-page-icon-inline" : "notion-page-icon-hero",
+      isImage ? "notion-page-icon-image" : "notion-page-icon-span"
+    )
+  }, content);
 };
-var PageIcon = React7.memo(PageIconImpl);
+var PageIcon = React6.memo(PageIconImpl);
 
 // src/components/page-title.tsx
-import * as React8 from "react";
+import * as React7 from "react";
 import { getBlockTitle as getBlockTitle2 } from "notion-utils";
 var PageTitleImpl = (_a) => {
   var _b = _a, { block, className, defaultIcon } = _b, rest = __objRest(_b, ["block", "className", "defaultIcon"]);
@@ -742,125 +680,141 @@ var PageTitleImpl = (_a) => {
       return null;
     }
     const titleDecoration = [[title]];
-    return /* @__PURE__ */ React8.createElement("span", __spreadValues({ className: cs("notion-page-title", className) }, rest), /* @__PURE__ */ React8.createElement(
-      PageIcon,
-      {
-        block,
-        defaultIcon,
-        className: "notion-page-title-icon"
-      }
-    ), /* @__PURE__ */ React8.createElement("span", { className: "notion-page-title-text" }, /* @__PURE__ */ React8.createElement(Text, { value: titleDecoration, block })));
+    return /* @__PURE__ */ React7.createElement("span", __spreadValues({
+      className: cs("notion-page-title", className)
+    }, rest), /* @__PURE__ */ React7.createElement(PageIcon, {
+      block,
+      defaultIcon,
+      className: "notion-page-title-icon"
+    }), /* @__PURE__ */ React7.createElement("span", {
+      className: "notion-page-title-text"
+    }, /* @__PURE__ */ React7.createElement(Text, {
+      value: titleDecoration,
+      block
+    })));
   }
   if (!((_a2 = block.properties) == null ? void 0 : _a2.title)) {
     return null;
   }
-  return /* @__PURE__ */ React8.createElement("span", __spreadValues({ className: cs("notion-page-title", className) }, rest), /* @__PURE__ */ React8.createElement(
-    PageIcon,
-    {
-      block,
-      defaultIcon,
-      className: "notion-page-title-icon"
-    }
-  ), /* @__PURE__ */ React8.createElement("span", { className: "notion-page-title-text" }, /* @__PURE__ */ React8.createElement(Text, { value: (_b2 = block.properties) == null ? void 0 : _b2.title, block })));
+  return /* @__PURE__ */ React7.createElement("span", __spreadValues({
+    className: cs("notion-page-title", className)
+  }, rest), /* @__PURE__ */ React7.createElement(PageIcon, {
+    block,
+    defaultIcon,
+    className: "notion-page-title-icon"
+  }), /* @__PURE__ */ React7.createElement("span", {
+    className: "notion-page-title-text"
+  }, /* @__PURE__ */ React7.createElement(Text, {
+    value: (_b2 = block.properties) == null ? void 0 : _b2.title,
+    block
+  })));
 };
-var PageTitle = React8.memo(PageTitleImpl);
+var PageTitle = React7.memo(PageTitleImpl);
 
 // src/components/header.tsx
-import * as React13 from "react";
+import * as React12 from "react";
 import { getPageBreadcrumbs } from "notion-utils";
 import { useHotkeys } from "react-hotkeys-hook";
 
 // src/icons/search-icon.tsx
-import * as React9 from "react";
+import * as React8 from "react";
 var SearchIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React9.createElement("svg", __spreadValues({ className: cs("notion-icon", className), viewBox: "0 0 17 17" }, rest), /* @__PURE__ */ React9.createElement("path", { d: "M6.78027 13.6729C8.24805 13.6729 9.60156 13.1982 10.709 12.4072L14.875 16.5732C15.0684 16.7666 15.3232 16.8633 15.5957 16.8633C16.167 16.8633 16.5713 16.4238 16.5713 15.8613C16.5713 15.5977 16.4834 15.3516 16.29 15.1582L12.1504 11.0098C13.0205 9.86719 13.5391 8.45215 13.5391 6.91406C13.5391 3.19629 10.498 0.155273 6.78027 0.155273C3.0625 0.155273 0.0214844 3.19629 0.0214844 6.91406C0.0214844 10.6318 3.0625 13.6729 6.78027 13.6729ZM6.78027 12.2139C3.87988 12.2139 1.48047 9.81445 1.48047 6.91406C1.48047 4.01367 3.87988 1.61426 6.78027 1.61426C9.68066 1.61426 12.0801 4.01367 12.0801 6.91406C12.0801 9.81445 9.68066 12.2139 6.78027 12.2139Z" }));
+  return /* @__PURE__ */ React8.createElement("svg", __spreadValues({
+    className: cs("notion-icon", className),
+    viewBox: "0 0 17 17"
+  }, rest), /* @__PURE__ */ React8.createElement("path", {
+    d: "M6.78027 13.6729C8.24805 13.6729 9.60156 13.1982 10.709 12.4072L14.875 16.5732C15.0684 16.7666 15.3232 16.8633 15.5957 16.8633C16.167 16.8633 16.5713 16.4238 16.5713 15.8613C16.5713 15.5977 16.4834 15.3516 16.29 15.1582L12.1504 11.0098C13.0205 9.86719 13.5391 8.45215 13.5391 6.91406C13.5391 3.19629 10.498 0.155273 6.78027 0.155273C3.0625 0.155273 0.0214844 3.19629 0.0214844 6.91406C0.0214844 10.6318 3.0625 13.6729 6.78027 13.6729ZM6.78027 12.2139C3.87988 12.2139 1.48047 9.81445 1.48047 6.91406C1.48047 4.01367 3.87988 1.61426 6.78027 1.61426C9.68066 1.61426 12.0801 4.01367 12.0801 6.91406C12.0801 9.81445 9.68066 12.2139 6.78027 12.2139Z"
+  }));
 };
 
 // src/components/search-dialog.tsx
 var import_lodash = __toESM(require_lodash(), 1);
-import * as React12 from "react";
+import * as React11 from "react";
 import { getBlockParentPage, getBlockTitle as getBlockTitle3 } from "notion-utils";
 
 // src/icons/clear-icon.tsx
-import * as React10 from "react";
+import * as React9 from "react";
 var ClearIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React10.createElement("svg", __spreadProps(__spreadValues({ className: cs("notion-icon", className) }, rest), { viewBox: "0 0 30 30" }), /* @__PURE__ */ React10.createElement("path", { d: "M15,0C6.716,0,0,6.716,0,15s6.716,15,15,15s15-6.716,15-15S23.284,0,15,0z M22,20.6L20.6,22L15,16.4L9.4,22L8,20.6l5.6-5.6 L8,9.4L9.4,8l5.6,5.6L20.6,8L22,9.4L16.4,15L22,20.6z" }));
+  return /* @__PURE__ */ React9.createElement("svg", __spreadProps(__spreadValues({
+    className: cs("notion-icon", className)
+  }, rest), {
+    viewBox: "0 0 30 30"
+  }), /* @__PURE__ */ React9.createElement("path", {
+    d: "M15,0C6.716,0,0,6.716,0,15s6.716,15,15,15s15-6.716,15-15S23.284,0,15,0z M22,20.6L20.6,22L15,16.4L9.4,22L8,20.6l5.6-5.6 L8,9.4L9.4,8l5.6,5.6L20.6,8L22,9.4L16.4,15L22,20.6z"
+  }));
 };
 
 // src/icons/loading-icon.tsx
-import * as React11 from "react";
+import * as React10 from "react";
 var LoadingIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React11.createElement("svg", __spreadProps(__spreadValues({ className: cs("notion-icon", className) }, rest), { viewBox: "0 0 24 24" }), /* @__PURE__ */ React11.createElement("defs", null, /* @__PURE__ */ React11.createElement(
-    "linearGradient",
-    {
-      x1: "28.1542969%",
-      y1: "63.7402344%",
-      x2: "74.6289062%",
-      y2: "17.7832031%",
-      id: "linearGradient-1"
-    },
-    /* @__PURE__ */ React11.createElement("stop", { stopColor: "rgba(164, 164, 164, 1)", offset: "0%" }),
-    /* @__PURE__ */ React11.createElement(
-      "stop",
-      {
-        stopColor: "rgba(164, 164, 164, 0)",
-        stopOpacity: "0",
-        offset: "100%"
-      }
-    )
-  )), /* @__PURE__ */ React11.createElement("g", { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none" }, /* @__PURE__ */ React11.createElement("g", { transform: "translate(-236.000000, -286.000000)" }, /* @__PURE__ */ React11.createElement("g", { transform: "translate(238.000000, 286.000000)" }, /* @__PURE__ */ React11.createElement(
-    "circle",
-    {
-      id: "Oval-2",
-      stroke: "url(#linearGradient-1)",
-      strokeWidth: "4",
-      cx: "10",
-      cy: "12",
-      r: "10"
-    }
-  ), /* @__PURE__ */ React11.createElement(
-    "path",
-    {
-      d: "M10,2 C4.4771525,2 0,6.4771525 0,12",
-      id: "Oval-2",
-      stroke: "rgba(164, 164, 164, 1)",
-      strokeWidth: "4"
-    }
-  ), /* @__PURE__ */ React11.createElement(
-    "rect",
-    {
-      id: "Rectangle-1",
-      fill: "rgba(164, 164, 164, 1)",
-      x: "8",
-      y: "0",
-      width: "4",
-      height: "4",
-      rx: "8"
-    }
-  )))));
+  return /* @__PURE__ */ React10.createElement("svg", __spreadProps(__spreadValues({
+    className: cs("notion-icon", className)
+  }, rest), {
+    viewBox: "0 0 24 24"
+  }), /* @__PURE__ */ React10.createElement("defs", null, /* @__PURE__ */ React10.createElement("linearGradient", {
+    x1: "28.1542969%",
+    y1: "63.7402344%",
+    x2: "74.6289062%",
+    y2: "17.7832031%",
+    id: "linearGradient-1"
+  }, /* @__PURE__ */ React10.createElement("stop", {
+    stopColor: "rgba(164, 164, 164, 1)",
+    offset: "0%"
+  }), /* @__PURE__ */ React10.createElement("stop", {
+    stopColor: "rgba(164, 164, 164, 0)",
+    stopOpacity: "0",
+    offset: "100%"
+  }))), /* @__PURE__ */ React10.createElement("g", {
+    id: "Page-1",
+    stroke: "none",
+    strokeWidth: "1",
+    fill: "none"
+  }, /* @__PURE__ */ React10.createElement("g", {
+    transform: "translate(-236.000000, -286.000000)"
+  }, /* @__PURE__ */ React10.createElement("g", {
+    transform: "translate(238.000000, 286.000000)"
+  }, /* @__PURE__ */ React10.createElement("circle", {
+    id: "Oval-2",
+    stroke: "url(#linearGradient-1)",
+    strokeWidth: "4",
+    cx: "10",
+    cy: "12",
+    r: "10"
+  }), /* @__PURE__ */ React10.createElement("path", {
+    d: "M10,2 C4.4771525,2 0,6.4771525 0,12",
+    id: "Oval-2",
+    stroke: "rgba(164, 164, 164, 1)",
+    strokeWidth: "4"
+  }), /* @__PURE__ */ React10.createElement("rect", {
+    id: "Rectangle-1",
+    fill: "rgba(164, 164, 164, 1)",
+    x: "8",
+    y: "0",
+    width: "4",
+    height: "4",
+    rx: "8"
+  })))));
 };
 
 // src/components/search-dialog.tsx
-var SearchDialog = class extends React12.Component {
+var SearchDialog = class extends React11.Component {
   constructor(props) {
     super(props);
-    __publicField(this, "state", {
+    this.state = {
       isLoading: false,
       query: "",
       searchResult: null,
       searchError: null
-    });
-    __publicField(this, "_inputRef");
-    __publicField(this, "_search");
-    __publicField(this, "_onAfterOpen", () => {
+    };
+    this._onAfterOpen = () => {
       if (this._inputRef.current) {
         this._inputRef.current.focus();
       }
-    });
-    __publicField(this, "_onChangeQuery", (e) => {
+    };
+    this._onChangeQuery = (e) => {
       const query = e.target.value;
       this.setState({ query });
       if (!query.trim()) {
@@ -869,18 +823,18 @@ var SearchDialog = class extends React12.Component {
       } else {
         this._search();
       }
-    });
-    __publicField(this, "_onClearQuery", () => {
+    };
+    this._onClearQuery = () => {
       this._onChangeQuery({ target: { value: "" } });
-    });
-    __publicField(this, "_warmupSearch", () => __async(this, null, function* () {
+    };
+    this._warmupSearch = () => __async(this, null, function* () {
       const { searchNotion, rootBlockId } = this.props;
       yield searchNotion({
         query: "",
         ancestorId: rootBlockId
       });
-    }));
-    __publicField(this, "_searchImpl", () => __async(this, null, function* () {
+    });
+    this._searchImpl = () => __async(this, null, function* () {
       const { searchNotion, rootBlockId } = this.props;
       const { query } = this.state;
       if (!query.trim()) {
@@ -933,8 +887,8 @@ var SearchDialog = class extends React12.Component {
       if (this.state.query === query) {
         this.setState({ isLoading: false, searchResult, searchError });
       }
-    }));
-    this._inputRef = React12.createRef();
+    });
+    this._inputRef = React11.createRef();
   }
   componentDidMount() {
     this._search = (0, import_lodash.default)(this._searchImpl.bind(this), 1e3);
@@ -944,91 +898,101 @@ var SearchDialog = class extends React12.Component {
     const { isOpen, onClose } = this.props;
     const { isLoading, query, searchResult, searchError } = this.state;
     const hasQuery = !!query.trim();
-    return /* @__PURE__ */ React12.createElement(NotionContextConsumer, null, (ctx2) => {
+    return /* @__PURE__ */ React11.createElement(NotionContextConsumer, null, (ctx2) => {
       const { components, defaultPageIcon, mapPageUrl } = ctx2;
-      return /* @__PURE__ */ React12.createElement(
-        components.Modal,
-        {
-          isOpen,
-          contentLabel: "Search",
-          className: "notion-search",
-          overlayClassName: "notion-search-overlay",
-          onRequestClose: onClose,
-          onAfterOpen: this._onAfterOpen
-        },
-        /* @__PURE__ */ React12.createElement("div", { className: "quickFindMenu" }, /* @__PURE__ */ React12.createElement("div", { className: "searchBar" }, /* @__PURE__ */ React12.createElement("div", { className: "inlineIcon" }, isLoading ? /* @__PURE__ */ React12.createElement(LoadingIcon, { className: "loadingIcon" }) : /* @__PURE__ */ React12.createElement(SearchIcon, null)), /* @__PURE__ */ React12.createElement(
-          "input",
-          {
-            className: "searchInput",
-            placeholder: "Search",
-            value: query,
-            ref: this._inputRef,
-            onChange: this._onChangeQuery
+      return /* @__PURE__ */ React11.createElement(components.Modal, {
+        isOpen,
+        contentLabel: "Search",
+        className: "notion-search",
+        overlayClassName: "notion-search-overlay",
+        onRequestClose: onClose,
+        onAfterOpen: this._onAfterOpen
+      }, /* @__PURE__ */ React11.createElement("div", {
+        className: "quickFindMenu"
+      }, /* @__PURE__ */ React11.createElement("div", {
+        className: "searchBar"
+      }, /* @__PURE__ */ React11.createElement("div", {
+        className: "inlineIcon"
+      }, isLoading ? /* @__PURE__ */ React11.createElement(LoadingIcon, {
+        className: "loadingIcon"
+      }) : /* @__PURE__ */ React11.createElement(SearchIcon, null)), /* @__PURE__ */ React11.createElement("input", {
+        className: "searchInput",
+        placeholder: "Search",
+        value: query,
+        ref: this._inputRef,
+        onChange: this._onChangeQuery
+      }), query && /* @__PURE__ */ React11.createElement("div", {
+        role: "button",
+        className: "clearButton",
+        onClick: this._onClearQuery
+      }, /* @__PURE__ */ React11.createElement(ClearIcon, {
+        className: "clearIcon"
+      }))), hasQuery && searchResult && /* @__PURE__ */ React11.createElement(React11.Fragment, null, searchResult.results.length ? /* @__PURE__ */ React11.createElement(NotionContextProvider, __spreadProps(__spreadValues({}, ctx2), {
+        recordMap: searchResult.recordMap
+      }), /* @__PURE__ */ React11.createElement("div", {
+        className: "resultsPane"
+      }, searchResult.results.map((result) => {
+        var _a;
+        return /* @__PURE__ */ React11.createElement(components.PageLink, {
+          key: result.id,
+          className: cs("result", "notion-page-link"),
+          href: mapPageUrl(
+            result.page.id,
+            searchResult.recordMap
+          )
+        }, /* @__PURE__ */ React11.createElement(PageTitle, {
+          block: result.page,
+          defaultIcon: defaultPageIcon
+        }), ((_a = result.highlight) == null ? void 0 : _a.html) && /* @__PURE__ */ React11.createElement("div", {
+          className: "notion-search-result-highlight",
+          dangerouslySetInnerHTML: {
+            __html: result.highlight.html
           }
-        ), query && /* @__PURE__ */ React12.createElement(
-          "div",
-          {
-            role: "button",
-            className: "clearButton",
-            onClick: this._onClearQuery
-          },
-          /* @__PURE__ */ React12.createElement(ClearIcon, { className: "clearIcon" })
-        )), hasQuery && searchResult && /* @__PURE__ */ React12.createElement(React12.Fragment, null, searchResult.results.length ? /* @__PURE__ */ React12.createElement(
-          NotionContextProvider,
-          __spreadProps(__spreadValues({}, ctx2), {
-            recordMap: searchResult.recordMap
-          }),
-          /* @__PURE__ */ React12.createElement("div", { className: "resultsPane" }, searchResult.results.map((result) => {
-            var _a;
-            return /* @__PURE__ */ React12.createElement(
-              components.PageLink,
-              {
-                key: result.id,
-                className: cs("result", "notion-page-link"),
-                href: mapPageUrl(
-                  result.page.id,
-                  searchResult.recordMap
-                )
-              },
-              /* @__PURE__ */ React12.createElement(
-                PageTitle,
-                {
-                  block: result.page,
-                  defaultIcon: defaultPageIcon
-                }
-              ),
-              ((_a = result.highlight) == null ? void 0 : _a.html) && /* @__PURE__ */ React12.createElement(
-                "div",
-                {
-                  className: "notion-search-result-highlight",
-                  dangerouslySetInnerHTML: {
-                    __html: result.highlight.html
-                  }
-                }
-              )
-            );
-          })),
-          /* @__PURE__ */ React12.createElement("footer", { className: "resultsFooter" }, /* @__PURE__ */ React12.createElement("div", null, /* @__PURE__ */ React12.createElement("span", { className: "resultsCount" }, searchResult.total), searchResult.total === 1 ? " result" : " results"))
-        ) : /* @__PURE__ */ React12.createElement("div", { className: "noResultsPane" }, /* @__PURE__ */ React12.createElement("div", { className: "noResults" }, "No results"), /* @__PURE__ */ React12.createElement("div", { className: "noResultsDetail" }, "Try different search terms"))), hasQuery && !searchResult && searchError && /* @__PURE__ */ React12.createElement("div", { className: "noResultsPane" }, /* @__PURE__ */ React12.createElement("div", { className: "noResults" }, "Search error")))
-      );
+        }));
+      })), /* @__PURE__ */ React11.createElement("footer", {
+        className: "resultsFooter"
+      }, /* @__PURE__ */ React11.createElement("div", null, /* @__PURE__ */ React11.createElement("span", {
+        className: "resultsCount"
+      }, searchResult.total), searchResult.total === 1 ? " result" : " results"))) : /* @__PURE__ */ React11.createElement("div", {
+        className: "noResultsPane"
+      }, /* @__PURE__ */ React11.createElement("div", {
+        className: "noResults"
+      }, "No results"), /* @__PURE__ */ React11.createElement("div", {
+        className: "noResultsDetail"
+      }, "Try different search terms"))), hasQuery && !searchResult && searchError && /* @__PURE__ */ React11.createElement("div", {
+        className: "noResultsPane"
+      }, /* @__PURE__ */ React11.createElement("div", {
+        className: "noResults"
+      }, "Search error"))));
     });
   }
 };
 
 // src/components/header.tsx
 var Header = ({ block }) => {
-  return /* @__PURE__ */ React13.createElement("header", { className: "notion-header" }, /* @__PURE__ */ React13.createElement("div", { className: "notion-nav-header" }, /* @__PURE__ */ React13.createElement(Breadcrumbs, { block }), /* @__PURE__ */ React13.createElement(Search, { block })));
+  return /* @__PURE__ */ React12.createElement("header", {
+    className: "notion-header"
+  }, /* @__PURE__ */ React12.createElement("div", {
+    className: "notion-nav-header"
+  }, /* @__PURE__ */ React12.createElement(Breadcrumbs, {
+    block
+  }), /* @__PURE__ */ React12.createElement(Search, {
+    block
+  })));
 };
 var Breadcrumbs = ({ block, rootOnly = false }) => {
   const { recordMap, mapPageUrl, components } = useNotionContext();
-  const breadcrumbs = React13.useMemo(() => {
+  const breadcrumbs = React12.useMemo(() => {
     const breadcrumbs2 = getPageBreadcrumbs(recordMap, block.id);
     if (rootOnly) {
       return [breadcrumbs2[0]].filter(Boolean);
     }
     return breadcrumbs2;
   }, [recordMap, block.id, rootOnly]);
-  return /* @__PURE__ */ React13.createElement("div", { className: "breadcrumbs", key: "breadcrumbs" }, breadcrumbs.map((breadcrumb, index) => {
+  return /* @__PURE__ */ React12.createElement("div", {
+    className: "breadcrumbs",
+    key: "breadcrumbs"
+  }, breadcrumbs.map((breadcrumb, index) => {
     if (!breadcrumb) {
       return null;
     }
@@ -1037,31 +1001,35 @@ var Breadcrumbs = ({ block, rootOnly = false }) => {
       pageLink: components.PageLink
     };
     if (breadcrumb.active) {
-      componentMap.pageLink = (props) => /* @__PURE__ */ React13.createElement("div", __spreadValues({}, props));
+      componentMap.pageLink = (props) => /* @__PURE__ */ React12.createElement("div", __spreadValues({}, props));
     } else {
       pageLinkProps.href = mapPageUrl(breadcrumb.pageId);
     }
-    return /* @__PURE__ */ React13.createElement(React13.Fragment, { key: breadcrumb.pageId }, /* @__PURE__ */ React13.createElement(
-      componentMap.pageLink,
-      __spreadValues({
-        className: cs("breadcrumb", breadcrumb.active && "active")
-      }, pageLinkProps),
-      breadcrumb.icon && /* @__PURE__ */ React13.createElement(PageIcon, { className: "icon", block: breadcrumb.block }),
-      breadcrumb.title && /* @__PURE__ */ React13.createElement("span", { className: "title" }, breadcrumb.title)
-    ), index < breadcrumbs.length - 1 && /* @__PURE__ */ React13.createElement("span", { className: "spacer" }, "/"));
+    return /* @__PURE__ */ React12.createElement(React12.Fragment, {
+      key: breadcrumb.pageId
+    }, /* @__PURE__ */ React12.createElement(componentMap.pageLink, __spreadValues({
+      className: cs("breadcrumb", breadcrumb.active && "active")
+    }, pageLinkProps), breadcrumb.icon && /* @__PURE__ */ React12.createElement(PageIcon, {
+      className: "icon",
+      block: breadcrumb.block
+    }), breadcrumb.title && /* @__PURE__ */ React12.createElement("span", {
+      className: "title"
+    }, breadcrumb.title)), index < breadcrumbs.length - 1 && /* @__PURE__ */ React12.createElement("span", {
+      className: "spacer"
+    }, "/"));
   }));
 };
 var Search = ({ block, search, title = "Search" }) => {
   const { searchNotion, rootPageId, isShowingSearch, onHideSearch } = useNotionContext();
   const onSearchNotion = search || searchNotion;
-  const [isSearchOpen, setIsSearchOpen] = React13.useState(isShowingSearch);
-  React13.useEffect(() => {
+  const [isSearchOpen, setIsSearchOpen] = React12.useState(isShowingSearch);
+  React12.useEffect(() => {
     setIsSearchOpen(isShowingSearch);
   }, [isShowingSearch]);
-  const onOpenSearch = React13.useCallback(() => {
+  const onOpenSearch = React12.useCallback(() => {
     setIsSearchOpen(true);
   }, []);
-  const onCloseSearch = React13.useCallback(() => {
+  const onCloseSearch = React12.useCallback(() => {
     setIsSearchOpen(false);
     if (onHideSearch) {
       onHideSearch();
@@ -1078,32 +1046,28 @@ var Search = ({ block, search, title = "Search" }) => {
     event.stopPropagation();
   });
   const hasSearch = !!onSearchNotion;
-  return /* @__PURE__ */ React13.createElement(React13.Fragment, null, hasSearch && /* @__PURE__ */ React13.createElement(
-    "div",
-    {
-      role: "button",
-      className: cs("breadcrumb", "button", "notion-search-button"),
-      onClick: onOpenSearch
-    },
-    /* @__PURE__ */ React13.createElement(SearchIcon, { className: "searchIcon" }),
-    title && /* @__PURE__ */ React13.createElement("span", { className: "title" }, title)
-  ), isSearchOpen && hasSearch && /* @__PURE__ */ React13.createElement(
-    SearchDialog,
-    {
-      isOpen: isSearchOpen,
-      rootBlockId: rootPageId || (block == null ? void 0 : block.id),
-      onClose: onCloseSearch,
-      searchNotion: onSearchNotion
-    }
-  ));
+  return /* @__PURE__ */ React12.createElement(React12.Fragment, null, hasSearch && /* @__PURE__ */ React12.createElement("div", {
+    role: "button",
+    className: cs("breadcrumb", "button", "notion-search-button"),
+    onClick: onOpenSearch
+  }, /* @__PURE__ */ React12.createElement(SearchIcon, {
+    className: "searchIcon"
+  }), title && /* @__PURE__ */ React12.createElement("span", {
+    className: "title"
+  }, title)), isSearchOpen && hasSearch && /* @__PURE__ */ React12.createElement(SearchDialog, {
+    isOpen: isSearchOpen,
+    rootBlockId: rootPageId || (block == null ? void 0 : block.id),
+    onClose: onCloseSearch,
+    searchNotion: onSearchNotion
+  }));
 };
 
 // src/components/asset.tsx
-import * as React15 from "react";
+import * as React14 from "react";
 import { getTextContent } from "notion-utils";
 
 // src/components/lite-youtube-embed.tsx
-import * as React14 from "react";
+import * as React13 from "react";
 var qs = (params) => {
   return Object.keys(params).map(
     (key) => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`
@@ -1122,7 +1086,7 @@ var LiteYouTubeEmbed = ({
   className
 }) => {
   const muteParam = mute || defaultPlay ? "1" : "0";
-  const queryString = React14.useMemo(
+  const queryString = React13.useMemo(
     () => qs(__spreadValues({ autoplay: "1", mute: muteParam }, params)),
     [muteParam, params]
   );
@@ -1130,65 +1094,70 @@ var LiteYouTubeEmbed = ({
   const posterUrl = `https://i.ytimg.com/vi/${id}/${resolution}.jpg`;
   const ytUrl = "https://www.youtube-nocookie.com";
   const iframeSrc = `${ytUrl}/embed/${id}?${queryString}`;
-  const [isPreconnected, setIsPreconnected] = React14.useState(false);
-  const [iframeInitialized, setIframeInitialized] = React14.useState(defaultPlay);
-  const [isIframeLoaded, setIsIframeLoaded] = React14.useState(false);
-  const warmConnections = React14.useCallback(() => {
+  const [isPreconnected, setIsPreconnected] = React13.useState(false);
+  const [iframeInitialized, setIframeInitialized] = React13.useState(defaultPlay);
+  const [isIframeLoaded, setIsIframeLoaded] = React13.useState(false);
+  const warmConnections = React13.useCallback(() => {
     if (isPreconnected)
       return;
     setIsPreconnected(true);
   }, [isPreconnected]);
-  const onLoadIframe = React14.useCallback(() => {
+  const onLoadIframe = React13.useCallback(() => {
     if (iframeInitialized)
       return;
     setIframeInitialized(true);
   }, [iframeInitialized]);
-  const onIframeLoaded = React14.useCallback(() => {
+  const onIframeLoaded = React13.useCallback(() => {
     setIsIframeLoaded(true);
   }, []);
-  return /* @__PURE__ */ React14.createElement(React14.Fragment, null, /* @__PURE__ */ React14.createElement("link", { rel: "preload", href: posterUrl, as: "image" }), isPreconnected && /* @__PURE__ */ React14.createElement(React14.Fragment, null, /* @__PURE__ */ React14.createElement("link", { rel: "preconnect", href: ytUrl }), /* @__PURE__ */ React14.createElement("link", { rel: "preconnect", href: "https://www.google.com" })), isPreconnected && adLinksPreconnect && /* @__PURE__ */ React14.createElement(React14.Fragment, null, /* @__PURE__ */ React14.createElement("link", { rel: "preconnect", href: "https://static.doubleclick.net" }), /* @__PURE__ */ React14.createElement("link", { rel: "preconnect", href: "https://googleads.g.doubleclick.net" })), /* @__PURE__ */ React14.createElement(
-    "div",
-    {
-      onClick: onLoadIframe,
-      onPointerOver: warmConnections,
-      className: cs(
-        "notion-yt-lite",
-        isIframeLoaded && "notion-yt-loaded",
-        iframeInitialized && "notion-yt-initialized",
-        className
-      ),
-      style
-    },
-    /* @__PURE__ */ React14.createElement(
-      "img",
-      {
-        src: posterUrl,
-        className: "notion-yt-thumbnail",
-        loading: lazyImage ? "lazy" : void 0,
-        alt
-      }
+  return /* @__PURE__ */ React13.createElement(React13.Fragment, null, /* @__PURE__ */ React13.createElement("link", {
+    rel: "preload",
+    href: posterUrl,
+    as: "image"
+  }), isPreconnected && /* @__PURE__ */ React13.createElement(React13.Fragment, null, /* @__PURE__ */ React13.createElement("link", {
+    rel: "preconnect",
+    href: ytUrl
+  }), /* @__PURE__ */ React13.createElement("link", {
+    rel: "preconnect",
+    href: "https://www.google.com"
+  })), isPreconnected && adLinksPreconnect && /* @__PURE__ */ React13.createElement(React13.Fragment, null, /* @__PURE__ */ React13.createElement("link", {
+    rel: "preconnect",
+    href: "https://static.doubleclick.net"
+  }), /* @__PURE__ */ React13.createElement("link", {
+    rel: "preconnect",
+    href: "https://googleads.g.doubleclick.net"
+  })), /* @__PURE__ */ React13.createElement("div", {
+    onClick: onLoadIframe,
+    onPointerOver: warmConnections,
+    className: cs(
+      "notion-yt-lite",
+      isIframeLoaded && "notion-yt-loaded",
+      iframeInitialized && "notion-yt-initialized",
+      className
     ),
-    /* @__PURE__ */ React14.createElement("div", { className: "notion-yt-playbtn" }),
-    iframeInitialized && /* @__PURE__ */ React14.createElement(
-      "iframe",
-      {
-        width: "560",
-        height: "315",
-        frameBorder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowFullScreen: true,
-        title: iframeTitle,
-        src: iframeSrc,
-        onLoad: onIframeLoaded
-      }
-    )
-  ));
+    style
+  }, /* @__PURE__ */ React13.createElement("img", {
+    src: posterUrl,
+    className: "notion-yt-thumbnail",
+    loading: lazyImage ? "lazy" : void 0,
+    alt
+  }), /* @__PURE__ */ React13.createElement("div", {
+    className: "notion-yt-playbtn"
+  }), iframeInitialized && /* @__PURE__ */ React13.createElement("iframe", {
+    width: "560",
+    height: "315",
+    frameBorder: "0",
+    allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+    allowFullScreen: true,
+    title: iframeTitle,
+    src: iframeSrc,
+    onLoad: onIframeLoaded
+  })));
 };
 
 // src/components/asset.tsx
 var isServer = typeof window === "undefined";
 var supportedAssetTypes = [
-  "replit",
   "video",
   "image",
   "embed",
@@ -1298,18 +1267,16 @@ var Asset = ({ block, zoomable = true, children }) => {
     const id = src.split("?")[0].split("/").pop();
     if (!id)
       return null;
-    content = /* @__PURE__ */ React15.createElement(
-      "div",
-      {
-        style: __spreadProps(__spreadValues({}, assetStyle), {
-          maxWidth: 420,
-          width: "100%",
-          marginLeft: "auto",
-          marginRight: "auto"
-        })
-      },
-      /* @__PURE__ */ React15.createElement(components.Tweet, { id })
-    );
+    content = /* @__PURE__ */ React14.createElement("div", {
+      style: __spreadProps(__spreadValues({}, assetStyle), {
+        maxWidth: 420,
+        width: "100%",
+        marginLeft: "auto",
+        marginRight: "auto"
+      })
+    }, /* @__PURE__ */ React14.createElement(components.Tweet, {
+      id
+    }));
   } else if (block.type === "pdf") {
     style.overflow = "auto";
     style.background = "rgb(226, 226, 226)";
@@ -1318,68 +1285,57 @@ var Asset = ({ block, zoomable = true, children }) => {
       style.padding = "8px 16px";
     }
     if (!isServer) {
-      content = /* @__PURE__ */ React15.createElement(components.Pdf, { file: source });
+      content = /* @__PURE__ */ React14.createElement(components.Pdf, {
+        file: source
+      });
     }
-  } else if (block.type === "embed" || block.type === "video" || block.type === "figma" || block.type === "typeform" || block.type === "gist" || block.type === "maps" || block.type === "excalidraw" || block.type === "codepen" || block.type === "drive" || block.type === "replit") {
+  } else if (block.type === "embed" || block.type === "video" || block.type === "figma" || block.type === "typeform" || block.type === "gist" || block.type === "maps" || block.type === "excalidraw" || block.type === "codepen" || block.type === "drive") {
     if (block.type === "video" && source && source.indexOf("youtube") < 0 && source.indexOf("youtu.be") < 0 && source.indexOf("vimeo") < 0 && source.indexOf("wistia") < 0 && source.indexOf("loom") < 0 && source.indexOf("videoask") < 0 && source.indexOf("getcloudapp") < 0) {
       style.paddingBottom = void 0;
-      content = /* @__PURE__ */ React15.createElement(
-        "video",
-        {
-          playsInline: true,
-          controls: true,
-          preload: "metadata",
-          style: assetStyle,
-          src: source,
-          title: block.type
-        }
-      );
+      content = /* @__PURE__ */ React14.createElement("video", {
+        playsInline: true,
+        controls: true,
+        preload: "metadata",
+        style: assetStyle,
+        src: source,
+        title: block.type
+      });
     } else {
       let src = ((_f = block.format) == null ? void 0 : _f.display_source) || source;
       if (src) {
         const youtubeVideoId = block.type === "video" ? getYoutubeId(src) : null;
         if (youtubeVideoId) {
-          content = /* @__PURE__ */ React15.createElement(
-            LiteYouTubeEmbed,
-            {
-              id: youtubeVideoId,
-              style: assetStyle,
-              className: "notion-asset-object-fit"
-            }
-          );
+          content = /* @__PURE__ */ React14.createElement(LiteYouTubeEmbed, {
+            id: youtubeVideoId,
+            style: assetStyle,
+            className: "notion-asset-object-fit"
+          });
         } else if (block.type === "gist") {
           if (!src.endsWith(".pibb")) {
             src = `${src}.pibb`;
           }
           assetStyle.width = "100%";
           style.paddingBottom = "50%";
-          content = /* @__PURE__ */ React15.createElement(
-            "iframe",
-            {
-              style: assetStyle,
-              className: "notion-asset-object-fit",
-              src,
-              title: "GitHub Gist",
-              frameBorder: "0",
-              loading: "lazy",
-              scrolling: "auto"
-            }
-          );
+          content = /* @__PURE__ */ React14.createElement("iframe", {
+            style: assetStyle,
+            className: "notion-asset-object-fit",
+            src,
+            title: "GitHub Gist",
+            frameBorder: "0",
+            loading: "lazy",
+            scrolling: "auto"
+          });
         } else {
-          src += block.type === "typeform" ? "&disable-auto-focus=true" : "";
-          content = /* @__PURE__ */ React15.createElement(
-            "iframe",
-            {
-              className: "notion-asset-object-fit",
-              style: assetStyle,
-              src,
-              title: `iframe ${block.type}`,
-              frameBorder: "0",
-              allowFullScreen: true,
-              loading: "lazy",
-              scrolling: "auto"
-            }
-          );
+          content = /* @__PURE__ */ React14.createElement("iframe", {
+            className: "notion-asset-object-fit",
+            style: assetStyle,
+            src,
+            title: `iframe ${block.type}`,
+            frameBorder: "0",
+            allowFullScreen: true,
+            loading: "lazy",
+            scrolling: "auto"
+          });
         }
       }
     }
@@ -1390,18 +1346,17 @@ var Asset = ({ block, zoomable = true, children }) => {
     const src = mapImageUrl(source, block);
     const caption = getTextContent((_j = block.properties) == null ? void 0 : _j.caption);
     const alt = caption || "notion image";
-    content = /* @__PURE__ */ React15.createElement(
-      LazyImage,
-      {
-        src,
-        alt,
-        zoomable,
-        height: style.height,
-        style: assetStyle
-      }
-    );
+    content = /* @__PURE__ */ React14.createElement(LazyImage, {
+      src,
+      alt,
+      zoomable,
+      height: style.height,
+      style: assetStyle
+    });
   }
-  return /* @__PURE__ */ React15.createElement(React15.Fragment, null, /* @__PURE__ */ React15.createElement("div", { style }, content, block.type === "image" && children), block.type !== "image" && children);
+  return /* @__PURE__ */ React14.createElement(React14.Fragment, null, /* @__PURE__ */ React14.createElement("div", {
+    style
+  }, content, block.type === "image" && children), block.type !== "image" && children);
 };
 
 // src/components/asset-wrapper.tsx
@@ -1421,32 +1376,32 @@ var AssetWrapper = ({ blockId, block }) => {
       }
     }
   }
-  const figure = /* @__PURE__ */ React16.createElement(
-    "figure",
-    {
-      className: cs(
-        "notion-asset-wrapper",
-        `notion-asset-wrapper-${block.type}`,
-        ((_d = value.format) == null ? void 0 : _d.block_full_width) && "notion-asset-wrapper-full",
-        blockId
-      )
-    },
-    /* @__PURE__ */ React16.createElement(Asset, { block: value, zoomable: zoom && !isURL }, ((_e = value == null ? void 0 : value.properties) == null ? void 0 : _e.caption) && !isURL && /* @__PURE__ */ React16.createElement("figcaption", { className: "notion-asset-caption" }, /* @__PURE__ */ React16.createElement(Text, { value: value.properties.caption, block })))
-  );
+  const figure = /* @__PURE__ */ React15.createElement("figure", {
+    className: cs(
+      "notion-asset-wrapper",
+      `notion-asset-wrapper-${block.type}`,
+      ((_d = value.format) == null ? void 0 : _d.block_full_width) && "notion-asset-wrapper-full",
+      blockId
+    )
+  }, /* @__PURE__ */ React15.createElement(Asset, {
+    block: value,
+    zoomable: zoom && !isURL
+  }, ((_e = value == null ? void 0 : value.properties) == null ? void 0 : _e.caption) && !isURL && /* @__PURE__ */ React15.createElement("figcaption", {
+    className: "notion-asset-caption"
+  }, /* @__PURE__ */ React15.createElement(Text, {
+    value: value.properties.caption,
+    block
+  }))));
   if (isURL) {
     const caption = (_f = value == null ? void 0 : value.properties) == null ? void 0 : _f.caption[0][0];
     const id = parsePageId(caption, { uuid: true });
     const isPage = caption.charAt(0) === "/" && id;
     const captionHostname = extractHostname(caption);
-    return /* @__PURE__ */ React16.createElement(
-      components.PageLink,
-      {
-        style: urlStyle,
-        href: isPage ? mapPageUrl(id) : caption,
-        target: captionHostname && captionHostname !== rootDomain && !caption.startsWith("/") ? "blank_" : null
-      },
-      figure
-    );
+    return /* @__PURE__ */ React15.createElement(components.PageLink, {
+      style: urlStyle,
+      href: isPage ? mapPageUrl(id) : caption,
+      target: captionHostname && captionHostname !== rootDomain && !caption.startsWith("/") ? "blank_" : null
+    }, figure);
   }
   return figure;
 };
@@ -1467,12 +1422,16 @@ function extractHostname(url) {
 }
 
 // src/components/checkbox.tsx
-import * as React18 from "react";
+import * as React17 from "react";
 
 // src/icons/check.tsx
-import * as React17 from "react";
+import * as React16 from "react";
 function SvgCheck(props) {
-  return /* @__PURE__ */ React17.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React17.createElement("path", { d: "M5.5 12L14 3.5 12.5 2l-7 7-4-4.003L0 6.499z" }));
+  return /* @__PURE__ */ React16.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React16.createElement("path", {
+    d: "M5.5 12L14 3.5 12.5 2l-7 7-4-4.003L0 6.499z"
+  }));
 }
 var check_default = SvgCheck;
 
@@ -1480,18 +1439,24 @@ var check_default = SvgCheck;
 var Checkbox = ({ isChecked }) => {
   let content = null;
   if (isChecked) {
-    content = /* @__PURE__ */ React18.createElement("div", { className: "notion-property-checkbox-checked" }, /* @__PURE__ */ React18.createElement(check_default, null));
+    content = /* @__PURE__ */ React17.createElement("div", {
+      className: "notion-property-checkbox-checked"
+    }, /* @__PURE__ */ React17.createElement(check_default, null));
   } else {
-    content = /* @__PURE__ */ React18.createElement("div", { className: "notion-property-checkbox-unchecked" });
+    content = /* @__PURE__ */ React17.createElement("div", {
+      className: "notion-property-checkbox-unchecked"
+    });
   }
-  return /* @__PURE__ */ React18.createElement("span", { className: "notion-property notion-property-checkbox" }, content);
+  return /* @__PURE__ */ React17.createElement("span", {
+    className: "notion-property notion-property-checkbox"
+  }, content);
 };
 
 // src/next.tsx
-import * as React19 from "react";
+import * as React18 from "react";
 import isEqual from "react-fast-compare";
 var wrapNextImage = (NextImage) => {
-  return React19.memo(function ReactNotionXNextImage(_a) {
+  return React18.memo(function ReactNotionXNextImage(_a) {
     var _b = _a, {
       src,
       alt,
@@ -1512,19 +1477,16 @@ var wrapNextImage = (NextImage) => {
     if (!layout) {
       layout = width && height ? "intrinsic" : "fill";
     }
-    return /* @__PURE__ */ React19.createElement(
-      NextImage,
-      __spreadValues({
-        className,
-        src,
-        alt,
-        width: layout === "intrinsic" && width,
-        height: layout === "intrinsic" && height,
-        objectFit: style == null ? void 0 : style.objectFit,
-        objectPosition: style == null ? void 0 : style.objectPosition,
-        layout
-      }, rest)
-    );
+    return /* @__PURE__ */ React18.createElement(NextImage, __spreadValues({
+      className,
+      src,
+      alt,
+      width: layout === "intrinsic" && width,
+      height: layout === "intrinsic" && height,
+      objectFit: style == null ? void 0 : style.objectFit,
+      objectPosition: style == null ? void 0 : style.objectPosition,
+      layout
+    }, rest));
   }, isEqual);
 };
 var wrapNextLink = (NextLink) => function ReactNotionXNextLink(_a) {
@@ -1547,28 +1509,27 @@ var wrapNextLink = (NextLink) => function ReactNotionXNextLink(_a) {
     "shallow",
     "locale"
   ]);
-  return /* @__PURE__ */ React19.createElement(
-    NextLink,
-    {
-      href,
-      as,
-      passHref,
-      prefetch,
-      replace,
-      scroll,
-      shallow,
-      locale
-    },
-    /* @__PURE__ */ React19.createElement("a", __spreadValues({}, linkProps))
-  );
+  return /* @__PURE__ */ React18.createElement(NextLink, {
+    href,
+    as,
+    passHref,
+    prefetch,
+    replace,
+    scroll,
+    shallow,
+    locale
+  }, /* @__PURE__ */ React18.createElement("a", __spreadValues({}, linkProps)));
 };
 
 // src/context.tsx
-var DefaultLink = (props) => /* @__PURE__ */ React20.createElement("a", __spreadValues({ target: "_blank", rel: "noopener noreferrer" }, props));
-var DefaultLinkMemo = React20.memo(DefaultLink);
-var DefaultPageLink = (props) => /* @__PURE__ */ React20.createElement("a", __spreadValues({}, props));
-var DefaultPageLinkMemo = React20.memo(DefaultPageLink);
-var DefaultEmbed = (props) => /* @__PURE__ */ React20.createElement(AssetWrapper, __spreadValues({}, props));
+var DefaultLink = (props) => /* @__PURE__ */ React19.createElement("a", __spreadValues({
+  target: "_blank",
+  rel: "noopener noreferrer"
+}, props));
+var DefaultLinkMemo = React19.memo(DefaultLink);
+var DefaultPageLink = (props) => /* @__PURE__ */ React19.createElement("a", __spreadValues({}, props));
+var DefaultPageLinkMemo = React19.memo(DefaultPageLink);
+var DefaultEmbed = (props) => /* @__PURE__ */ React19.createElement(AssetWrapper, __spreadValues({}, props));
 var DefaultHeader = Header;
 var dummyComponent = (name) => () => {
   console.warn(
@@ -1579,17 +1540,14 @@ var dummyComponent = (name) => () => {
 var dummyOverrideFn = (_, defaultValueFn) => defaultValueFn();
 var defaultComponents = {
   Image: null,
-  // disable custom images by default
   Link: DefaultLinkMemo,
   PageLink: DefaultPageLinkMemo,
   Checkbox,
   Callout: void 0,
-  // use the built-in callout rendering by default
   Code: dummyComponent("Code"),
   Equation: dummyComponent("Equation"),
   Collection: dummyComponent("Collection"),
   Property: void 0,
-  // use the built-in property rendering by default
   propertyTextValue: dummyOverrideFn,
   propertySelectValue: dummyOverrideFn,
   propertyRelationValue: dummyOverrideFn,
@@ -1640,7 +1598,7 @@ var defaultNotionContext = {
   defaultPageCoverPosition: 0.5,
   zoom: null
 };
-var ctx = React20.createContext(defaultNotionContext);
+var ctx = React19.createContext(defaultNotionContext);
 var NotionContextProvider = (_a) => {
   var _b = _a, {
     components: themeComponents = {},
@@ -1660,7 +1618,7 @@ var NotionContextProvider = (_a) => {
       delete rest[key];
     }
   }
-  const wrappedThemeComponents = React20.useMemo(
+  const wrappedThemeComponents = React19.useMemo(
     () => __spreadValues({}, themeComponents),
     [themeComponents]
   );
@@ -1675,7 +1633,7 @@ var NotionContextProvider = (_a) => {
       delete wrappedThemeComponents[key];
     }
   }
-  const value = React20.useMemo(
+  const value = React19.useMemo(
     () => __spreadProps(__spreadValues(__spreadValues({}, defaultNotionContext), rest), {
       rootPageId,
       mapPageUrl: mapPageUrl != null ? mapPageUrl : defaultMapPageUrl(rootPageId),
@@ -1684,22 +1642,29 @@ var NotionContextProvider = (_a) => {
     }),
     [mapImageUrl, mapPageUrl, wrappedThemeComponents, rootPageId, rest]
   );
-  return /* @__PURE__ */ React20.createElement(ctx.Provider, { value }, children);
+  return /* @__PURE__ */ React19.createElement(ctx.Provider, {
+    value
+  }, children);
 };
 var NotionContextConsumer = ctx.Consumer;
 var useNotionContext = () => {
-  return React20.useContext(ctx);
+  return React19.useContext(ctx);
 };
 
 // src/components/text.tsx
 var Text = ({ value, block, linkProps, linkProtocol }) => {
   const { components, recordMap, mapPageUrl, mapImageUrl, rootDomain } = useNotionContext();
-  return /* @__PURE__ */ React21.createElement(React21.Fragment, null, value == null ? void 0 : value.map(([text, decorations], index) => {
+  return /* @__PURE__ */ React20.createElement(React20.Fragment, null, value == null ? void 0 : value.map(([text, decorations], index) => {
     if (!decorations) {
       if (text === ",") {
-        return /* @__PURE__ */ React21.createElement("span", { key: index, style: { padding: "0.5em" } });
+        return /* @__PURE__ */ React20.createElement("span", {
+          key: index,
+          style: { padding: "0.5em" }
+        });
       } else {
-        return /* @__PURE__ */ React21.createElement(React21.Fragment, { key: index }, text);
+        return /* @__PURE__ */ React20.createElement(React20.Fragment, {
+          key: index
+        }, text);
       }
     }
     const formatted = decorations.reduce(
@@ -1713,14 +1678,12 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
               console.log('"p" missing block', blockId);
               return null;
             }
-            return /* @__PURE__ */ React21.createElement(
-              components.PageLink,
-              {
-                className: "notion-link",
-                href: mapPageUrl(blockId)
-              },
-              /* @__PURE__ */ React21.createElement(PageTitle, { block: linkedBlock })
-            );
+            return /* @__PURE__ */ React20.createElement(components.PageLink, {
+              className: "notion-link",
+              href: mapPageUrl(blockId)
+            }, /* @__PURE__ */ React20.createElement(PageTitle, {
+              block: linkedBlock
+            }));
           }
           case "\u2023": {
             const linkType = decorator[1][0];
@@ -1733,14 +1696,11 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
                   return null;
                 }
                 const name = [user.given_name, user.family_name].filter(Boolean).join(" ");
-                return /* @__PURE__ */ React21.createElement(
-                  GracefulImage,
-                  {
-                    className: "notion-user",
-                    src: mapImageUrl(user.profile_photo, block),
-                    alt: name
-                  }
-                );
+                return /* @__PURE__ */ React20.createElement(GracefulImage, {
+                  className: "notion-user",
+                  src: mapImageUrl(user.profile_photo, block),
+                  alt: name
+                });
               }
               default: {
                 const linkedBlock = (_c = recordMap.block[id]) == null ? void 0 : _c.value;
@@ -1748,34 +1708,41 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
                   console.log('"\u2023" missing block', linkType, id);
                   return null;
                 }
-                return /* @__PURE__ */ React21.createElement(
-                  components.PageLink,
-                  __spreadProps(__spreadValues({
-                    className: "notion-link",
-                    href: mapPageUrl(id)
-                  }, linkProps), {
-                    target: "_blank",
-                    rel: "noopener noreferrer"
-                  }),
-                  /* @__PURE__ */ React21.createElement(PageTitle, { block: linkedBlock })
-                );
+                return /* @__PURE__ */ React20.createElement(components.PageLink, __spreadProps(__spreadValues({
+                  className: "notion-link",
+                  href: mapPageUrl(id)
+                }, linkProps), {
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                }), /* @__PURE__ */ React20.createElement(PageTitle, {
+                  block: linkedBlock
+                }));
               }
             }
           }
           case "h":
-            return /* @__PURE__ */ React21.createElement("span", { className: `notion-${decorator[1]}` }, element);
+            return /* @__PURE__ */ React20.createElement("span", {
+              className: `notion-${decorator[1]}`
+            }, element);
           case "c":
-            return /* @__PURE__ */ React21.createElement("code", { className: "notion-inline-code" }, element);
+            return /* @__PURE__ */ React20.createElement("code", {
+              className: "notion-inline-code"
+            }, element);
           case "b":
-            return /* @__PURE__ */ React21.createElement("b", null, element);
+            return /* @__PURE__ */ React20.createElement("b", null, element);
           case "i":
-            return /* @__PURE__ */ React21.createElement("em", null, element);
+            return /* @__PURE__ */ React20.createElement("em", null, element);
           case "s":
-            return /* @__PURE__ */ React21.createElement("s", null, element);
+            return /* @__PURE__ */ React20.createElement("s", null, element);
           case "_":
-            return /* @__PURE__ */ React21.createElement("span", { className: "notion-inline-underscore" }, element);
+            return /* @__PURE__ */ React20.createElement("span", {
+              className: "notion-inline-underscore"
+            }, element);
           case "e":
-            return /* @__PURE__ */ React21.createElement(components.Equation, { math: decorator[1], inline: true });
+            return /* @__PURE__ */ React20.createElement(components.Equation, {
+              math: decorator[1],
+              inline: true
+            });
           case "m":
             return element;
           case "a": {
@@ -1784,23 +1751,15 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
             const id = parsePageId2(pathname, { uuid: true });
             if ((v[0] === "/" || v.includes(rootDomain)) && id) {
               const href = v.includes(rootDomain) ? v : `${mapPageUrl(id)}${getHashFragmentValue(v)}`;
-              return /* @__PURE__ */ React21.createElement(
-                components.PageLink,
-                __spreadValues({
-                  className: "notion-link",
-                  href
-                }, linkProps),
-                element
-              );
+              return /* @__PURE__ */ React20.createElement(components.PageLink, __spreadValues({
+                className: "notion-link",
+                href
+              }, linkProps), element);
             } else {
-              return /* @__PURE__ */ React21.createElement(
-                components.Link,
-                __spreadValues({
-                  className: "notion-link",
-                  href: linkProtocol ? `${linkProtocol}:${decorator[1]}` : decorator[1]
-                }, linkProps),
-                element
-              );
+              return /* @__PURE__ */ React20.createElement(components.Link, __spreadValues({
+                className: "notion-link",
+                href: linkProtocol ? `${linkProtocol}:${decorator[1]}` : decorator[1]
+              }, linkProps), element);
             }
           }
           case "d": {
@@ -1809,10 +1768,6 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
             if (type === "date") {
               const startDate = v.start_date;
               return formatDate(startDate);
-            } else if (type === "datetime") {
-              const startDate = v.start_date;
-              const startTime = v.start_time;
-              return `${formatDate(startDate)} ${startTime}`;
             } else if (type === "daterange") {
               const startDate = v.start_date;
               const endDate = v.end_date;
@@ -1829,19 +1784,19 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
               return null;
             }
             const name = [user.given_name, user.family_name].filter(Boolean).join(" ");
-            return /* @__PURE__ */ React21.createElement(
-              GracefulImage,
-              {
-                className: "notion-user",
-                src: mapImageUrl(user.profile_photo, block),
-                alt: name
-              }
-            );
+            return /* @__PURE__ */ React20.createElement(GracefulImage, {
+              className: "notion-user",
+              src: mapImageUrl(user.profile_photo, block),
+              alt: name
+            });
           }
           case "eoi": {
             const blockId = decorator[1];
             const externalObjectInstance = (_e = recordMap.block[blockId]) == null ? void 0 : _e.value;
-            return /* @__PURE__ */ React21.createElement(EOI, { block: externalObjectInstance, inline: true });
+            return /* @__PURE__ */ React20.createElement(EOI, {
+              block: externalObjectInstance,
+              inline: true
+            });
           }
           default:
             if (true) {
@@ -1850,52 +1805,43 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
             return element;
         }
       },
-      /* @__PURE__ */ React21.createElement(React21.Fragment, null, text)
+      /* @__PURE__ */ React20.createElement(React20.Fragment, null, text)
     );
-    return /* @__PURE__ */ React21.createElement(React21.Fragment, { key: index }, formatted);
+    return /* @__PURE__ */ React20.createElement(React20.Fragment, {
+      key: index
+    }, formatted);
   }));
 };
 
 // src/icons/copy.tsx
-import * as React22 from "react";
+import * as React21 from "react";
 function SvgCopy(props) {
-  return /* @__PURE__ */ React22.createElement(
-    "svg",
-    __spreadValues({
-      fill: "currentColor",
-      viewBox: "0 0 16 16",
-      width: "1em",
-      version: "1.1"
-    }, props),
-    /* @__PURE__ */ React22.createElement(
-      "path",
-      {
-        fillRule: "evenodd",
-        d: "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"
-      }
-    ),
-    /* @__PURE__ */ React22.createElement(
-      "path",
-      {
-        fillRule: "evenodd",
-        d: "M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"
-      }
-    )
-  );
+  return /* @__PURE__ */ React21.createElement("svg", __spreadValues({
+    fill: "currentColor",
+    viewBox: "0 0 16 16",
+    width: "1em",
+    version: "1.1"
+  }, props), /* @__PURE__ */ React21.createElement("path", {
+    fillRule: "evenodd",
+    d: "M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"
+  }), /* @__PURE__ */ React21.createElement("path", {
+    fillRule: "evenodd",
+    d: "M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"
+  }));
 }
 var copy_default = SvgCopy;
 
 // src/third-party/code.tsx
 var Code = ({ block, defaultLanguage = "typescript", className }) => {
   var _a, _b, _c;
-  const [isCopied, setIsCopied] = React23.useState(false);
-  const copyTimeout = React23.useRef();
+  const [isCopied, setIsCopied] = React22.useState(false);
+  const copyTimeout = React22.useRef();
   const { recordMap } = useNotionContext();
   const content = getBlockTitle4(block, recordMap);
   const language = (((_c = (_b = (_a = block.properties) == null ? void 0 : _a.language) == null ? void 0 : _b[0]) == null ? void 0 : _c[0]) || defaultLanguage).toLowerCase();
   const caption = block.properties.caption;
-  const codeRef = React23.useRef();
-  React23.useEffect(() => {
+  const codeRef = React22.useRef();
+  React22.useEffect(() => {
     if (codeRef.current) {
       try {
         highlightElement(codeRef.current);
@@ -1904,7 +1850,7 @@ var Code = ({ block, defaultLanguage = "typescript", className }) => {
       }
     }
   }, [codeRef]);
-  const onClickCopyToClipboard = React23.useCallback(() => {
+  const onClickCopyToClipboard = React22.useCallback(() => {
     (0, import_clipboard_copy.default)(content);
     setIsCopied(true);
     if (copyTimeout.current) {
@@ -1915,15 +1861,28 @@ var Code = ({ block, defaultLanguage = "typescript", className }) => {
       setIsCopied(false);
     }, 1200);
   }, [content, copyTimeout]);
-  const copyButton = /* @__PURE__ */ React23.createElement("div", { className: "notion-code-copy-button", onClick: onClickCopyToClipboard }, /* @__PURE__ */ React23.createElement(copy_default, null));
-  return /* @__PURE__ */ React23.createElement(React23.Fragment, null, /* @__PURE__ */ React23.createElement("pre", { className: cs("notion-code", className) }, /* @__PURE__ */ React23.createElement("div", { className: "notion-code-copy" }, copyButton, isCopied && /* @__PURE__ */ React23.createElement("div", { className: "notion-code-copy-tooltip" }, /* @__PURE__ */ React23.createElement("div", null, isCopied ? "Copied" : "Copy"))), /* @__PURE__ */ React23.createElement("code", { className: `language-${language}`, ref: codeRef }, content)), caption && /* @__PURE__ */ React23.createElement("figcaption", { className: "notion-asset-caption" }, /* @__PURE__ */ React23.createElement(Text, { value: caption, block })));
+  const copyButton = /* @__PURE__ */ React22.createElement("div", {
+    className: "notion-code-copy-button",
+    onClick: onClickCopyToClipboard
+  }, /* @__PURE__ */ React22.createElement(copy_default, null));
+  return /* @__PURE__ */ React22.createElement(React22.Fragment, null, /* @__PURE__ */ React22.createElement("pre", {
+    className: cs("notion-code", className)
+  }, /* @__PURE__ */ React22.createElement("div", {
+    className: "notion-code-copy"
+  }, copyButton, isCopied && /* @__PURE__ */ React22.createElement("div", {
+    className: "notion-code-copy-tooltip"
+  }, /* @__PURE__ */ React22.createElement("div", null, isCopied ? "Copied" : "Copy"))), /* @__PURE__ */ React22.createElement("code", {
+    className: `language-${language}`,
+    ref: codeRef
+  }, content)), caption && /* @__PURE__ */ React22.createElement("figcaption", {
+    className: "notion-asset-caption"
+  }, /* @__PURE__ */ React22.createElement(Text, {
+    value: caption,
+    block
+  })));
 };
 export {
   Code
 };
-/*! Bundled license information:
-
-clipboard-copy/index.js:
-  (*! clipboard-copy. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> *)
-*/
+/*! clipboard-copy. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 //# sourceMappingURL=code.js.map

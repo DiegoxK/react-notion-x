@@ -45,17 +45,9 @@ var __copyProps = (to, from, except, desc) => {
   return to;
 };
 var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
-var __publicField = (obj, key, value) => {
-  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
-  return value;
-};
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -77,9 +69,9 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 
-// node_modules/.pnpm/lodash.throttle@4.1.1/node_modules/lodash.throttle/index.js
+// ../../node_modules/lodash.throttle/index.js
 var require_lodash = __commonJS({
-  "node_modules/.pnpm/lodash.throttle@4.1.1/node_modules/lodash.throttle/index.js"(exports, module) {
+  "../../node_modules/lodash.throttle/index.js"(exports, module) {
     var FUNC_ERROR_TEXT = "Expected a function";
     var NAN = 0 / 0;
     var symbolTag = "[object Symbol]";
@@ -225,36 +217,9 @@ var require_lodash = __commonJS({
   }
 });
 
-// node_modules/.pnpm/@babel+runtime@7.23.9/node_modules/@babel/runtime/helpers/interopRequireDefault.js
-var require_interopRequireDefault = __commonJS({
-  "node_modules/.pnpm/@babel+runtime@7.23.9/node_modules/@babel/runtime/helpers/interopRequireDefault.js"(exports, module) {
-    function _interopRequireDefault(obj) {
-      return obj && obj.__esModule ? obj : {
-        "default": obj
-      };
-    }
-    module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  }
-});
-
-// node_modules/.pnpm/@babel+runtime@7.23.9/node_modules/@babel/runtime/helpers/typeof.js
-var require_typeof = __commonJS({
-  "node_modules/.pnpm/@babel+runtime@7.23.9/node_modules/@babel/runtime/helpers/typeof.js"(exports, module) {
-    function _typeof(o) {
-      "@babel/helpers - typeof";
-      return module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o2) {
-        return typeof o2;
-      } : function(o2) {
-        return o2 && "function" == typeof Symbol && o2.constructor === Symbol && o2 !== Symbol.prototype ? "symbol" : typeof o2;
-      }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof(o);
-    }
-    module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/requiredArgs/index.js
+// ../../node_modules/date-fns/_lib/requiredArgs/index.js
 var require_requiredArgs = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/requiredArgs/index.js"(exports, module) {
+  "../../node_modules/date-fns/_lib/requiredArgs/index.js"(exports, module) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
@@ -269,60 +234,61 @@ var require_requiredArgs = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/isDate/index.js
+// ../../node_modules/date-fns/isDate/index.js
 var require_isDate = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/isDate/index.js"(exports, module) {
+  "../../node_modules/date-fns/isDate/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = isDate;
-    var _typeof2 = _interopRequireDefault(require_typeof());
     var _index = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function isDate(value) {
       (0, _index.default)(1, arguments);
-      return value instanceof Date || (0, _typeof2.default)(value) === "object" && Object.prototype.toString.call(value) === "[object Date]";
+      return value instanceof Date || typeof value === "object" && Object.prototype.toString.call(value) === "[object Date]";
     }
     module.exports = exports.default;
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/toDate/index.js
+// ../../node_modules/date-fns/toDate/index.js
 var require_toDate = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/toDate/index.js"(exports, module) {
+  "../../node_modules/date-fns/toDate/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = toDate;
-    var _typeof2 = _interopRequireDefault(require_typeof());
     var _index = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function toDate(argument) {
       (0, _index.default)(1, arguments);
       var argStr = Object.prototype.toString.call(argument);
-      if (argument instanceof Date || (0, _typeof2.default)(argument) === "object" && argStr === "[object Date]") {
+      if (argument instanceof Date || typeof argument === "object" && argStr === "[object Date]") {
         return new Date(argument.getTime());
       } else if (typeof argument === "number" || argStr === "[object Number]") {
         return new Date(argument);
       } else {
         if ((typeof argument === "string" || argStr === "[object String]") && typeof console !== "undefined") {
-          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule");
           console.warn(new Error().stack);
         }
-        return /* @__PURE__ */ new Date(NaN);
+        return new Date(NaN);
       }
     }
     module.exports = exports.default;
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/isValid/index.js
+// ../../node_modules/date-fns/isValid/index.js
 var require_isValid = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/isValid/index.js"(exports, module) {
+  "../../node_modules/date-fns/isValid/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -330,6 +296,9 @@ var require_isValid = __commonJS({
     var _index = _interopRequireDefault(require_isDate());
     var _index2 = _interopRequireDefault(require_toDate());
     var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function isValid(dirtyDate) {
       (0, _index3.default)(1, arguments);
       if (!(0, _index.default)(dirtyDate) && typeof dirtyDate !== "number") {
@@ -342,1252 +311,9 @@ var require_isValid = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/toInteger/index.js
-var require_toInteger = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/toInteger/index.js"(exports, module) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = toInteger;
-    function toInteger(dirtyNumber) {
-      if (dirtyNumber === null || dirtyNumber === true || dirtyNumber === false) {
-        return NaN;
-      }
-      var number = Number(dirtyNumber);
-      if (isNaN(number)) {
-        return number;
-      }
-      return number < 0 ? Math.ceil(number) : Math.floor(number);
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/addMilliseconds/index.js
-var require_addMilliseconds = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/addMilliseconds/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = addMilliseconds;
-    var _index = _interopRequireDefault(require_toInteger());
-    var _index2 = _interopRequireDefault(require_toDate());
-    var _index3 = _interopRequireDefault(require_requiredArgs());
-    function addMilliseconds(dirtyDate, dirtyAmount) {
-      (0, _index3.default)(2, arguments);
-      var timestamp = (0, _index2.default)(dirtyDate).getTime();
-      var amount = (0, _index.default)(dirtyAmount);
-      return new Date(timestamp + amount);
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/subMilliseconds/index.js
-var require_subMilliseconds = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/subMilliseconds/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = subMilliseconds;
-    var _index = _interopRequireDefault(require_addMilliseconds());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    var _index3 = _interopRequireDefault(require_toInteger());
-    function subMilliseconds(dirtyDate, dirtyAmount) {
-      (0, _index2.default)(2, arguments);
-      var amount = (0, _index3.default)(dirtyAmount);
-      return (0, _index.default)(dirtyDate, -amount);
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCDayOfYear/index.js
-var require_getUTCDayOfYear = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCDayOfYear/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = getUTCDayOfYear;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    var MILLISECONDS_IN_DAY = 864e5;
-    function getUTCDayOfYear(dirtyDate) {
-      (0, _index2.default)(1, arguments);
-      var date = (0, _index.default)(dirtyDate);
-      var timestamp = date.getTime();
-      date.setUTCMonth(0, 1);
-      date.setUTCHours(0, 0, 0, 0);
-      var startOfYearTimestamp = date.getTime();
-      var difference = timestamp - startOfYearTimestamp;
-      return Math.floor(difference / MILLISECONDS_IN_DAY) + 1;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCISOWeek/index.js
-var require_startOfUTCISOWeek = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCISOWeek/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = startOfUTCISOWeek;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    function startOfUTCISOWeek(dirtyDate) {
-      (0, _index2.default)(1, arguments);
-      var weekStartsOn = 1;
-      var date = (0, _index.default)(dirtyDate);
-      var day = date.getUTCDay();
-      var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
-      date.setUTCDate(date.getUTCDate() - diff);
-      date.setUTCHours(0, 0, 0, 0);
-      return date;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCISOWeekYear/index.js
-var require_getUTCISOWeekYear = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCISOWeekYear/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = getUTCISOWeekYear;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    var _index3 = _interopRequireDefault(require_startOfUTCISOWeek());
-    function getUTCISOWeekYear(dirtyDate) {
-      (0, _index2.default)(1, arguments);
-      var date = (0, _index.default)(dirtyDate);
-      var year = date.getUTCFullYear();
-      var fourthOfJanuaryOfNextYear = /* @__PURE__ */ new Date(0);
-      fourthOfJanuaryOfNextYear.setUTCFullYear(year + 1, 0, 4);
-      fourthOfJanuaryOfNextYear.setUTCHours(0, 0, 0, 0);
-      var startOfNextYear = (0, _index3.default)(fourthOfJanuaryOfNextYear);
-      var fourthOfJanuaryOfThisYear = /* @__PURE__ */ new Date(0);
-      fourthOfJanuaryOfThisYear.setUTCFullYear(year, 0, 4);
-      fourthOfJanuaryOfThisYear.setUTCHours(0, 0, 0, 0);
-      var startOfThisYear = (0, _index3.default)(fourthOfJanuaryOfThisYear);
-      if (date.getTime() >= startOfNextYear.getTime()) {
-        return year + 1;
-      } else if (date.getTime() >= startOfThisYear.getTime()) {
-        return year;
-      } else {
-        return year - 1;
-      }
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCISOWeekYear/index.js
-var require_startOfUTCISOWeekYear = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCISOWeekYear/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = startOfUTCISOWeekYear;
-    var _index = _interopRequireDefault(require_getUTCISOWeekYear());
-    var _index2 = _interopRequireDefault(require_startOfUTCISOWeek());
-    var _index3 = _interopRequireDefault(require_requiredArgs());
-    function startOfUTCISOWeekYear(dirtyDate) {
-      (0, _index3.default)(1, arguments);
-      var year = (0, _index.default)(dirtyDate);
-      var fourthOfJanuary = /* @__PURE__ */ new Date(0);
-      fourthOfJanuary.setUTCFullYear(year, 0, 4);
-      fourthOfJanuary.setUTCHours(0, 0, 0, 0);
-      var date = (0, _index2.default)(fourthOfJanuary);
-      return date;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCISOWeek/index.js
-var require_getUTCISOWeek = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCISOWeek/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = getUTCISOWeek;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_startOfUTCISOWeek());
-    var _index3 = _interopRequireDefault(require_startOfUTCISOWeekYear());
-    var _index4 = _interopRequireDefault(require_requiredArgs());
-    var MILLISECONDS_IN_WEEK = 6048e5;
-    function getUTCISOWeek(dirtyDate) {
-      (0, _index4.default)(1, arguments);
-      var date = (0, _index.default)(dirtyDate);
-      var diff = (0, _index2.default)(date).getTime() - (0, _index3.default)(date).getTime();
-      return Math.round(diff / MILLISECONDS_IN_WEEK) + 1;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/defaultOptions/index.js
-var require_defaultOptions = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/defaultOptions/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.getDefaultOptions = getDefaultOptions;
-    exports.setDefaultOptions = setDefaultOptions;
-    var defaultOptions = {};
-    function getDefaultOptions() {
-      return defaultOptions;
-    }
-    function setDefaultOptions(newOptions) {
-      defaultOptions = newOptions;
-    }
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCWeek/index.js
-var require_startOfUTCWeek = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCWeek/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = startOfUTCWeek;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    var _index3 = _interopRequireDefault(require_toInteger());
-    var _index4 = require_defaultOptions();
-    function startOfUTCWeek(dirtyDate, options) {
-      var _ref, _ref2, _ref3, _options$weekStartsOn, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-      (0, _index2.default)(1, arguments);
-      var defaultOptions = (0, _index4.getDefaultOptions)();
-      var weekStartsOn = (0, _index3.default)((_ref = (_ref2 = (_ref3 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.weekStartsOn) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions.weekStartsOn) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.weekStartsOn) !== null && _ref !== void 0 ? _ref : 0);
-      if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
-        throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-      }
-      var date = (0, _index.default)(dirtyDate);
-      var day = date.getUTCDay();
-      var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
-      date.setUTCDate(date.getUTCDate() - diff);
-      date.setUTCHours(0, 0, 0, 0);
-      return date;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCWeekYear/index.js
-var require_getUTCWeekYear = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCWeekYear/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = getUTCWeekYear;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    var _index3 = _interopRequireDefault(require_startOfUTCWeek());
-    var _index4 = _interopRequireDefault(require_toInteger());
-    var _index5 = require_defaultOptions();
-    function getUTCWeekYear(dirtyDate, options) {
-      var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-      (0, _index2.default)(1, arguments);
-      var date = (0, _index.default)(dirtyDate);
-      var year = date.getUTCFullYear();
-      var defaultOptions = (0, _index5.getDefaultOptions)();
-      var firstWeekContainsDate = (0, _index4.default)((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
-      if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
-        throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-      }
-      var firstWeekOfNextYear = /* @__PURE__ */ new Date(0);
-      firstWeekOfNextYear.setUTCFullYear(year + 1, 0, firstWeekContainsDate);
-      firstWeekOfNextYear.setUTCHours(0, 0, 0, 0);
-      var startOfNextYear = (0, _index3.default)(firstWeekOfNextYear, options);
-      var firstWeekOfThisYear = /* @__PURE__ */ new Date(0);
-      firstWeekOfThisYear.setUTCFullYear(year, 0, firstWeekContainsDate);
-      firstWeekOfThisYear.setUTCHours(0, 0, 0, 0);
-      var startOfThisYear = (0, _index3.default)(firstWeekOfThisYear, options);
-      if (date.getTime() >= startOfNextYear.getTime()) {
-        return year + 1;
-      } else if (date.getTime() >= startOfThisYear.getTime()) {
-        return year;
-      } else {
-        return year - 1;
-      }
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCWeekYear/index.js
-var require_startOfUTCWeekYear = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/startOfUTCWeekYear/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = startOfUTCWeekYear;
-    var _index = _interopRequireDefault(require_getUTCWeekYear());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    var _index3 = _interopRequireDefault(require_startOfUTCWeek());
-    var _index4 = _interopRequireDefault(require_toInteger());
-    var _index5 = require_defaultOptions();
-    function startOfUTCWeekYear(dirtyDate, options) {
-      var _ref, _ref2, _ref3, _options$firstWeekCon, _options$locale, _options$locale$optio, _defaultOptions$local, _defaultOptions$local2;
-      (0, _index2.default)(1, arguments);
-      var defaultOptions = (0, _index5.getDefaultOptions)();
-      var firstWeekContainsDate = (0, _index4.default)((_ref = (_ref2 = (_ref3 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale = options.locale) === null || _options$locale === void 0 ? void 0 : (_options$locale$optio = _options$locale.options) === null || _options$locale$optio === void 0 ? void 0 : _options$locale$optio.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : defaultOptions.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : (_defaultOptions$local = defaultOptions.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref !== void 0 ? _ref : 1);
-      var year = (0, _index.default)(dirtyDate, options);
-      var firstWeek = /* @__PURE__ */ new Date(0);
-      firstWeek.setUTCFullYear(year, 0, firstWeekContainsDate);
-      firstWeek.setUTCHours(0, 0, 0, 0);
-      var date = (0, _index3.default)(firstWeek, options);
-      return date;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCWeek/index.js
-var require_getUTCWeek = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getUTCWeek/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = getUTCWeek;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_startOfUTCWeek());
-    var _index3 = _interopRequireDefault(require_startOfUTCWeekYear());
-    var _index4 = _interopRequireDefault(require_requiredArgs());
-    var MILLISECONDS_IN_WEEK = 6048e5;
-    function getUTCWeek(dirtyDate, options) {
-      (0, _index4.default)(1, arguments);
-      var date = (0, _index.default)(dirtyDate);
-      var diff = (0, _index2.default)(date, options).getTime() - (0, _index3.default)(date, options).getTime();
-      return Math.round(diff / MILLISECONDS_IN_WEEK) + 1;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/addLeadingZeros/index.js
-var require_addLeadingZeros = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/addLeadingZeros/index.js"(exports, module) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = addLeadingZeros;
-    function addLeadingZeros(number, targetLength) {
-      var sign = number < 0 ? "-" : "";
-      var output = Math.abs(number).toString();
-      while (output.length < targetLength) {
-        output = "0" + output;
-      }
-      return sign + output;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/format/lightFormatters/index.js
-var require_lightFormatters = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/format/lightFormatters/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = void 0;
-    var _index = _interopRequireDefault(require_addLeadingZeros());
-    var formatters = {
-      // Year
-      y: function y(date, token) {
-        var signedYear = date.getUTCFullYear();
-        var year = signedYear > 0 ? signedYear : 1 - signedYear;
-        return (0, _index.default)(token === "yy" ? year % 100 : year, token.length);
-      },
-      // Month
-      M: function M(date, token) {
-        var month = date.getUTCMonth();
-        return token === "M" ? String(month + 1) : (0, _index.default)(month + 1, 2);
-      },
-      // Day of the month
-      d: function d(date, token) {
-        return (0, _index.default)(date.getUTCDate(), token.length);
-      },
-      // AM or PM
-      a: function a(date, token) {
-        var dayPeriodEnumValue = date.getUTCHours() / 12 >= 1 ? "pm" : "am";
-        switch (token) {
-          case "a":
-          case "aa":
-            return dayPeriodEnumValue.toUpperCase();
-          case "aaa":
-            return dayPeriodEnumValue;
-          case "aaaaa":
-            return dayPeriodEnumValue[0];
-          case "aaaa":
-          default:
-            return dayPeriodEnumValue === "am" ? "a.m." : "p.m.";
-        }
-      },
-      // Hour [1-12]
-      h: function h(date, token) {
-        return (0, _index.default)(date.getUTCHours() % 12 || 12, token.length);
-      },
-      // Hour [0-23]
-      H: function H(date, token) {
-        return (0, _index.default)(date.getUTCHours(), token.length);
-      },
-      // Minute
-      m: function m(date, token) {
-        return (0, _index.default)(date.getUTCMinutes(), token.length);
-      },
-      // Second
-      s: function s(date, token) {
-        return (0, _index.default)(date.getUTCSeconds(), token.length);
-      },
-      // Fraction of second
-      S: function S(date, token) {
-        var numberOfDigits = token.length;
-        var milliseconds = date.getUTCMilliseconds();
-        var fractionalSeconds = Math.floor(milliseconds * Math.pow(10, numberOfDigits - 3));
-        return (0, _index.default)(fractionalSeconds, token.length);
-      }
-    };
-    var _default = formatters;
-    exports.default = _default;
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/format/formatters/index.js
-var require_formatters = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/format/formatters/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = void 0;
-    var _index = _interopRequireDefault(require_getUTCDayOfYear());
-    var _index2 = _interopRequireDefault(require_getUTCISOWeek());
-    var _index3 = _interopRequireDefault(require_getUTCISOWeekYear());
-    var _index4 = _interopRequireDefault(require_getUTCWeek());
-    var _index5 = _interopRequireDefault(require_getUTCWeekYear());
-    var _index6 = _interopRequireDefault(require_addLeadingZeros());
-    var _index7 = _interopRequireDefault(require_lightFormatters());
-    var dayPeriodEnum = {
-      am: "am",
-      pm: "pm",
-      midnight: "midnight",
-      noon: "noon",
-      morning: "morning",
-      afternoon: "afternoon",
-      evening: "evening",
-      night: "night"
-    };
-    var formatters = {
-      // Era
-      G: function G(date, token, localize) {
-        var era = date.getUTCFullYear() > 0 ? 1 : 0;
-        switch (token) {
-          case "G":
-          case "GG":
-          case "GGG":
-            return localize.era(era, {
-              width: "abbreviated"
-            });
-          case "GGGGG":
-            return localize.era(era, {
-              width: "narrow"
-            });
-          case "GGGG":
-          default:
-            return localize.era(era, {
-              width: "wide"
-            });
-        }
-      },
-      // Year
-      y: function y(date, token, localize) {
-        if (token === "yo") {
-          var signedYear = date.getUTCFullYear();
-          var year = signedYear > 0 ? signedYear : 1 - signedYear;
-          return localize.ordinalNumber(year, {
-            unit: "year"
-          });
-        }
-        return _index7.default.y(date, token);
-      },
-      // Local week-numbering year
-      Y: function Y(date, token, localize, options) {
-        var signedWeekYear = (0, _index5.default)(date, options);
-        var weekYear = signedWeekYear > 0 ? signedWeekYear : 1 - signedWeekYear;
-        if (token === "YY") {
-          var twoDigitYear = weekYear % 100;
-          return (0, _index6.default)(twoDigitYear, 2);
-        }
-        if (token === "Yo") {
-          return localize.ordinalNumber(weekYear, {
-            unit: "year"
-          });
-        }
-        return (0, _index6.default)(weekYear, token.length);
-      },
-      // ISO week-numbering year
-      R: function R(date, token) {
-        var isoWeekYear = (0, _index3.default)(date);
-        return (0, _index6.default)(isoWeekYear, token.length);
-      },
-      // Extended year. This is a single number designating the year of this calendar system.
-      // The main difference between `y` and `u` localizers are B.C. years:
-      // | Year | `y` | `u` |
-      // |------|-----|-----|
-      // | AC 1 |   1 |   1 |
-      // | BC 1 |   1 |   0 |
-      // | BC 2 |   2 |  -1 |
-      // Also `yy` always returns the last two digits of a year,
-      // while `uu` pads single digit years to 2 characters and returns other years unchanged.
-      u: function u(date, token) {
-        var year = date.getUTCFullYear();
-        return (0, _index6.default)(year, token.length);
-      },
-      // Quarter
-      Q: function Q(date, token, localize) {
-        var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
-        switch (token) {
-          case "Q":
-            return String(quarter);
-          case "QQ":
-            return (0, _index6.default)(quarter, 2);
-          case "Qo":
-            return localize.ordinalNumber(quarter, {
-              unit: "quarter"
-            });
-          case "QQQ":
-            return localize.quarter(quarter, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "QQQQQ":
-            return localize.quarter(quarter, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "QQQQ":
-          default:
-            return localize.quarter(quarter, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // Stand-alone quarter
-      q: function q(date, token, localize) {
-        var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
-        switch (token) {
-          case "q":
-            return String(quarter);
-          case "qq":
-            return (0, _index6.default)(quarter, 2);
-          case "qo":
-            return localize.ordinalNumber(quarter, {
-              unit: "quarter"
-            });
-          case "qqq":
-            return localize.quarter(quarter, {
-              width: "abbreviated",
-              context: "standalone"
-            });
-          case "qqqqq":
-            return localize.quarter(quarter, {
-              width: "narrow",
-              context: "standalone"
-            });
-          case "qqqq":
-          default:
-            return localize.quarter(quarter, {
-              width: "wide",
-              context: "standalone"
-            });
-        }
-      },
-      // Month
-      M: function M(date, token, localize) {
-        var month = date.getUTCMonth();
-        switch (token) {
-          case "M":
-          case "MM":
-            return _index7.default.M(date, token);
-          case "Mo":
-            return localize.ordinalNumber(month + 1, {
-              unit: "month"
-            });
-          case "MMM":
-            return localize.month(month, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "MMMMM":
-            return localize.month(month, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "MMMM":
-          default:
-            return localize.month(month, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // Stand-alone month
-      L: function L(date, token, localize) {
-        var month = date.getUTCMonth();
-        switch (token) {
-          case "L":
-            return String(month + 1);
-          case "LL":
-            return (0, _index6.default)(month + 1, 2);
-          case "Lo":
-            return localize.ordinalNumber(month + 1, {
-              unit: "month"
-            });
-          case "LLL":
-            return localize.month(month, {
-              width: "abbreviated",
-              context: "standalone"
-            });
-          case "LLLLL":
-            return localize.month(month, {
-              width: "narrow",
-              context: "standalone"
-            });
-          case "LLLL":
-          default:
-            return localize.month(month, {
-              width: "wide",
-              context: "standalone"
-            });
-        }
-      },
-      // Local week of year
-      w: function w(date, token, localize, options) {
-        var week = (0, _index4.default)(date, options);
-        if (token === "wo") {
-          return localize.ordinalNumber(week, {
-            unit: "week"
-          });
-        }
-        return (0, _index6.default)(week, token.length);
-      },
-      // ISO week of year
-      I: function I(date, token, localize) {
-        var isoWeek = (0, _index2.default)(date);
-        if (token === "Io") {
-          return localize.ordinalNumber(isoWeek, {
-            unit: "week"
-          });
-        }
-        return (0, _index6.default)(isoWeek, token.length);
-      },
-      // Day of the month
-      d: function d(date, token, localize) {
-        if (token === "do") {
-          return localize.ordinalNumber(date.getUTCDate(), {
-            unit: "date"
-          });
-        }
-        return _index7.default.d(date, token);
-      },
-      // Day of year
-      D: function D(date, token, localize) {
-        var dayOfYear = (0, _index.default)(date);
-        if (token === "Do") {
-          return localize.ordinalNumber(dayOfYear, {
-            unit: "dayOfYear"
-          });
-        }
-        return (0, _index6.default)(dayOfYear, token.length);
-      },
-      // Day of week
-      E: function E(date, token, localize) {
-        var dayOfWeek = date.getUTCDay();
-        switch (token) {
-          case "E":
-          case "EE":
-          case "EEE":
-            return localize.day(dayOfWeek, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "EEEEE":
-            return localize.day(dayOfWeek, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "EEEEEE":
-            return localize.day(dayOfWeek, {
-              width: "short",
-              context: "formatting"
-            });
-          case "EEEE":
-          default:
-            return localize.day(dayOfWeek, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // Local day of week
-      e: function e(date, token, localize, options) {
-        var dayOfWeek = date.getUTCDay();
-        var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
-        switch (token) {
-          case "e":
-            return String(localDayOfWeek);
-          case "ee":
-            return (0, _index6.default)(localDayOfWeek, 2);
-          case "eo":
-            return localize.ordinalNumber(localDayOfWeek, {
-              unit: "day"
-            });
-          case "eee":
-            return localize.day(dayOfWeek, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "eeeee":
-            return localize.day(dayOfWeek, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "eeeeee":
-            return localize.day(dayOfWeek, {
-              width: "short",
-              context: "formatting"
-            });
-          case "eeee":
-          default:
-            return localize.day(dayOfWeek, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // Stand-alone local day of week
-      c: function c(date, token, localize, options) {
-        var dayOfWeek = date.getUTCDay();
-        var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
-        switch (token) {
-          case "c":
-            return String(localDayOfWeek);
-          case "cc":
-            return (0, _index6.default)(localDayOfWeek, token.length);
-          case "co":
-            return localize.ordinalNumber(localDayOfWeek, {
-              unit: "day"
-            });
-          case "ccc":
-            return localize.day(dayOfWeek, {
-              width: "abbreviated",
-              context: "standalone"
-            });
-          case "ccccc":
-            return localize.day(dayOfWeek, {
-              width: "narrow",
-              context: "standalone"
-            });
-          case "cccccc":
-            return localize.day(dayOfWeek, {
-              width: "short",
-              context: "standalone"
-            });
-          case "cccc":
-          default:
-            return localize.day(dayOfWeek, {
-              width: "wide",
-              context: "standalone"
-            });
-        }
-      },
-      // ISO day of week
-      i: function i(date, token, localize) {
-        var dayOfWeek = date.getUTCDay();
-        var isoDayOfWeek = dayOfWeek === 0 ? 7 : dayOfWeek;
-        switch (token) {
-          case "i":
-            return String(isoDayOfWeek);
-          case "ii":
-            return (0, _index6.default)(isoDayOfWeek, token.length);
-          case "io":
-            return localize.ordinalNumber(isoDayOfWeek, {
-              unit: "day"
-            });
-          case "iii":
-            return localize.day(dayOfWeek, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "iiiii":
-            return localize.day(dayOfWeek, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "iiiiii":
-            return localize.day(dayOfWeek, {
-              width: "short",
-              context: "formatting"
-            });
-          case "iiii":
-          default:
-            return localize.day(dayOfWeek, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // AM or PM
-      a: function a(date, token, localize) {
-        var hours = date.getUTCHours();
-        var dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
-        switch (token) {
-          case "a":
-          case "aa":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "aaa":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "abbreviated",
-              context: "formatting"
-            }).toLowerCase();
-          case "aaaaa":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "aaaa":
-          default:
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // AM, PM, midnight, noon
-      b: function b(date, token, localize) {
-        var hours = date.getUTCHours();
-        var dayPeriodEnumValue;
-        if (hours === 12) {
-          dayPeriodEnumValue = dayPeriodEnum.noon;
-        } else if (hours === 0) {
-          dayPeriodEnumValue = dayPeriodEnum.midnight;
-        } else {
-          dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
-        }
-        switch (token) {
-          case "b":
-          case "bb":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "bbb":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "abbreviated",
-              context: "formatting"
-            }).toLowerCase();
-          case "bbbbb":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "bbbb":
-          default:
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // in the morning, in the afternoon, in the evening, at night
-      B: function B(date, token, localize) {
-        var hours = date.getUTCHours();
-        var dayPeriodEnumValue;
-        if (hours >= 17) {
-          dayPeriodEnumValue = dayPeriodEnum.evening;
-        } else if (hours >= 12) {
-          dayPeriodEnumValue = dayPeriodEnum.afternoon;
-        } else if (hours >= 4) {
-          dayPeriodEnumValue = dayPeriodEnum.morning;
-        } else {
-          dayPeriodEnumValue = dayPeriodEnum.night;
-        }
-        switch (token) {
-          case "B":
-          case "BB":
-          case "BBB":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "abbreviated",
-              context: "formatting"
-            });
-          case "BBBBB":
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "narrow",
-              context: "formatting"
-            });
-          case "BBBB":
-          default:
-            return localize.dayPeriod(dayPeriodEnumValue, {
-              width: "wide",
-              context: "formatting"
-            });
-        }
-      },
-      // Hour [1-12]
-      h: function h(date, token, localize) {
-        if (token === "ho") {
-          var hours = date.getUTCHours() % 12;
-          if (hours === 0)
-            hours = 12;
-          return localize.ordinalNumber(hours, {
-            unit: "hour"
-          });
-        }
-        return _index7.default.h(date, token);
-      },
-      // Hour [0-23]
-      H: function H(date, token, localize) {
-        if (token === "Ho") {
-          return localize.ordinalNumber(date.getUTCHours(), {
-            unit: "hour"
-          });
-        }
-        return _index7.default.H(date, token);
-      },
-      // Hour [0-11]
-      K: function K(date, token, localize) {
-        var hours = date.getUTCHours() % 12;
-        if (token === "Ko") {
-          return localize.ordinalNumber(hours, {
-            unit: "hour"
-          });
-        }
-        return (0, _index6.default)(hours, token.length);
-      },
-      // Hour [1-24]
-      k: function k(date, token, localize) {
-        var hours = date.getUTCHours();
-        if (hours === 0)
-          hours = 24;
-        if (token === "ko") {
-          return localize.ordinalNumber(hours, {
-            unit: "hour"
-          });
-        }
-        return (0, _index6.default)(hours, token.length);
-      },
-      // Minute
-      m: function m(date, token, localize) {
-        if (token === "mo") {
-          return localize.ordinalNumber(date.getUTCMinutes(), {
-            unit: "minute"
-          });
-        }
-        return _index7.default.m(date, token);
-      },
-      // Second
-      s: function s(date, token, localize) {
-        if (token === "so") {
-          return localize.ordinalNumber(date.getUTCSeconds(), {
-            unit: "second"
-          });
-        }
-        return _index7.default.s(date, token);
-      },
-      // Fraction of second
-      S: function S(date, token) {
-        return _index7.default.S(date, token);
-      },
-      // Timezone (ISO-8601. If offset is 0, output is always `'Z'`)
-      X: function X(date, token, _localize, options) {
-        var originalDate = options._originalDate || date;
-        var timezoneOffset = originalDate.getTimezoneOffset();
-        if (timezoneOffset === 0) {
-          return "Z";
-        }
-        switch (token) {
-          case "X":
-            return formatTimezoneWithOptionalMinutes(timezoneOffset);
-          case "XXXX":
-          case "XX":
-            return formatTimezone(timezoneOffset);
-          case "XXXXX":
-          case "XXX":
-          default:
-            return formatTimezone(timezoneOffset, ":");
-        }
-      },
-      // Timezone (ISO-8601. If offset is 0, output is `'+00:00'` or equivalent)
-      x: function x(date, token, _localize, options) {
-        var originalDate = options._originalDate || date;
-        var timezoneOffset = originalDate.getTimezoneOffset();
-        switch (token) {
-          case "x":
-            return formatTimezoneWithOptionalMinutes(timezoneOffset);
-          case "xxxx":
-          case "xx":
-            return formatTimezone(timezoneOffset);
-          case "xxxxx":
-          case "xxx":
-          default:
-            return formatTimezone(timezoneOffset, ":");
-        }
-      },
-      // Timezone (GMT)
-      O: function O(date, token, _localize, options) {
-        var originalDate = options._originalDate || date;
-        var timezoneOffset = originalDate.getTimezoneOffset();
-        switch (token) {
-          case "O":
-          case "OO":
-          case "OOO":
-            return "GMT" + formatTimezoneShort(timezoneOffset, ":");
-          case "OOOO":
-          default:
-            return "GMT" + formatTimezone(timezoneOffset, ":");
-        }
-      },
-      // Timezone (specific non-location)
-      z: function z(date, token, _localize, options) {
-        var originalDate = options._originalDate || date;
-        var timezoneOffset = originalDate.getTimezoneOffset();
-        switch (token) {
-          case "z":
-          case "zz":
-          case "zzz":
-            return "GMT" + formatTimezoneShort(timezoneOffset, ":");
-          case "zzzz":
-          default:
-            return "GMT" + formatTimezone(timezoneOffset, ":");
-        }
-      },
-      // Seconds timestamp
-      t: function t(date, token, _localize, options) {
-        var originalDate = options._originalDate || date;
-        var timestamp = Math.floor(originalDate.getTime() / 1e3);
-        return (0, _index6.default)(timestamp, token.length);
-      },
-      // Milliseconds timestamp
-      T: function T(date, token, _localize, options) {
-        var originalDate = options._originalDate || date;
-        var timestamp = originalDate.getTime();
-        return (0, _index6.default)(timestamp, token.length);
-      }
-    };
-    function formatTimezoneShort(offset, dirtyDelimiter) {
-      var sign = offset > 0 ? "-" : "+";
-      var absOffset = Math.abs(offset);
-      var hours = Math.floor(absOffset / 60);
-      var minutes = absOffset % 60;
-      if (minutes === 0) {
-        return sign + String(hours);
-      }
-      var delimiter = dirtyDelimiter || "";
-      return sign + String(hours) + delimiter + (0, _index6.default)(minutes, 2);
-    }
-    function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter) {
-      if (offset % 60 === 0) {
-        var sign = offset > 0 ? "-" : "+";
-        return sign + (0, _index6.default)(Math.abs(offset) / 60, 2);
-      }
-      return formatTimezone(offset, dirtyDelimiter);
-    }
-    function formatTimezone(offset, dirtyDelimiter) {
-      var delimiter = dirtyDelimiter || "";
-      var sign = offset > 0 ? "-" : "+";
-      var absOffset = Math.abs(offset);
-      var hours = (0, _index6.default)(Math.floor(absOffset / 60), 2);
-      var minutes = (0, _index6.default)(absOffset % 60, 2);
-      return sign + hours + delimiter + minutes;
-    }
-    var _default = formatters;
-    exports.default = _default;
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/format/longFormatters/index.js
-var require_longFormatters = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/format/longFormatters/index.js"(exports, module) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = void 0;
-    var dateLongFormatter = function dateLongFormatter2(pattern, formatLong) {
-      switch (pattern) {
-        case "P":
-          return formatLong.date({
-            width: "short"
-          });
-        case "PP":
-          return formatLong.date({
-            width: "medium"
-          });
-        case "PPP":
-          return formatLong.date({
-            width: "long"
-          });
-        case "PPPP":
-        default:
-          return formatLong.date({
-            width: "full"
-          });
-      }
-    };
-    var timeLongFormatter = function timeLongFormatter2(pattern, formatLong) {
-      switch (pattern) {
-        case "p":
-          return formatLong.time({
-            width: "short"
-          });
-        case "pp":
-          return formatLong.time({
-            width: "medium"
-          });
-        case "ppp":
-          return formatLong.time({
-            width: "long"
-          });
-        case "pppp":
-        default:
-          return formatLong.time({
-            width: "full"
-          });
-      }
-    };
-    var dateTimeLongFormatter = function dateTimeLongFormatter2(pattern, formatLong) {
-      var matchResult = pattern.match(/(P+)(p+)?/) || [];
-      var datePattern = matchResult[1];
-      var timePattern = matchResult[2];
-      if (!timePattern) {
-        return dateLongFormatter(pattern, formatLong);
-      }
-      var dateTimeFormat;
-      switch (datePattern) {
-        case "P":
-          dateTimeFormat = formatLong.dateTime({
-            width: "short"
-          });
-          break;
-        case "PP":
-          dateTimeFormat = formatLong.dateTime({
-            width: "medium"
-          });
-          break;
-        case "PPP":
-          dateTimeFormat = formatLong.dateTime({
-            width: "long"
-          });
-          break;
-        case "PPPP":
-        default:
-          dateTimeFormat = formatLong.dateTime({
-            width: "full"
-          });
-          break;
-      }
-      return dateTimeFormat.replace("{{date}}", dateLongFormatter(datePattern, formatLong)).replace("{{time}}", timeLongFormatter(timePattern, formatLong));
-    };
-    var longFormatters = {
-      p: timeLongFormatter,
-      P: dateTimeLongFormatter
-    };
-    var _default = longFormatters;
-    exports.default = _default;
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js
-var require_getTimezoneOffsetInMilliseconds = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js"(exports, module) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = getTimezoneOffsetInMilliseconds;
-    function getTimezoneOffsetInMilliseconds(date) {
-      var utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()));
-      utcDate.setUTCFullYear(date.getFullYear());
-      return date.getTime() - utcDate.getTime();
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/protectedTokens/index.js
-var require_protectedTokens = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/protectedTokens/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.isProtectedDayOfYearToken = isProtectedDayOfYearToken;
-    exports.isProtectedWeekYearToken = isProtectedWeekYearToken;
-    exports.throwProtectedError = throwProtectedError;
-    var protectedDayOfYearTokens = ["D", "DD"];
-    var protectedWeekYearTokens = ["YY", "YYYY"];
-    function isProtectedDayOfYearToken(token) {
-      return protectedDayOfYearTokens.indexOf(token) !== -1;
-    }
-    function isProtectedWeekYearToken(token) {
-      return protectedWeekYearTokens.indexOf(token) !== -1;
-    }
-    function throwProtectedError(token, format4, input) {
-      if (token === "YYYY") {
-        throw new RangeError("Use `yyyy` instead of `YYYY` (in `".concat(format4, "`) for formatting years to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-      } else if (token === "YY") {
-        throw new RangeError("Use `yy` instead of `YY` (in `".concat(format4, "`) for formatting years to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-      } else if (token === "D") {
-        throw new RangeError("Use `d` instead of `D` (in `".concat(format4, "`) for formatting days of the month to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-      } else if (token === "DD") {
-        throw new RangeError("Use `dd` instead of `DD` (in `".concat(format4, "`) for formatting days of the month to the input `").concat(input, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
-      }
-    }
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/formatDistance/index.js
+// ../../node_modules/date-fns/locale/en-US/_lib/formatDistance/index.js
 var require_formatDistance = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/formatDistance/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/en-US/_lib/formatDistance/index.js"(exports, module) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
@@ -1656,7 +382,7 @@ var require_formatDistance = __commonJS({
         other: "almost {{count}} years"
       }
     };
-    var formatDistance = function formatDistance2(token, count, options) {
+    var formatDistance = function(token, count, options) {
       var result;
       var tokenValue = formatDistanceLocale[token];
       if (typeof tokenValue === "string") {
@@ -1681,9 +407,9 @@ var require_formatDistance = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildFormatLongFn/index.js
+// ../../node_modules/date-fns/locale/_lib/buildFormatLongFn/index.js
 var require_buildFormatLongFn = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildFormatLongFn/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/_lib/buildFormatLongFn/index.js"(exports, module) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
@@ -1701,16 +427,18 @@ var require_buildFormatLongFn = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/formatLong/index.js
+// ../../node_modules/date-fns/locale/en-US/_lib/formatLong/index.js
 var require_formatLong = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/formatLong/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/en-US/_lib/formatLong/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = void 0;
     var _index = _interopRequireDefault(require_buildFormatLongFn());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     var dateFormats = {
       full: "EEEE, MMMM do, y",
       long: "MMMM do, y",
@@ -1749,9 +477,9 @@ var require_formatLong = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/formatRelative/index.js
+// ../../node_modules/date-fns/locale/en-US/_lib/formatRelative/index.js
 var require_formatRelative = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/formatRelative/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/en-US/_lib/formatRelative/index.js"(exports, module) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
@@ -1765,7 +493,7 @@ var require_formatRelative = __commonJS({
       nextWeek: "eeee 'at' p",
       other: "P"
     };
-    var formatRelative = function formatRelative2(token, _date, _baseDate, _options) {
+    var formatRelative = function(token, _date, _baseDate, _options) {
       return formatRelativeLocale[token];
     };
     var _default = formatRelative;
@@ -1774,25 +502,26 @@ var require_formatRelative = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildLocalizeFn/index.js
+// ../../node_modules/date-fns/locale/_lib/buildLocalizeFn/index.js
 var require_buildLocalizeFn = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildLocalizeFn/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/_lib/buildLocalizeFn/index.js"(exports, module) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = buildLocalizeFn;
     function buildLocalizeFn(args) {
-      return function(dirtyIndex, options) {
-        var context = options !== null && options !== void 0 && options.context ? String(options.context) : "standalone";
+      return function(dirtyIndex, dirtyOptions) {
+        var options = dirtyOptions || {};
+        var context = options.context ? String(options.context) : "standalone";
         var valuesArray;
         if (context === "formatting" && args.formattingValues) {
           var defaultWidth = args.defaultFormattingWidth || args.defaultWidth;
-          var width = options !== null && options !== void 0 && options.width ? String(options.width) : defaultWidth;
+          var width = options.width ? String(options.width) : defaultWidth;
           valuesArray = args.formattingValues[width] || args.formattingValues[defaultWidth];
         } else {
           var _defaultWidth = args.defaultWidth;
-          var _width = options !== null && options !== void 0 && options.width ? String(options.width) : args.defaultWidth;
+          var _width = options.width ? String(options.width) : args.defaultWidth;
           valuesArray = args.values[_width] || args.values[_defaultWidth];
         }
         var index = args.argumentCallback ? args.argumentCallback(dirtyIndex) : dirtyIndex;
@@ -1803,16 +532,18 @@ var require_buildLocalizeFn = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/localize/index.js
+// ../../node_modules/date-fns/locale/en-US/_lib/localize/index.js
 var require_localize = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/localize/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/en-US/_lib/localize/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = void 0;
     var _index = _interopRequireDefault(require_buildLocalizeFn());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     var eraValues = {
       narrow: ["B", "A"],
       abbreviated: ["BC", "AD"],
@@ -1898,7 +629,7 @@ var require_localize = __commonJS({
         night: "at night"
       }
     };
-    var ordinalNumber = function ordinalNumber2(dirtyNumber, _options) {
+    var ordinalNumber = function(dirtyNumber, _options) {
       var number = Number(dirtyNumber);
       var rem100 = number % 100;
       if (rem100 > 20 || rem100 < 10) {
@@ -1922,7 +653,7 @@ var require_localize = __commonJS({
       quarter: (0, _index.default)({
         values: quarterValues,
         defaultWidth: "wide",
-        argumentCallback: function argumentCallback(quarter) {
+        argumentCallback: function(quarter) {
           return quarter - 1;
         }
       }),
@@ -1947,9 +678,9 @@ var require_localize = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildMatchFn/index.js
+// ../../node_modules/date-fns/locale/_lib/buildMatchFn/index.js
 var require_buildMatchFn = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildMatchFn/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/_lib/buildMatchFn/index.js"(exports, module) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
@@ -2001,9 +732,9 @@ var require_buildMatchFn = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildMatchPatternFn/index.js
+// ../../node_modules/date-fns/locale/_lib/buildMatchPatternFn/index.js
 var require_buildMatchPatternFn = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/_lib/buildMatchPatternFn/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/_lib/buildMatchPatternFn/index.js"(exports, module) {
     "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
@@ -2032,17 +763,19 @@ var require_buildMatchPatternFn = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/match/index.js
+// ../../node_modules/date-fns/locale/en-US/_lib/match/index.js
 var require_match = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/_lib/match/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/en-US/_lib/match/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = void 0;
     var _index = _interopRequireDefault(require_buildMatchFn());
     var _index2 = _interopRequireDefault(require_buildMatchPatternFn());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     var matchOrdinalNumberPattern = /^(\d+)(th|st|nd|rd)?/i;
     var parseOrdinalNumberPattern = /\d+/i;
     var matchEraPatterns = {
@@ -2100,7 +833,7 @@ var require_match = __commonJS({
       ordinalNumber: (0, _index2.default)({
         matchPattern: matchOrdinalNumberPattern,
         parsePattern: parseOrdinalNumberPattern,
-        valueCallback: function valueCallback(value) {
+        valueCallback: function(value) {
           return parseInt(value, 10);
         }
       }),
@@ -2115,7 +848,7 @@ var require_match = __commonJS({
         defaultMatchWidth: "wide",
         parsePatterns: parseQuarterPatterns,
         defaultParseWidth: "any",
-        valueCallback: function valueCallback(index) {
+        valueCallback: function(index) {
           return index + 1;
         }
       }),
@@ -2144,11 +877,10 @@ var require_match = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/index.js
+// ../../node_modules/date-fns/locale/en-US/index.js
 var require_en_US = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/locale/en-US/index.js"(exports, module) {
+  "../../node_modules/date-fns/locale/en-US/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -2158,6 +890,9 @@ var require_en_US = __commonJS({
     var _index3 = _interopRequireDefault(require_formatRelative());
     var _index4 = _interopRequireDefault(require_localize());
     var _index5 = _interopRequireDefault(require_match());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     var locale = {
       code: "en-US",
       formatDistance: _index.default,
@@ -2176,58 +911,1249 @@ var require_en_US = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/defaultLocale/index.js
-var require_defaultLocale = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/defaultLocale/index.js"(exports, module) {
+// ../../node_modules/date-fns/_lib/toInteger/index.js
+var require_toInteger = __commonJS({
+  "../../node_modules/date-fns/_lib/toInteger/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = toInteger;
+    function toInteger(dirtyNumber) {
+      if (dirtyNumber === null || dirtyNumber === true || dirtyNumber === false) {
+        return NaN;
+      }
+      var number = Number(dirtyNumber);
+      if (isNaN(number)) {
+        return number;
+      }
+      return number < 0 ? Math.ceil(number) : Math.floor(number);
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/addMilliseconds/index.js
+var require_addMilliseconds = __commonJS({
+  "../../node_modules/date-fns/addMilliseconds/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = addMilliseconds;
+    var _index = _interopRequireDefault(require_toInteger());
+    var _index2 = _interopRequireDefault(require_toDate());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function addMilliseconds(dirtyDate, dirtyAmount) {
+      (0, _index3.default)(2, arguments);
+      var timestamp = (0, _index2.default)(dirtyDate).getTime();
+      var amount = (0, _index.default)(dirtyAmount);
+      return new Date(timestamp + amount);
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/subMilliseconds/index.js
+var require_subMilliseconds = __commonJS({
+  "../../node_modules/date-fns/subMilliseconds/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = subMilliseconds;
+    var _index = _interopRequireDefault(require_toInteger());
+    var _index2 = _interopRequireDefault(require_addMilliseconds());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function subMilliseconds(dirtyDate, dirtyAmount) {
+      (0, _index3.default)(2, arguments);
+      var amount = (0, _index.default)(dirtyAmount);
+      return (0, _index2.default)(dirtyDate, -amount);
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/getUTCDayOfYear/index.js
+var require_getUTCDayOfYear = __commonJS({
+  "../../node_modules/date-fns/_lib/getUTCDayOfYear/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = getUTCDayOfYear;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    var MILLISECONDS_IN_DAY = 864e5;
+    function getUTCDayOfYear(dirtyDate) {
+      (0, _index2.default)(1, arguments);
+      var date = (0, _index.default)(dirtyDate);
+      var timestamp = date.getTime();
+      date.setUTCMonth(0, 1);
+      date.setUTCHours(0, 0, 0, 0);
+      var startOfYearTimestamp = date.getTime();
+      var difference = timestamp - startOfYearTimestamp;
+      return Math.floor(difference / MILLISECONDS_IN_DAY) + 1;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/startOfUTCISOWeek/index.js
+var require_startOfUTCISOWeek = __commonJS({
+  "../../node_modules/date-fns/_lib/startOfUTCISOWeek/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = startOfUTCISOWeek;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function startOfUTCISOWeek(dirtyDate) {
+      (0, _index2.default)(1, arguments);
+      var weekStartsOn = 1;
+      var date = (0, _index.default)(dirtyDate);
+      var day = date.getUTCDay();
+      var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
+      date.setUTCDate(date.getUTCDate() - diff);
+      date.setUTCHours(0, 0, 0, 0);
+      return date;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/getUTCISOWeekYear/index.js
+var require_getUTCISOWeekYear = __commonJS({
+  "../../node_modules/date-fns/_lib/getUTCISOWeekYear/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = getUTCISOWeekYear;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    var _index3 = _interopRequireDefault(require_startOfUTCISOWeek());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function getUTCISOWeekYear(dirtyDate) {
+      (0, _index2.default)(1, arguments);
+      var date = (0, _index.default)(dirtyDate);
+      var year = date.getUTCFullYear();
+      var fourthOfJanuaryOfNextYear = new Date(0);
+      fourthOfJanuaryOfNextYear.setUTCFullYear(year + 1, 0, 4);
+      fourthOfJanuaryOfNextYear.setUTCHours(0, 0, 0, 0);
+      var startOfNextYear = (0, _index3.default)(fourthOfJanuaryOfNextYear);
+      var fourthOfJanuaryOfThisYear = new Date(0);
+      fourthOfJanuaryOfThisYear.setUTCFullYear(year, 0, 4);
+      fourthOfJanuaryOfThisYear.setUTCHours(0, 0, 0, 0);
+      var startOfThisYear = (0, _index3.default)(fourthOfJanuaryOfThisYear);
+      if (date.getTime() >= startOfNextYear.getTime()) {
+        return year + 1;
+      } else if (date.getTime() >= startOfThisYear.getTime()) {
+        return year;
+      } else {
+        return year - 1;
+      }
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/startOfUTCISOWeekYear/index.js
+var require_startOfUTCISOWeekYear = __commonJS({
+  "../../node_modules/date-fns/_lib/startOfUTCISOWeekYear/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = startOfUTCISOWeekYear;
+    var _index = _interopRequireDefault(require_getUTCISOWeekYear());
+    var _index2 = _interopRequireDefault(require_startOfUTCISOWeek());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function startOfUTCISOWeekYear(dirtyDate) {
+      (0, _index3.default)(1, arguments);
+      var year = (0, _index.default)(dirtyDate);
+      var fourthOfJanuary = new Date(0);
+      fourthOfJanuary.setUTCFullYear(year, 0, 4);
+      fourthOfJanuary.setUTCHours(0, 0, 0, 0);
+      var date = (0, _index2.default)(fourthOfJanuary);
+      return date;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/getUTCISOWeek/index.js
+var require_getUTCISOWeek = __commonJS({
+  "../../node_modules/date-fns/_lib/getUTCISOWeek/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = getUTCISOWeek;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_startOfUTCISOWeek());
+    var _index3 = _interopRequireDefault(require_startOfUTCISOWeekYear());
+    var _index4 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    var MILLISECONDS_IN_WEEK = 6048e5;
+    function getUTCISOWeek(dirtyDate) {
+      (0, _index4.default)(1, arguments);
+      var date = (0, _index.default)(dirtyDate);
+      var diff = (0, _index2.default)(date).getTime() - (0, _index3.default)(date).getTime();
+      return Math.round(diff / MILLISECONDS_IN_WEEK) + 1;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/startOfUTCWeek/index.js
+var require_startOfUTCWeek = __commonJS({
+  "../../node_modules/date-fns/_lib/startOfUTCWeek/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = startOfUTCWeek;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    var _index3 = _interopRequireDefault(require_toInteger());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function startOfUTCWeek(dirtyDate, dirtyOptions) {
+      (0, _index2.default)(1, arguments);
+      var options = dirtyOptions || {};
+      var locale = options.locale;
+      var localeWeekStartsOn = locale && locale.options && locale.options.weekStartsOn;
+      var defaultWeekStartsOn = localeWeekStartsOn == null ? 0 : (0, _index3.default)(localeWeekStartsOn);
+      var weekStartsOn = options.weekStartsOn == null ? defaultWeekStartsOn : (0, _index3.default)(options.weekStartsOn);
+      if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
+        throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+      }
+      var date = (0, _index.default)(dirtyDate);
+      var day = date.getUTCDay();
+      var diff = (day < weekStartsOn ? 7 : 0) + day - weekStartsOn;
+      date.setUTCDate(date.getUTCDate() - diff);
+      date.setUTCHours(0, 0, 0, 0);
+      return date;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/getUTCWeekYear/index.js
+var require_getUTCWeekYear = __commonJS({
+  "../../node_modules/date-fns/_lib/getUTCWeekYear/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = getUTCWeekYear;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    var _index3 = _interopRequireDefault(require_startOfUTCWeek());
+    var _index4 = _interopRequireDefault(require_toInteger());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function getUTCWeekYear(dirtyDate, dirtyOptions) {
+      (0, _index2.default)(1, arguments);
+      var date = (0, _index.default)(dirtyDate);
+      var year = date.getUTCFullYear();
+      var options = dirtyOptions || {};
+      var locale = options.locale;
+      var localeFirstWeekContainsDate = locale && locale.options && locale.options.firstWeekContainsDate;
+      var defaultFirstWeekContainsDate = localeFirstWeekContainsDate == null ? 1 : (0, _index4.default)(localeFirstWeekContainsDate);
+      var firstWeekContainsDate = options.firstWeekContainsDate == null ? defaultFirstWeekContainsDate : (0, _index4.default)(options.firstWeekContainsDate);
+      if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
+        throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+      }
+      var firstWeekOfNextYear = new Date(0);
+      firstWeekOfNextYear.setUTCFullYear(year + 1, 0, firstWeekContainsDate);
+      firstWeekOfNextYear.setUTCHours(0, 0, 0, 0);
+      var startOfNextYear = (0, _index3.default)(firstWeekOfNextYear, dirtyOptions);
+      var firstWeekOfThisYear = new Date(0);
+      firstWeekOfThisYear.setUTCFullYear(year, 0, firstWeekContainsDate);
+      firstWeekOfThisYear.setUTCHours(0, 0, 0, 0);
+      var startOfThisYear = (0, _index3.default)(firstWeekOfThisYear, dirtyOptions);
+      if (date.getTime() >= startOfNextYear.getTime()) {
+        return year + 1;
+      } else if (date.getTime() >= startOfThisYear.getTime()) {
+        return year;
+      } else {
+        return year - 1;
+      }
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/startOfUTCWeekYear/index.js
+var require_startOfUTCWeekYear = __commonJS({
+  "../../node_modules/date-fns/_lib/startOfUTCWeekYear/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = startOfUTCWeekYear;
+    var _index = _interopRequireDefault(require_getUTCWeekYear());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    var _index3 = _interopRequireDefault(require_startOfUTCWeek());
+    var _index4 = _interopRequireDefault(require_toInteger());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function startOfUTCWeekYear(dirtyDate, dirtyOptions) {
+      (0, _index2.default)(1, arguments);
+      var options = dirtyOptions || {};
+      var locale = options.locale;
+      var localeFirstWeekContainsDate = locale && locale.options && locale.options.firstWeekContainsDate;
+      var defaultFirstWeekContainsDate = localeFirstWeekContainsDate == null ? 1 : (0, _index4.default)(localeFirstWeekContainsDate);
+      var firstWeekContainsDate = options.firstWeekContainsDate == null ? defaultFirstWeekContainsDate : (0, _index4.default)(options.firstWeekContainsDate);
+      var year = (0, _index.default)(dirtyDate, dirtyOptions);
+      var firstWeek = new Date(0);
+      firstWeek.setUTCFullYear(year, 0, firstWeekContainsDate);
+      firstWeek.setUTCHours(0, 0, 0, 0);
+      var date = (0, _index3.default)(firstWeek, dirtyOptions);
+      return date;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/getUTCWeek/index.js
+var require_getUTCWeek = __commonJS({
+  "../../node_modules/date-fns/_lib/getUTCWeek/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = getUTCWeek;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_startOfUTCWeek());
+    var _index3 = _interopRequireDefault(require_startOfUTCWeekYear());
+    var _index4 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    var MILLISECONDS_IN_WEEK = 6048e5;
+    function getUTCWeek(dirtyDate, options) {
+      (0, _index4.default)(1, arguments);
+      var date = (0, _index.default)(dirtyDate);
+      var diff = (0, _index2.default)(date, options).getTime() - (0, _index3.default)(date, options).getTime();
+      return Math.round(diff / MILLISECONDS_IN_WEEK) + 1;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/addLeadingZeros/index.js
+var require_addLeadingZeros = __commonJS({
+  "../../node_modules/date-fns/_lib/addLeadingZeros/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = addLeadingZeros;
+    function addLeadingZeros(number, targetLength) {
+      var sign = number < 0 ? "-" : "";
+      var output = Math.abs(number).toString();
+      while (output.length < targetLength) {
+        output = "0" + output;
+      }
+      return sign + output;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/format/lightFormatters/index.js
+var require_lightFormatters = __commonJS({
+  "../../node_modules/date-fns/_lib/format/lightFormatters/index.js"(exports, module) {
+    "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = void 0;
-    var _index = _interopRequireDefault(require_en_US());
-    var _default = _index.default;
+    var _index = _interopRequireDefault(require_addLeadingZeros());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    var formatters = {
+      y: function(date, token) {
+        var signedYear = date.getUTCFullYear();
+        var year = signedYear > 0 ? signedYear : 1 - signedYear;
+        return (0, _index.default)(token === "yy" ? year % 100 : year, token.length);
+      },
+      M: function(date, token) {
+        var month = date.getUTCMonth();
+        return token === "M" ? String(month + 1) : (0, _index.default)(month + 1, 2);
+      },
+      d: function(date, token) {
+        return (0, _index.default)(date.getUTCDate(), token.length);
+      },
+      a: function(date, token) {
+        var dayPeriodEnumValue = date.getUTCHours() / 12 >= 1 ? "pm" : "am";
+        switch (token) {
+          case "a":
+          case "aa":
+            return dayPeriodEnumValue.toUpperCase();
+          case "aaa":
+            return dayPeriodEnumValue;
+          case "aaaaa":
+            return dayPeriodEnumValue[0];
+          case "aaaa":
+          default:
+            return dayPeriodEnumValue === "am" ? "a.m." : "p.m.";
+        }
+      },
+      h: function(date, token) {
+        return (0, _index.default)(date.getUTCHours() % 12 || 12, token.length);
+      },
+      H: function(date, token) {
+        return (0, _index.default)(date.getUTCHours(), token.length);
+      },
+      m: function(date, token) {
+        return (0, _index.default)(date.getUTCMinutes(), token.length);
+      },
+      s: function(date, token) {
+        return (0, _index.default)(date.getUTCSeconds(), token.length);
+      },
+      S: function(date, token) {
+        var numberOfDigits = token.length;
+        var milliseconds = date.getUTCMilliseconds();
+        var fractionalSeconds = Math.floor(milliseconds * Math.pow(10, numberOfDigits - 3));
+        return (0, _index.default)(fractionalSeconds, token.length);
+      }
+    };
+    var _default = formatters;
     exports.default = _default;
     module.exports = exports.default;
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/format/index.js
-var require_format = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/format/index.js"(exports, module) {
+// ../../node_modules/date-fns/_lib/format/formatters/index.js
+var require_formatters = __commonJS({
+  "../../node_modules/date-fns/_lib/format/formatters/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = void 0;
+    var _index = _interopRequireDefault(require_getUTCDayOfYear());
+    var _index2 = _interopRequireDefault(require_getUTCISOWeek());
+    var _index3 = _interopRequireDefault(require_getUTCISOWeekYear());
+    var _index4 = _interopRequireDefault(require_getUTCWeek());
+    var _index5 = _interopRequireDefault(require_getUTCWeekYear());
+    var _index6 = _interopRequireDefault(require_addLeadingZeros());
+    var _index7 = _interopRequireDefault(require_lightFormatters());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    var dayPeriodEnum = {
+      am: "am",
+      pm: "pm",
+      midnight: "midnight",
+      noon: "noon",
+      morning: "morning",
+      afternoon: "afternoon",
+      evening: "evening",
+      night: "night"
+    };
+    var formatters = {
+      G: function(date, token, localize) {
+        var era = date.getUTCFullYear() > 0 ? 1 : 0;
+        switch (token) {
+          case "G":
+          case "GG":
+          case "GGG":
+            return localize.era(era, {
+              width: "abbreviated"
+            });
+          case "GGGGG":
+            return localize.era(era, {
+              width: "narrow"
+            });
+          case "GGGG":
+          default:
+            return localize.era(era, {
+              width: "wide"
+            });
+        }
+      },
+      y: function(date, token, localize) {
+        if (token === "yo") {
+          var signedYear = date.getUTCFullYear();
+          var year = signedYear > 0 ? signedYear : 1 - signedYear;
+          return localize.ordinalNumber(year, {
+            unit: "year"
+          });
+        }
+        return _index7.default.y(date, token);
+      },
+      Y: function(date, token, localize, options) {
+        var signedWeekYear = (0, _index5.default)(date, options);
+        var weekYear = signedWeekYear > 0 ? signedWeekYear : 1 - signedWeekYear;
+        if (token === "YY") {
+          var twoDigitYear = weekYear % 100;
+          return (0, _index6.default)(twoDigitYear, 2);
+        }
+        if (token === "Yo") {
+          return localize.ordinalNumber(weekYear, {
+            unit: "year"
+          });
+        }
+        return (0, _index6.default)(weekYear, token.length);
+      },
+      R: function(date, token) {
+        var isoWeekYear = (0, _index3.default)(date);
+        return (0, _index6.default)(isoWeekYear, token.length);
+      },
+      u: function(date, token) {
+        var year = date.getUTCFullYear();
+        return (0, _index6.default)(year, token.length);
+      },
+      Q: function(date, token, localize) {
+        var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
+        switch (token) {
+          case "Q":
+            return String(quarter);
+          case "QQ":
+            return (0, _index6.default)(quarter, 2);
+          case "Qo":
+            return localize.ordinalNumber(quarter, {
+              unit: "quarter"
+            });
+          case "QQQ":
+            return localize.quarter(quarter, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "QQQQQ":
+            return localize.quarter(quarter, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "QQQQ":
+          default:
+            return localize.quarter(quarter, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      q: function(date, token, localize) {
+        var quarter = Math.ceil((date.getUTCMonth() + 1) / 3);
+        switch (token) {
+          case "q":
+            return String(quarter);
+          case "qq":
+            return (0, _index6.default)(quarter, 2);
+          case "qo":
+            return localize.ordinalNumber(quarter, {
+              unit: "quarter"
+            });
+          case "qqq":
+            return localize.quarter(quarter, {
+              width: "abbreviated",
+              context: "standalone"
+            });
+          case "qqqqq":
+            return localize.quarter(quarter, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "qqqq":
+          default:
+            return localize.quarter(quarter, {
+              width: "wide",
+              context: "standalone"
+            });
+        }
+      },
+      M: function(date, token, localize) {
+        var month = date.getUTCMonth();
+        switch (token) {
+          case "M":
+          case "MM":
+            return _index7.default.M(date, token);
+          case "Mo":
+            return localize.ordinalNumber(month + 1, {
+              unit: "month"
+            });
+          case "MMM":
+            return localize.month(month, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "MMMMM":
+            return localize.month(month, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "MMMM":
+          default:
+            return localize.month(month, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      L: function(date, token, localize) {
+        var month = date.getUTCMonth();
+        switch (token) {
+          case "L":
+            return String(month + 1);
+          case "LL":
+            return (0, _index6.default)(month + 1, 2);
+          case "Lo":
+            return localize.ordinalNumber(month + 1, {
+              unit: "month"
+            });
+          case "LLL":
+            return localize.month(month, {
+              width: "abbreviated",
+              context: "standalone"
+            });
+          case "LLLLL":
+            return localize.month(month, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "LLLL":
+          default:
+            return localize.month(month, {
+              width: "wide",
+              context: "standalone"
+            });
+        }
+      },
+      w: function(date, token, localize, options) {
+        var week = (0, _index4.default)(date, options);
+        if (token === "wo") {
+          return localize.ordinalNumber(week, {
+            unit: "week"
+          });
+        }
+        return (0, _index6.default)(week, token.length);
+      },
+      I: function(date, token, localize) {
+        var isoWeek = (0, _index2.default)(date);
+        if (token === "Io") {
+          return localize.ordinalNumber(isoWeek, {
+            unit: "week"
+          });
+        }
+        return (0, _index6.default)(isoWeek, token.length);
+      },
+      d: function(date, token, localize) {
+        if (token === "do") {
+          return localize.ordinalNumber(date.getUTCDate(), {
+            unit: "date"
+          });
+        }
+        return _index7.default.d(date, token);
+      },
+      D: function(date, token, localize) {
+        var dayOfYear = (0, _index.default)(date);
+        if (token === "Do") {
+          return localize.ordinalNumber(dayOfYear, {
+            unit: "dayOfYear"
+          });
+        }
+        return (0, _index6.default)(dayOfYear, token.length);
+      },
+      E: function(date, token, localize) {
+        var dayOfWeek = date.getUTCDay();
+        switch (token) {
+          case "E":
+          case "EE":
+          case "EEE":
+            return localize.day(dayOfWeek, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "EEEEE":
+            return localize.day(dayOfWeek, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "EEEEEE":
+            return localize.day(dayOfWeek, {
+              width: "short",
+              context: "formatting"
+            });
+          case "EEEE":
+          default:
+            return localize.day(dayOfWeek, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      e: function(date, token, localize, options) {
+        var dayOfWeek = date.getUTCDay();
+        var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
+        switch (token) {
+          case "e":
+            return String(localDayOfWeek);
+          case "ee":
+            return (0, _index6.default)(localDayOfWeek, 2);
+          case "eo":
+            return localize.ordinalNumber(localDayOfWeek, {
+              unit: "day"
+            });
+          case "eee":
+            return localize.day(dayOfWeek, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "eeeee":
+            return localize.day(dayOfWeek, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "eeeeee":
+            return localize.day(dayOfWeek, {
+              width: "short",
+              context: "formatting"
+            });
+          case "eeee":
+          default:
+            return localize.day(dayOfWeek, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      c: function(date, token, localize, options) {
+        var dayOfWeek = date.getUTCDay();
+        var localDayOfWeek = (dayOfWeek - options.weekStartsOn + 8) % 7 || 7;
+        switch (token) {
+          case "c":
+            return String(localDayOfWeek);
+          case "cc":
+            return (0, _index6.default)(localDayOfWeek, token.length);
+          case "co":
+            return localize.ordinalNumber(localDayOfWeek, {
+              unit: "day"
+            });
+          case "ccc":
+            return localize.day(dayOfWeek, {
+              width: "abbreviated",
+              context: "standalone"
+            });
+          case "ccccc":
+            return localize.day(dayOfWeek, {
+              width: "narrow",
+              context: "standalone"
+            });
+          case "cccccc":
+            return localize.day(dayOfWeek, {
+              width: "short",
+              context: "standalone"
+            });
+          case "cccc":
+          default:
+            return localize.day(dayOfWeek, {
+              width: "wide",
+              context: "standalone"
+            });
+        }
+      },
+      i: function(date, token, localize) {
+        var dayOfWeek = date.getUTCDay();
+        var isoDayOfWeek = dayOfWeek === 0 ? 7 : dayOfWeek;
+        switch (token) {
+          case "i":
+            return String(isoDayOfWeek);
+          case "ii":
+            return (0, _index6.default)(isoDayOfWeek, token.length);
+          case "io":
+            return localize.ordinalNumber(isoDayOfWeek, {
+              unit: "day"
+            });
+          case "iii":
+            return localize.day(dayOfWeek, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "iiiii":
+            return localize.day(dayOfWeek, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "iiiiii":
+            return localize.day(dayOfWeek, {
+              width: "short",
+              context: "formatting"
+            });
+          case "iiii":
+          default:
+            return localize.day(dayOfWeek, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      a: function(date, token, localize) {
+        var hours = date.getUTCHours();
+        var dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
+        switch (token) {
+          case "a":
+          case "aa":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "aaa":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "abbreviated",
+              context: "formatting"
+            }).toLowerCase();
+          case "aaaaa":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "aaaa":
+          default:
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      b: function(date, token, localize) {
+        var hours = date.getUTCHours();
+        var dayPeriodEnumValue;
+        if (hours === 12) {
+          dayPeriodEnumValue = dayPeriodEnum.noon;
+        } else if (hours === 0) {
+          dayPeriodEnumValue = dayPeriodEnum.midnight;
+        } else {
+          dayPeriodEnumValue = hours / 12 >= 1 ? "pm" : "am";
+        }
+        switch (token) {
+          case "b":
+          case "bb":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "bbb":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "abbreviated",
+              context: "formatting"
+            }).toLowerCase();
+          case "bbbbb":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "bbbb":
+          default:
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      B: function(date, token, localize) {
+        var hours = date.getUTCHours();
+        var dayPeriodEnumValue;
+        if (hours >= 17) {
+          dayPeriodEnumValue = dayPeriodEnum.evening;
+        } else if (hours >= 12) {
+          dayPeriodEnumValue = dayPeriodEnum.afternoon;
+        } else if (hours >= 4) {
+          dayPeriodEnumValue = dayPeriodEnum.morning;
+        } else {
+          dayPeriodEnumValue = dayPeriodEnum.night;
+        }
+        switch (token) {
+          case "B":
+          case "BB":
+          case "BBB":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "abbreviated",
+              context: "formatting"
+            });
+          case "BBBBB":
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "narrow",
+              context: "formatting"
+            });
+          case "BBBB":
+          default:
+            return localize.dayPeriod(dayPeriodEnumValue, {
+              width: "wide",
+              context: "formatting"
+            });
+        }
+      },
+      h: function(date, token, localize) {
+        if (token === "ho") {
+          var hours = date.getUTCHours() % 12;
+          if (hours === 0)
+            hours = 12;
+          return localize.ordinalNumber(hours, {
+            unit: "hour"
+          });
+        }
+        return _index7.default.h(date, token);
+      },
+      H: function(date, token, localize) {
+        if (token === "Ho") {
+          return localize.ordinalNumber(date.getUTCHours(), {
+            unit: "hour"
+          });
+        }
+        return _index7.default.H(date, token);
+      },
+      K: function(date, token, localize) {
+        var hours = date.getUTCHours() % 12;
+        if (token === "Ko") {
+          return localize.ordinalNumber(hours, {
+            unit: "hour"
+          });
+        }
+        return (0, _index6.default)(hours, token.length);
+      },
+      k: function(date, token, localize) {
+        var hours = date.getUTCHours();
+        if (hours === 0)
+          hours = 24;
+        if (token === "ko") {
+          return localize.ordinalNumber(hours, {
+            unit: "hour"
+          });
+        }
+        return (0, _index6.default)(hours, token.length);
+      },
+      m: function(date, token, localize) {
+        if (token === "mo") {
+          return localize.ordinalNumber(date.getUTCMinutes(), {
+            unit: "minute"
+          });
+        }
+        return _index7.default.m(date, token);
+      },
+      s: function(date, token, localize) {
+        if (token === "so") {
+          return localize.ordinalNumber(date.getUTCSeconds(), {
+            unit: "second"
+          });
+        }
+        return _index7.default.s(date, token);
+      },
+      S: function(date, token) {
+        return _index7.default.S(date, token);
+      },
+      X: function(date, token, _localize, options) {
+        var originalDate = options._originalDate || date;
+        var timezoneOffset = originalDate.getTimezoneOffset();
+        if (timezoneOffset === 0) {
+          return "Z";
+        }
+        switch (token) {
+          case "X":
+            return formatTimezoneWithOptionalMinutes(timezoneOffset);
+          case "XXXX":
+          case "XX":
+            return formatTimezone(timezoneOffset);
+          case "XXXXX":
+          case "XXX":
+          default:
+            return formatTimezone(timezoneOffset, ":");
+        }
+      },
+      x: function(date, token, _localize, options) {
+        var originalDate = options._originalDate || date;
+        var timezoneOffset = originalDate.getTimezoneOffset();
+        switch (token) {
+          case "x":
+            return formatTimezoneWithOptionalMinutes(timezoneOffset);
+          case "xxxx":
+          case "xx":
+            return formatTimezone(timezoneOffset);
+          case "xxxxx":
+          case "xxx":
+          default:
+            return formatTimezone(timezoneOffset, ":");
+        }
+      },
+      O: function(date, token, _localize, options) {
+        var originalDate = options._originalDate || date;
+        var timezoneOffset = originalDate.getTimezoneOffset();
+        switch (token) {
+          case "O":
+          case "OO":
+          case "OOO":
+            return "GMT" + formatTimezoneShort(timezoneOffset, ":");
+          case "OOOO":
+          default:
+            return "GMT" + formatTimezone(timezoneOffset, ":");
+        }
+      },
+      z: function(date, token, _localize, options) {
+        var originalDate = options._originalDate || date;
+        var timezoneOffset = originalDate.getTimezoneOffset();
+        switch (token) {
+          case "z":
+          case "zz":
+          case "zzz":
+            return "GMT" + formatTimezoneShort(timezoneOffset, ":");
+          case "zzzz":
+          default:
+            return "GMT" + formatTimezone(timezoneOffset, ":");
+        }
+      },
+      t: function(date, token, _localize, options) {
+        var originalDate = options._originalDate || date;
+        var timestamp = Math.floor(originalDate.getTime() / 1e3);
+        return (0, _index6.default)(timestamp, token.length);
+      },
+      T: function(date, token, _localize, options) {
+        var originalDate = options._originalDate || date;
+        var timestamp = originalDate.getTime();
+        return (0, _index6.default)(timestamp, token.length);
+      }
+    };
+    function formatTimezoneShort(offset, dirtyDelimiter) {
+      var sign = offset > 0 ? "-" : "+";
+      var absOffset = Math.abs(offset);
+      var hours = Math.floor(absOffset / 60);
+      var minutes = absOffset % 60;
+      if (minutes === 0) {
+        return sign + String(hours);
+      }
+      var delimiter = dirtyDelimiter || "";
+      return sign + String(hours) + delimiter + (0, _index6.default)(minutes, 2);
+    }
+    function formatTimezoneWithOptionalMinutes(offset, dirtyDelimiter) {
+      if (offset % 60 === 0) {
+        var sign = offset > 0 ? "-" : "+";
+        return sign + (0, _index6.default)(Math.abs(offset) / 60, 2);
+      }
+      return formatTimezone(offset, dirtyDelimiter);
+    }
+    function formatTimezone(offset, dirtyDelimiter) {
+      var delimiter = dirtyDelimiter || "";
+      var sign = offset > 0 ? "-" : "+";
+      var absOffset = Math.abs(offset);
+      var hours = (0, _index6.default)(Math.floor(absOffset / 60), 2);
+      var minutes = (0, _index6.default)(absOffset % 60, 2);
+      return sign + hours + delimiter + minutes;
+    }
+    var _default = formatters;
+    exports.default = _default;
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/format/longFormatters/index.js
+var require_longFormatters = __commonJS({
+  "../../node_modules/date-fns/_lib/format/longFormatters/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = void 0;
+    function dateLongFormatter(pattern, formatLong) {
+      switch (pattern) {
+        case "P":
+          return formatLong.date({
+            width: "short"
+          });
+        case "PP":
+          return formatLong.date({
+            width: "medium"
+          });
+        case "PPP":
+          return formatLong.date({
+            width: "long"
+          });
+        case "PPPP":
+        default:
+          return formatLong.date({
+            width: "full"
+          });
+      }
+    }
+    function timeLongFormatter(pattern, formatLong) {
+      switch (pattern) {
+        case "p":
+          return formatLong.time({
+            width: "short"
+          });
+        case "pp":
+          return formatLong.time({
+            width: "medium"
+          });
+        case "ppp":
+          return formatLong.time({
+            width: "long"
+          });
+        case "pppp":
+        default:
+          return formatLong.time({
+            width: "full"
+          });
+      }
+    }
+    function dateTimeLongFormatter(pattern, formatLong) {
+      var matchResult = pattern.match(/(P+)(p+)?/) || [];
+      var datePattern = matchResult[1];
+      var timePattern = matchResult[2];
+      if (!timePattern) {
+        return dateLongFormatter(pattern, formatLong);
+      }
+      var dateTimeFormat;
+      switch (datePattern) {
+        case "P":
+          dateTimeFormat = formatLong.dateTime({
+            width: "short"
+          });
+          break;
+        case "PP":
+          dateTimeFormat = formatLong.dateTime({
+            width: "medium"
+          });
+          break;
+        case "PPP":
+          dateTimeFormat = formatLong.dateTime({
+            width: "long"
+          });
+          break;
+        case "PPPP":
+        default:
+          dateTimeFormat = formatLong.dateTime({
+            width: "full"
+          });
+          break;
+      }
+      return dateTimeFormat.replace("{{date}}", dateLongFormatter(datePattern, formatLong)).replace("{{time}}", timeLongFormatter(timePattern, formatLong));
+    }
+    var longFormatters = {
+      p: timeLongFormatter,
+      P: dateTimeLongFormatter
+    };
+    var _default = longFormatters;
+    exports.default = _default;
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js
+var require_getTimezoneOffsetInMilliseconds = __commonJS({
+  "../../node_modules/date-fns/_lib/getTimezoneOffsetInMilliseconds/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = getTimezoneOffsetInMilliseconds;
+    function getTimezoneOffsetInMilliseconds(date) {
+      var utcDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()));
+      utcDate.setUTCFullYear(date.getFullYear());
+      return date.getTime() - utcDate.getTime();
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/protectedTokens/index.js
+var require_protectedTokens = __commonJS({
+  "../../node_modules/date-fns/_lib/protectedTokens/index.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.isProtectedDayOfYearToken = isProtectedDayOfYearToken;
+    exports.isProtectedWeekYearToken = isProtectedWeekYearToken;
+    exports.throwProtectedError = throwProtectedError;
+    var protectedDayOfYearTokens = ["D", "DD"];
+    var protectedWeekYearTokens = ["YY", "YYYY"];
+    function isProtectedDayOfYearToken(token) {
+      return protectedDayOfYearTokens.indexOf(token) !== -1;
+    }
+    function isProtectedWeekYearToken(token) {
+      return protectedWeekYearTokens.indexOf(token) !== -1;
+    }
+    function throwProtectedError(token, format4, input) {
+      if (token === "YYYY") {
+        throw new RangeError("Use `yyyy` instead of `YYYY` (in `".concat(format4, "`) for formatting years to the input `").concat(input, "`; see: https://git.io/fxCyr"));
+      } else if (token === "YY") {
+        throw new RangeError("Use `yy` instead of `YY` (in `".concat(format4, "`) for formatting years to the input `").concat(input, "`; see: https://git.io/fxCyr"));
+      } else if (token === "D") {
+        throw new RangeError("Use `d` instead of `D` (in `".concat(format4, "`) for formatting days of the month to the input `").concat(input, "`; see: https://git.io/fxCyr"));
+      } else if (token === "DD") {
+        throw new RangeError("Use `dd` instead of `DD` (in `".concat(format4, "`) for formatting days of the month to the input `").concat(input, "`; see: https://git.io/fxCyr"));
+      }
+    }
+  }
+});
+
+// ../../node_modules/date-fns/format/index.js
+var require_format = __commonJS({
+  "../../node_modules/date-fns/format/index.js"(exports, module) {
+    "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = format4;
     var _index = _interopRequireDefault(require_isValid());
-    var _index2 = _interopRequireDefault(require_subMilliseconds());
-    var _index3 = _interopRequireDefault(require_toDate());
-    var _index4 = _interopRequireDefault(require_formatters());
-    var _index5 = _interopRequireDefault(require_longFormatters());
-    var _index6 = _interopRequireDefault(require_getTimezoneOffsetInMilliseconds());
-    var _index7 = require_protectedTokens();
-    var _index8 = _interopRequireDefault(require_toInteger());
-    var _index9 = _interopRequireDefault(require_requiredArgs());
-    var _index10 = require_defaultOptions();
-    var _index11 = _interopRequireDefault(require_defaultLocale());
+    var _index2 = _interopRequireDefault(require_en_US());
+    var _index3 = _interopRequireDefault(require_subMilliseconds());
+    var _index4 = _interopRequireDefault(require_toDate());
+    var _index5 = _interopRequireDefault(require_formatters());
+    var _index6 = _interopRequireDefault(require_longFormatters());
+    var _index7 = _interopRequireDefault(require_getTimezoneOffsetInMilliseconds());
+    var _index8 = require_protectedTokens();
+    var _index9 = _interopRequireDefault(require_toInteger());
+    var _index10 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     var formattingTokensRegExp = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
     var longFormattingTokensRegExp = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
     var escapedStringRegExp = /^'([^]*?)'?$/;
     var doubleQuoteRegExp = /''/g;
     var unescapedLatinCharacterRegExp = /[a-zA-Z]/;
-    function format4(dirtyDate, dirtyFormatStr, options) {
-      var _ref, _options$locale, _ref2, _ref3, _ref4, _options$firstWeekCon, _options$locale2, _options$locale2$opti, _defaultOptions$local, _defaultOptions$local2, _ref5, _ref6, _ref7, _options$weekStartsOn, _options$locale3, _options$locale3$opti, _defaultOptions$local3, _defaultOptions$local4;
-      (0, _index9.default)(2, arguments);
+    function format4(dirtyDate, dirtyFormatStr, dirtyOptions) {
+      (0, _index10.default)(2, arguments);
       var formatStr = String(dirtyFormatStr);
-      var defaultOptions = (0, _index10.getDefaultOptions)();
-      var locale = (_ref = (_options$locale = options === null || options === void 0 ? void 0 : options.locale) !== null && _options$locale !== void 0 ? _options$locale : defaultOptions.locale) !== null && _ref !== void 0 ? _ref : _index11.default;
-      var firstWeekContainsDate = (0, _index8.default)((_ref2 = (_ref3 = (_ref4 = (_options$firstWeekCon = options === null || options === void 0 ? void 0 : options.firstWeekContainsDate) !== null && _options$firstWeekCon !== void 0 ? _options$firstWeekCon : options === null || options === void 0 ? void 0 : (_options$locale2 = options.locale) === null || _options$locale2 === void 0 ? void 0 : (_options$locale2$opti = _options$locale2.options) === null || _options$locale2$opti === void 0 ? void 0 : _options$locale2$opti.firstWeekContainsDate) !== null && _ref4 !== void 0 ? _ref4 : defaultOptions.firstWeekContainsDate) !== null && _ref3 !== void 0 ? _ref3 : (_defaultOptions$local = defaultOptions.locale) === null || _defaultOptions$local === void 0 ? void 0 : (_defaultOptions$local2 = _defaultOptions$local.options) === null || _defaultOptions$local2 === void 0 ? void 0 : _defaultOptions$local2.firstWeekContainsDate) !== null && _ref2 !== void 0 ? _ref2 : 1);
+      var options = dirtyOptions || {};
+      var locale = options.locale || _index2.default;
+      var localeFirstWeekContainsDate = locale.options && locale.options.firstWeekContainsDate;
+      var defaultFirstWeekContainsDate = localeFirstWeekContainsDate == null ? 1 : (0, _index9.default)(localeFirstWeekContainsDate);
+      var firstWeekContainsDate = options.firstWeekContainsDate == null ? defaultFirstWeekContainsDate : (0, _index9.default)(options.firstWeekContainsDate);
       if (!(firstWeekContainsDate >= 1 && firstWeekContainsDate <= 7)) {
         throw new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
       }
-      var weekStartsOn = (0, _index8.default)((_ref5 = (_ref6 = (_ref7 = (_options$weekStartsOn = options === null || options === void 0 ? void 0 : options.weekStartsOn) !== null && _options$weekStartsOn !== void 0 ? _options$weekStartsOn : options === null || options === void 0 ? void 0 : (_options$locale3 = options.locale) === null || _options$locale3 === void 0 ? void 0 : (_options$locale3$opti = _options$locale3.options) === null || _options$locale3$opti === void 0 ? void 0 : _options$locale3$opti.weekStartsOn) !== null && _ref7 !== void 0 ? _ref7 : defaultOptions.weekStartsOn) !== null && _ref6 !== void 0 ? _ref6 : (_defaultOptions$local3 = defaultOptions.locale) === null || _defaultOptions$local3 === void 0 ? void 0 : (_defaultOptions$local4 = _defaultOptions$local3.options) === null || _defaultOptions$local4 === void 0 ? void 0 : _defaultOptions$local4.weekStartsOn) !== null && _ref5 !== void 0 ? _ref5 : 0);
+      var localeWeekStartsOn = locale.options && locale.options.weekStartsOn;
+      var defaultWeekStartsOn = localeWeekStartsOn == null ? 0 : (0, _index9.default)(localeWeekStartsOn);
+      var weekStartsOn = options.weekStartsOn == null ? defaultWeekStartsOn : (0, _index9.default)(options.weekStartsOn);
       if (!(weekStartsOn >= 0 && weekStartsOn <= 6)) {
         throw new RangeError("weekStartsOn must be between 0 and 6 inclusively");
       }
@@ -2237,12 +2163,12 @@ var require_format = __commonJS({
       if (!locale.formatLong) {
         throw new RangeError("locale must contain formatLong property");
       }
-      var originalDate = (0, _index3.default)(dirtyDate);
+      var originalDate = (0, _index4.default)(dirtyDate);
       if (!(0, _index.default)(originalDate)) {
         throw new RangeError("Invalid time value");
       }
-      var timezoneOffset = (0, _index6.default)(originalDate);
-      var utcDate = (0, _index2.default)(originalDate, timezoneOffset);
+      var timezoneOffset = (0, _index7.default)(originalDate);
+      var utcDate = (0, _index3.default)(originalDate, timezoneOffset);
       var formatterOptions = {
         firstWeekContainsDate,
         weekStartsOn,
@@ -2252,8 +2178,8 @@ var require_format = __commonJS({
       var result = formatStr.match(longFormattingTokensRegExp).map(function(substring) {
         var firstCharacter = substring[0];
         if (firstCharacter === "p" || firstCharacter === "P") {
-          var longFormatter = _index5.default[firstCharacter];
-          return longFormatter(substring, locale.formatLong);
+          var longFormatter = _index6.default[firstCharacter];
+          return longFormatter(substring, locale.formatLong, formatterOptions);
         }
         return substring;
       }).join("").match(formattingTokensRegExp).map(function(substring) {
@@ -2264,13 +2190,13 @@ var require_format = __commonJS({
         if (firstCharacter === "'") {
           return cleanEscapedString(substring);
         }
-        var formatter = _index4.default[firstCharacter];
+        var formatter = _index5.default[firstCharacter];
         if (formatter) {
-          if (!(options !== null && options !== void 0 && options.useAdditionalWeekYearTokens) && (0, _index7.isProtectedWeekYearToken)(substring)) {
-            (0, _index7.throwProtectedError)(substring, dirtyFormatStr, String(dirtyDate));
+          if (!options.useAdditionalWeekYearTokens && (0, _index8.isProtectedWeekYearToken)(substring)) {
+            (0, _index8.throwProtectedError)(substring, dirtyFormatStr, dirtyDate);
           }
-          if (!(options !== null && options !== void 0 && options.useAdditionalDayOfYearTokens) && (0, _index7.isProtectedDayOfYearToken)(substring)) {
-            (0, _index7.throwProtectedError)(substring, dirtyFormatStr, String(dirtyDate));
+          if (!options.useAdditionalDayOfYearTokens && (0, _index8.isProtectedDayOfYearToken)(substring)) {
+            (0, _index8.throwProtectedError)(substring, dirtyFormatStr, dirtyDate);
           }
           return formatter(utcDate, substring, locale.localize, formatterOptions);
         }
@@ -2282,19 +2208,15 @@ var require_format = __commonJS({
       return result;
     }
     function cleanEscapedString(input) {
-      var matched = input.match(escapedStringRegExp);
-      if (!matched) {
-        return input;
-      }
-      return matched[1].replace(doubleQuoteRegExp, "'");
+      return input.match(escapedStringRegExp)[1].replace(doubleQuoteRegExp, "'");
     }
     module.exports = exports.default;
   }
 });
 
-// node_modules/.pnpm/format-number@3.0.0/node_modules/format-number/index.js
+// ../../node_modules/format-number/index.js
 var require_format_number = __commonJS({
-  "node_modules/.pnpm/format-number@3.0.0/node_modules/format-number/index.js"(exports, module) {
+  "../../node_modules/format-number/index.js"(exports, module) {
     module.exports = formatter;
     module.exports.default = formatter;
     function formatter(options) {
@@ -2513,11 +2435,10 @@ var require_format_number = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/addDays/index.js
+// ../../node_modules/date-fns/addDays/index.js
 var require_addDays = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/addDays/index.js"(exports, module) {
+  "../../node_modules/date-fns/addDays/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -2525,12 +2446,15 @@ var require_addDays = __commonJS({
     var _index = _interopRequireDefault(require_toInteger());
     var _index2 = _interopRequireDefault(require_toDate());
     var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function addDays(dirtyDate, dirtyAmount) {
       (0, _index3.default)(2, arguments);
       var date = (0, _index2.default)(dirtyDate);
       var amount = (0, _index.default)(dirtyAmount);
       if (isNaN(amount)) {
-        return /* @__PURE__ */ new Date(NaN);
+        return new Date(NaN);
       }
       if (!amount) {
         return date;
@@ -2542,11 +2466,10 @@ var require_addDays = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/addMonths/index.js
+// ../../node_modules/date-fns/addMonths/index.js
 var require_addMonths = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/addMonths/index.js"(exports, module) {
+  "../../node_modules/date-fns/addMonths/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -2554,12 +2477,15 @@ var require_addMonths = __commonJS({
     var _index = _interopRequireDefault(require_toInteger());
     var _index2 = _interopRequireDefault(require_toDate());
     var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function addMonths(dirtyDate, dirtyAmount) {
       (0, _index3.default)(2, arguments);
       var date = (0, _index2.default)(dirtyDate);
       var amount = (0, _index.default)(dirtyAmount);
       if (isNaN(amount)) {
-        return /* @__PURE__ */ new Date(NaN);
+        return new Date(NaN);
       }
       if (!amount) {
         return date;
@@ -2579,25 +2505,26 @@ var require_addMonths = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/add/index.js
+// ../../node_modules/date-fns/add/index.js
 var require_add = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/add/index.js"(exports, module) {
+  "../../node_modules/date-fns/add/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = add2;
-    var _typeof2 = _interopRequireDefault(require_typeof());
     var _index = _interopRequireDefault(require_addDays());
     var _index2 = _interopRequireDefault(require_addMonths());
     var _index3 = _interopRequireDefault(require_toDate());
     var _index4 = _interopRequireDefault(require_requiredArgs());
     var _index5 = _interopRequireDefault(require_toInteger());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function add2(dirtyDate, duration) {
       (0, _index4.default)(2, arguments);
-      if (!duration || (0, _typeof2.default)(duration) !== "object")
-        return /* @__PURE__ */ new Date(NaN);
+      if (!duration || typeof duration !== "object")
+        return new Date(NaN);
       var years = duration.years ? (0, _index5.default)(duration.years) : 0;
       var months = duration.months ? (0, _index5.default)(duration.months) : 0;
       var weeks = duration.weeks ? (0, _index5.default)(duration.weeks) : 0;
@@ -2618,17 +2545,19 @@ var require_add = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getDate/index.js
+// ../../node_modules/date-fns/getDate/index.js
 var require_getDate = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getDate/index.js"(exports, module) {
+  "../../node_modules/date-fns/getDate/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = getDate2;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function getDate2(dirtyDate) {
       (0, _index2.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -2639,17 +2568,19 @@ var require_getDate = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getDay/index.js
+// ../../node_modules/date-fns/getDay/index.js
 var require_getDay = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getDay/index.js"(exports, module) {
+  "../../node_modules/date-fns/getDay/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = getDay2;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function getDay2(dirtyDate) {
       (0, _index2.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -2660,17 +2591,19 @@ var require_getDay = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getHours/index.js
+// ../../node_modules/date-fns/getHours/index.js
 var require_getHours = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getHours/index.js"(exports, module) {
+  "../../node_modules/date-fns/getHours/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = getHours2;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function getHours2(dirtyDate) {
       (0, _index2.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -2681,17 +2614,19 @@ var require_getHours = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getMinutes/index.js
+// ../../node_modules/date-fns/getMinutes/index.js
 var require_getMinutes = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getMinutes/index.js"(exports, module) {
+  "../../node_modules/date-fns/getMinutes/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = getMinutes2;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function getMinutes2(dirtyDate) {
       (0, _index2.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -2702,17 +2637,19 @@ var require_getMinutes = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getMonth/index.js
+// ../../node_modules/date-fns/getMonth/index.js
 var require_getMonth = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getMonth/index.js"(exports, module) {
+  "../../node_modules/date-fns/getMonth/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = getMonth2;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function getMonth2(dirtyDate) {
       (0, _index2.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -2723,17 +2660,19 @@ var require_getMonth = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getYear/index.js
+// ../../node_modules/date-fns/getYear/index.js
 var require_getYear = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/getYear/index.js"(exports, module) {
+  "../../node_modules/date-fns/getYear/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = getYear2;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function getYear2(dirtyDate) {
       (0, _index2.default)(1, arguments);
       return (0, _index.default)(dirtyDate).getFullYear();
@@ -2742,17 +2681,19 @@ var require_getYear = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/compareAsc/index.js
+// ../../node_modules/date-fns/compareAsc/index.js
 var require_compareAsc = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/compareAsc/index.js"(exports, module) {
+  "../../node_modules/date-fns/compareAsc/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = compareAsc;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function compareAsc(dirtyDateLeft, dirtyDateRight) {
       (0, _index2.default)(2, arguments);
       var dateLeft = (0, _index.default)(dirtyDateLeft);
@@ -2770,234 +2711,73 @@ var require_compareAsc = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/startOfDay/index.js
-var require_startOfDay = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/startOfDay/index.js"(exports, module) {
+// ../../node_modules/date-fns/differenceInCalendarYears/index.js
+var require_differenceInCalendarYears = __commonJS({
+  "../../node_modules/date-fns/differenceInCalendarYears/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.default = startOfDay;
+    exports.default = differenceInCalendarYears;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
-    function startOfDay(dirtyDate) {
-      (0, _index2.default)(1, arguments);
-      var date = (0, _index.default)(dirtyDate);
-      date.setHours(0, 0, 0, 0);
-      return date;
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
     }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInCalendarDays/index.js
-var require_differenceInCalendarDays = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInCalendarDays/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = differenceInCalendarDays;
-    var _index = _interopRequireDefault(require_getTimezoneOffsetInMilliseconds());
-    var _index2 = _interopRequireDefault(require_startOfDay());
-    var _index3 = _interopRequireDefault(require_requiredArgs());
-    var MILLISECONDS_IN_DAY = 864e5;
-    function differenceInCalendarDays(dirtyDateLeft, dirtyDateRight) {
-      (0, _index3.default)(2, arguments);
-      var startOfDayLeft = (0, _index2.default)(dirtyDateLeft);
-      var startOfDayRight = (0, _index2.default)(dirtyDateRight);
-      var timestampLeft = startOfDayLeft.getTime() - (0, _index.default)(startOfDayLeft);
-      var timestampRight = startOfDayRight.getTime() - (0, _index.default)(startOfDayRight);
-      return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_DAY);
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInDays/index.js
-var require_differenceInDays = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInDays/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = differenceInDays;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_differenceInCalendarDays());
-    var _index3 = _interopRequireDefault(require_requiredArgs());
-    function compareLocalAsc(dateLeft, dateRight) {
-      var diff = dateLeft.getFullYear() - dateRight.getFullYear() || dateLeft.getMonth() - dateRight.getMonth() || dateLeft.getDate() - dateRight.getDate() || dateLeft.getHours() - dateRight.getHours() || dateLeft.getMinutes() - dateRight.getMinutes() || dateLeft.getSeconds() - dateRight.getSeconds() || dateLeft.getMilliseconds() - dateRight.getMilliseconds();
-      if (diff < 0) {
-        return -1;
-      } else if (diff > 0) {
-        return 1;
-      } else {
-        return diff;
-      }
-    }
-    function differenceInDays(dirtyDateLeft, dirtyDateRight) {
-      (0, _index3.default)(2, arguments);
+    function differenceInCalendarYears(dirtyDateLeft, dirtyDateRight) {
+      (0, _index2.default)(2, arguments);
       var dateLeft = (0, _index.default)(dirtyDateLeft);
       var dateRight = (0, _index.default)(dirtyDateRight);
-      var sign = compareLocalAsc(dateLeft, dateRight);
+      return dateLeft.getFullYear() - dateRight.getFullYear();
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/differenceInYears/index.js
+var require_differenceInYears = __commonJS({
+  "../../node_modules/date-fns/differenceInYears/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = differenceInYears;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_differenceInCalendarYears());
+    var _index3 = _interopRequireDefault(require_compareAsc());
+    var _index4 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function differenceInYears(dirtyDateLeft, dirtyDateRight) {
+      (0, _index4.default)(2, arguments);
+      var dateLeft = (0, _index.default)(dirtyDateLeft);
+      var dateRight = (0, _index.default)(dirtyDateRight);
+      var sign = (0, _index3.default)(dateLeft, dateRight);
       var difference = Math.abs((0, _index2.default)(dateLeft, dateRight));
-      dateLeft.setDate(dateLeft.getDate() - sign * difference);
-      var isLastDayNotFull = Number(compareLocalAsc(dateLeft, dateRight) === -sign);
-      var result = sign * (difference - isLastDayNotFull);
+      dateLeft.setFullYear(1584);
+      dateRight.setFullYear(1584);
+      var isLastYearNotFull = (0, _index3.default)(dateLeft, dateRight) === -sign;
+      var result = sign * (difference - Number(isLastYearNotFull));
       return result === 0 ? 0 : result;
     }
     module.exports = exports.default;
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/constants/index.js
-var require_constants = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/constants/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.secondsInYear = exports.secondsInWeek = exports.secondsInQuarter = exports.secondsInMonth = exports.secondsInMinute = exports.secondsInHour = exports.secondsInDay = exports.quartersInYear = exports.monthsInYear = exports.monthsInQuarter = exports.minutesInHour = exports.minTime = exports.millisecondsInSecond = exports.millisecondsInMinute = exports.millisecondsInHour = exports.maxTime = exports.daysInYear = exports.daysInWeek = void 0;
-    var daysInWeek = 7;
-    exports.daysInWeek = daysInWeek;
-    var daysInYear = 365.2425;
-    exports.daysInYear = daysInYear;
-    var maxTime = Math.pow(10, 8) * 24 * 60 * 60 * 1e3;
-    exports.maxTime = maxTime;
-    var millisecondsInMinute = 6e4;
-    exports.millisecondsInMinute = millisecondsInMinute;
-    var millisecondsInHour = 36e5;
-    exports.millisecondsInHour = millisecondsInHour;
-    var millisecondsInSecond = 1e3;
-    exports.millisecondsInSecond = millisecondsInSecond;
-    var minTime = -maxTime;
-    exports.minTime = minTime;
-    var minutesInHour = 60;
-    exports.minutesInHour = minutesInHour;
-    var monthsInQuarter = 3;
-    exports.monthsInQuarter = monthsInQuarter;
-    var monthsInYear = 12;
-    exports.monthsInYear = monthsInYear;
-    var quartersInYear = 4;
-    exports.quartersInYear = quartersInYear;
-    var secondsInHour = 3600;
-    exports.secondsInHour = secondsInHour;
-    var secondsInMinute = 60;
-    exports.secondsInMinute = secondsInMinute;
-    var secondsInDay = secondsInHour * 24;
-    exports.secondsInDay = secondsInDay;
-    var secondsInWeek = secondsInDay * 7;
-    exports.secondsInWeek = secondsInWeek;
-    var secondsInYear = secondsInDay * daysInYear;
-    exports.secondsInYear = secondsInYear;
-    var secondsInMonth = secondsInYear / 12;
-    exports.secondsInMonth = secondsInMonth;
-    var secondsInQuarter = secondsInMonth * 3;
-    exports.secondsInQuarter = secondsInQuarter;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInMilliseconds/index.js
-var require_differenceInMilliseconds = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInMilliseconds/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = differenceInMilliseconds;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    function differenceInMilliseconds(dateLeft, dateRight) {
-      (0, _index2.default)(2, arguments);
-      return (0, _index.default)(dateLeft).getTime() - (0, _index.default)(dateRight).getTime();
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/roundingMethods/index.js
-var require_roundingMethods = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/_lib/roundingMethods/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.getRoundingMethod = getRoundingMethod;
-    var roundingMap = {
-      ceil: Math.ceil,
-      round: Math.round,
-      floor: Math.floor,
-      trunc: function trunc(value) {
-        return value < 0 ? Math.ceil(value) : Math.floor(value);
-      }
-      // Math.trunc is not supported by IE
-    };
-    var defaultRoundingMethod = "trunc";
-    function getRoundingMethod(method) {
-      return method ? roundingMap[method] : roundingMap[defaultRoundingMethod];
-    }
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInHours/index.js
-var require_differenceInHours = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInHours/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = differenceInHours;
-    var _index = require_constants();
-    var _index2 = _interopRequireDefault(require_differenceInMilliseconds());
-    var _index3 = _interopRequireDefault(require_requiredArgs());
-    var _index4 = require_roundingMethods();
-    function differenceInHours(dateLeft, dateRight, options) {
-      (0, _index3.default)(2, arguments);
-      var diff = (0, _index2.default)(dateLeft, dateRight) / _index.millisecondsInHour;
-      return (0, _index4.getRoundingMethod)(options === null || options === void 0 ? void 0 : options.roundingMethod)(diff);
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInMinutes/index.js
-var require_differenceInMinutes = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInMinutes/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = differenceInMinutes;
-    var _index = require_constants();
-    var _index2 = _interopRequireDefault(require_differenceInMilliseconds());
-    var _index3 = _interopRequireDefault(require_requiredArgs());
-    var _index4 = require_roundingMethods();
-    function differenceInMinutes(dateLeft, dateRight, options) {
-      (0, _index3.default)(2, arguments);
-      var diff = (0, _index2.default)(dateLeft, dateRight) / _index.millisecondsInMinute;
-      return (0, _index4.getRoundingMethod)(options === null || options === void 0 ? void 0 : options.roundingMethod)(diff);
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInCalendarMonths/index.js
+// ../../node_modules/date-fns/differenceInCalendarMonths/index.js
 var require_differenceInCalendarMonths = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInCalendarMonths/index.js"(exports, module) {
+  "../../node_modules/date-fns/differenceInCalendarMonths/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = differenceInCalendarMonths;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function differenceInCalendarMonths(dirtyDateLeft, dirtyDateRight) {
       (0, _index2.default)(2, arguments);
       var dateLeft = (0, _index.default)(dirtyDateLeft);
@@ -3010,17 +2790,19 @@ var require_differenceInCalendarMonths = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/endOfDay/index.js
+// ../../node_modules/date-fns/endOfDay/index.js
 var require_endOfDay = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/endOfDay/index.js"(exports, module) {
+  "../../node_modules/date-fns/endOfDay/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = endOfDay;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function endOfDay(dirtyDate) {
       (0, _index2.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -3031,17 +2813,19 @@ var require_endOfDay = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/endOfMonth/index.js
+// ../../node_modules/date-fns/endOfMonth/index.js
 var require_endOfMonth = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/endOfMonth/index.js"(exports, module) {
+  "../../node_modules/date-fns/endOfMonth/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = endOfMonth;
     var _index = _interopRequireDefault(require_toDate());
     var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function endOfMonth(dirtyDate) {
       (0, _index2.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -3054,11 +2838,10 @@ var require_endOfMonth = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/isLastDayOfMonth/index.js
+// ../../node_modules/date-fns/isLastDayOfMonth/index.js
 var require_isLastDayOfMonth = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/isLastDayOfMonth/index.js"(exports, module) {
+  "../../node_modules/date-fns/isLastDayOfMonth/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -3067,6 +2850,9 @@ var require_isLastDayOfMonth = __commonJS({
     var _index2 = _interopRequireDefault(require_endOfDay());
     var _index3 = _interopRequireDefault(require_endOfMonth());
     var _index4 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function isLastDayOfMonth(dirtyDate) {
       (0, _index4.default)(1, arguments);
       var date = (0, _index.default)(dirtyDate);
@@ -3076,11 +2862,10 @@ var require_isLastDayOfMonth = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInMonths/index.js
+// ../../node_modules/date-fns/differenceInMonths/index.js
 var require_differenceInMonths = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInMonths/index.js"(exports, module) {
+  "../../node_modules/date-fns/differenceInMonths/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -3090,6 +2875,9 @@ var require_differenceInMonths = __commonJS({
     var _index3 = _interopRequireDefault(require_compareAsc());
     var _index4 = _interopRequireDefault(require_requiredArgs());
     var _index5 = _interopRequireDefault(require_isLastDayOfMonth());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function differenceInMonths(dirtyDateLeft, dirtyDateRight) {
       (0, _index4.default)(2, arguments);
       var dateLeft = (0, _index.default)(dirtyDateLeft);
@@ -3116,11 +2904,226 @@ var require_differenceInMonths = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInSeconds/index.js
-var require_differenceInSeconds = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInSeconds/index.js"(exports, module) {
+// ../../node_modules/date-fns/startOfDay/index.js
+var require_startOfDay = __commonJS({
+  "../../node_modules/date-fns/startOfDay/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = startOfDay;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function startOfDay(dirtyDate) {
+      (0, _index2.default)(1, arguments);
+      var date = (0, _index.default)(dirtyDate);
+      date.setHours(0, 0, 0, 0);
+      return date;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/differenceInCalendarDays/index.js
+var require_differenceInCalendarDays = __commonJS({
+  "../../node_modules/date-fns/differenceInCalendarDays/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = differenceInCalendarDays;
+    var _index = _interopRequireDefault(require_getTimezoneOffsetInMilliseconds());
+    var _index2 = _interopRequireDefault(require_startOfDay());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    var MILLISECONDS_IN_DAY = 864e5;
+    function differenceInCalendarDays(dirtyDateLeft, dirtyDateRight) {
+      (0, _index3.default)(2, arguments);
+      var startOfDayLeft = (0, _index2.default)(dirtyDateLeft);
+      var startOfDayRight = (0, _index2.default)(dirtyDateRight);
+      var timestampLeft = startOfDayLeft.getTime() - (0, _index.default)(startOfDayLeft);
+      var timestampRight = startOfDayRight.getTime() - (0, _index.default)(startOfDayRight);
+      return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_DAY);
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/differenceInDays/index.js
+var require_differenceInDays = __commonJS({
+  "../../node_modules/date-fns/differenceInDays/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = differenceInDays;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_differenceInCalendarDays());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function compareLocalAsc(dateLeft, dateRight) {
+      var diff = dateLeft.getFullYear() - dateRight.getFullYear() || dateLeft.getMonth() - dateRight.getMonth() || dateLeft.getDate() - dateRight.getDate() || dateLeft.getHours() - dateRight.getHours() || dateLeft.getMinutes() - dateRight.getMinutes() || dateLeft.getSeconds() - dateRight.getSeconds() || dateLeft.getMilliseconds() - dateRight.getMilliseconds();
+      if (diff < 0) {
+        return -1;
+      } else if (diff > 0) {
+        return 1;
+      } else {
+        return diff;
+      }
+    }
+    function differenceInDays(dirtyDateLeft, dirtyDateRight) {
+      (0, _index3.default)(2, arguments);
+      var dateLeft = (0, _index.default)(dirtyDateLeft);
+      var dateRight = (0, _index.default)(dirtyDateRight);
+      var sign = compareLocalAsc(dateLeft, dateRight);
+      var difference = Math.abs((0, _index2.default)(dateLeft, dateRight));
+      dateLeft.setDate(dateLeft.getDate() - sign * difference);
+      var isLastDayNotFull = Number(compareLocalAsc(dateLeft, dateRight) === -sign);
+      var result = sign * (difference - isLastDayNotFull);
+      return result === 0 ? 0 : result;
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/constants/index.js
+var require_constants = __commonJS({
+  "../../node_modules/date-fns/constants/index.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.secondsInMinute = exports.secondsInHour = exports.quartersInYear = exports.monthsInYear = exports.monthsInQuarter = exports.minutesInHour = exports.minTime = exports.millisecondsInSecond = exports.millisecondsInHour = exports.millisecondsInMinute = exports.maxTime = exports.daysInWeek = void 0;
+    var daysInWeek = 7;
+    exports.daysInWeek = daysInWeek;
+    var maxTime = Math.pow(10, 8) * 24 * 60 * 60 * 1e3;
+    exports.maxTime = maxTime;
+    var millisecondsInMinute = 6e4;
+    exports.millisecondsInMinute = millisecondsInMinute;
+    var millisecondsInHour = 36e5;
+    exports.millisecondsInHour = millisecondsInHour;
+    var millisecondsInSecond = 1e3;
+    exports.millisecondsInSecond = millisecondsInSecond;
+    var minTime = -maxTime;
+    exports.minTime = minTime;
+    var minutesInHour = 60;
+    exports.minutesInHour = minutesInHour;
+    var monthsInQuarter = 3;
+    exports.monthsInQuarter = monthsInQuarter;
+    var monthsInYear = 12;
+    exports.monthsInYear = monthsInYear;
+    var quartersInYear = 4;
+    exports.quartersInYear = quartersInYear;
+    var secondsInHour = 3600;
+    exports.secondsInHour = secondsInHour;
+    var secondsInMinute = 60;
+    exports.secondsInMinute = secondsInMinute;
+  }
+});
+
+// ../../node_modules/date-fns/differenceInMilliseconds/index.js
+var require_differenceInMilliseconds = __commonJS({
+  "../../node_modules/date-fns/differenceInMilliseconds/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = differenceInMilliseconds;
+    var _index = _interopRequireDefault(require_toDate());
+    var _index2 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function differenceInMilliseconds(dateLeft, dateRight) {
+      (0, _index2.default)(2, arguments);
+      return (0, _index.default)(dateLeft).getTime() - (0, _index.default)(dateRight).getTime();
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/_lib/roundingMethods/index.js
+var require_roundingMethods = __commonJS({
+  "../../node_modules/date-fns/_lib/roundingMethods/index.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.getRoundingMethod = getRoundingMethod;
+    var roundingMap = {
+      ceil: Math.ceil,
+      round: Math.round,
+      floor: Math.floor,
+      trunc: function(value) {
+        return value < 0 ? Math.ceil(value) : Math.floor(value);
+      }
+    };
+    var defaultRoundingMethod = "trunc";
+    function getRoundingMethod(method) {
+      return method ? roundingMap[method] : roundingMap[defaultRoundingMethod];
+    }
+  }
+});
+
+// ../../node_modules/date-fns/differenceInHours/index.js
+var require_differenceInHours = __commonJS({
+  "../../node_modules/date-fns/differenceInHours/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = differenceInHours;
+    var _index = require_constants();
+    var _index2 = _interopRequireDefault(require_differenceInMilliseconds());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    var _index4 = require_roundingMethods();
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function differenceInHours(dateLeft, dateRight, options) {
+      (0, _index3.default)(2, arguments);
+      var diff = (0, _index2.default)(dateLeft, dateRight) / _index.millisecondsInHour;
+      return (0, _index4.getRoundingMethod)(options === null || options === void 0 ? void 0 : options.roundingMethod)(diff);
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/differenceInMinutes/index.js
+var require_differenceInMinutes = __commonJS({
+  "../../node_modules/date-fns/differenceInMinutes/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = differenceInMinutes;
+    var _index = require_constants();
+    var _index2 = _interopRequireDefault(require_differenceInMilliseconds());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    var _index4 = require_roundingMethods();
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function differenceInMinutes(dateLeft, dateRight, options) {
+      (0, _index3.default)(2, arguments);
+      var diff = (0, _index2.default)(dateLeft, dateRight) / _index.millisecondsInMinute;
+      return (0, _index4.getRoundingMethod)(options === null || options === void 0 ? void 0 : options.roundingMethod)(diff);
+    }
+    module.exports = exports.default;
+  }
+});
+
+// ../../node_modules/date-fns/differenceInSeconds/index.js
+var require_differenceInSeconds = __commonJS({
+  "../../node_modules/date-fns/differenceInSeconds/index.js"(exports, module) {
+    "use strict";
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -3128,6 +3131,9 @@ var require_differenceInSeconds = __commonJS({
     var _index = _interopRequireDefault(require_differenceInMilliseconds());
     var _index2 = _interopRequireDefault(require_requiredArgs());
     var _index3 = require_roundingMethods();
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function differenceInSeconds(dateLeft, dateRight, options) {
       (0, _index2.default)(2, arguments);
       var diff = (0, _index.default)(dateLeft, dateRight) / 1e3;
@@ -3137,138 +3143,33 @@ var require_differenceInSeconds = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInCalendarYears/index.js
-var require_differenceInCalendarYears = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInCalendarYears/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = differenceInCalendarYears;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    function differenceInCalendarYears(dirtyDateLeft, dirtyDateRight) {
-      (0, _index2.default)(2, arguments);
-      var dateLeft = (0, _index.default)(dirtyDateLeft);
-      var dateRight = (0, _index.default)(dirtyDateRight);
-      return dateLeft.getFullYear() - dateRight.getFullYear();
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInYears/index.js
-var require_differenceInYears = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/differenceInYears/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = differenceInYears;
-    var _index = _interopRequireDefault(require_toDate());
-    var _index2 = _interopRequireDefault(require_differenceInCalendarYears());
-    var _index3 = _interopRequireDefault(require_compareAsc());
-    var _index4 = _interopRequireDefault(require_requiredArgs());
-    function differenceInYears(dirtyDateLeft, dirtyDateRight) {
-      (0, _index4.default)(2, arguments);
-      var dateLeft = (0, _index.default)(dirtyDateLeft);
-      var dateRight = (0, _index.default)(dirtyDateRight);
-      var sign = (0, _index3.default)(dateLeft, dateRight);
-      var difference = Math.abs((0, _index2.default)(dateLeft, dateRight));
-      dateLeft.setFullYear(1584);
-      dateRight.setFullYear(1584);
-      var isLastYearNotFull = (0, _index3.default)(dateLeft, dateRight) === -sign;
-      var result = sign * (difference - Number(isLastYearNotFull));
-      return result === 0 ? 0 : result;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/intervalToDuration/index.js
-var require_intervalToDuration = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/intervalToDuration/index.js"(exports, module) {
-    "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.default = intervalToDuration2;
-    var _index = _interopRequireDefault(require_compareAsc());
-    var _index2 = _interopRequireDefault(require_add());
-    var _index3 = _interopRequireDefault(require_differenceInDays());
-    var _index4 = _interopRequireDefault(require_differenceInHours());
-    var _index5 = _interopRequireDefault(require_differenceInMinutes());
-    var _index6 = _interopRequireDefault(require_differenceInMonths());
-    var _index7 = _interopRequireDefault(require_differenceInSeconds());
-    var _index8 = _interopRequireDefault(require_differenceInYears());
-    var _index9 = _interopRequireDefault(require_toDate());
-    var _index10 = _interopRequireDefault(require_requiredArgs());
-    function intervalToDuration2(interval) {
-      (0, _index10.default)(1, arguments);
-      var start = (0, _index9.default)(interval.start);
-      var end = (0, _index9.default)(interval.end);
-      if (isNaN(start.getTime()))
-        throw new RangeError("Start Date is invalid");
-      if (isNaN(end.getTime()))
-        throw new RangeError("End Date is invalid");
-      var duration = {};
-      duration.years = Math.abs((0, _index8.default)(end, start));
-      var sign = (0, _index.default)(end, start);
-      var remainingMonths = (0, _index2.default)(start, {
-        years: sign * duration.years
-      });
-      duration.months = Math.abs((0, _index6.default)(end, remainingMonths));
-      var remainingDays = (0, _index2.default)(remainingMonths, {
-        months: sign * duration.months
-      });
-      duration.days = Math.abs((0, _index3.default)(end, remainingDays));
-      var remainingHours = (0, _index2.default)(remainingDays, {
-        days: sign * duration.days
-      });
-      duration.hours = Math.abs((0, _index4.default)(end, remainingHours));
-      var remainingMinutes = (0, _index2.default)(remainingHours, {
-        hours: sign * duration.hours
-      });
-      duration.minutes = Math.abs((0, _index5.default)(end, remainingMinutes));
-      var remainingSeconds = (0, _index2.default)(remainingMinutes, {
-        minutes: sign * duration.minutes
-      });
-      duration.seconds = Math.abs((0, _index7.default)(end, remainingSeconds));
-      return duration;
-    }
-    module.exports = exports.default;
-  }
-});
-
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/subDays/index.js
+// ../../node_modules/date-fns/subDays/index.js
 var require_subDays = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/subDays/index.js"(exports, module) {
+  "../../node_modules/date-fns/subDays/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = subDays;
-    var _index = _interopRequireDefault(require_addDays());
-    var _index2 = _interopRequireDefault(require_requiredArgs());
-    var _index3 = _interopRequireDefault(require_toInteger());
+    var _index = _interopRequireDefault(require_toInteger());
+    var _index2 = _interopRequireDefault(require_addDays());
+    var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function subDays(dirtyDate, dirtyAmount) {
-      (0, _index2.default)(2, arguments);
-      var amount = (0, _index3.default)(dirtyAmount);
-      return (0, _index.default)(dirtyDate, -amount);
+      (0, _index3.default)(2, arguments);
+      var amount = (0, _index.default)(dirtyAmount);
+      return (0, _index2.default)(dirtyDate, -amount);
     }
     module.exports = exports.default;
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/subMonths/index.js
+// ../../node_modules/date-fns/subMonths/index.js
 var require_subMonths = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/subMonths/index.js"(exports, module) {
+  "../../node_modules/date-fns/subMonths/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
@@ -3276,6 +3177,9 @@ var require_subMonths = __commonJS({
     var _index = _interopRequireDefault(require_toInteger());
     var _index2 = _interopRequireDefault(require_addMonths());
     var _index3 = _interopRequireDefault(require_requiredArgs());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function subMonths(dirtyDate, dirtyAmount) {
       (0, _index3.default)(2, arguments);
       var amount = (0, _index.default)(dirtyAmount);
@@ -3285,24 +3189,25 @@ var require_subMonths = __commonJS({
   }
 });
 
-// node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/sub/index.js
+// ../../node_modules/date-fns/sub/index.js
 var require_sub = __commonJS({
-  "node_modules/.pnpm/date-fns@2.30.0/node_modules/date-fns/sub/index.js"(exports, module) {
+  "../../node_modules/date-fns/sub/index.js"(exports, module) {
     "use strict";
-    var _interopRequireDefault = require_interopRequireDefault().default;
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
     exports.default = sub2;
-    var _typeof2 = _interopRequireDefault(require_typeof());
     var _index = _interopRequireDefault(require_subDays());
     var _index2 = _interopRequireDefault(require_subMonths());
     var _index3 = _interopRequireDefault(require_requiredArgs());
     var _index4 = _interopRequireDefault(require_toInteger());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
     function sub2(date, duration) {
       (0, _index3.default)(2, arguments);
-      if (!duration || (0, _typeof2.default)(duration) !== "object")
-        return /* @__PURE__ */ new Date(NaN);
+      if (!duration || typeof duration !== "object")
+        return new Date(NaN);
       var years = duration.years ? (0, _index4.default)(duration.years) : 0;
       var months = duration.months ? (0, _index4.default)(duration.months) : 0;
       var weeks = duration.weeks ? (0, _index4.default)(duration.weeks) : 0;
@@ -3322,8 +3227,77 @@ var require_sub = __commonJS({
   }
 });
 
+// ../../node_modules/date-fns/intervalToDuration/index.js
+var require_intervalToDuration = __commonJS({
+  "../../node_modules/date-fns/intervalToDuration/index.js"(exports, module) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.default = intervalToDuration2;
+    var _index = _interopRequireDefault(require_compareAsc());
+    var _index2 = _interopRequireDefault(require_differenceInYears());
+    var _index3 = _interopRequireDefault(require_differenceInMonths());
+    var _index4 = _interopRequireDefault(require_differenceInDays());
+    var _index5 = _interopRequireDefault(require_differenceInHours());
+    var _index6 = _interopRequireDefault(require_differenceInMinutes());
+    var _index7 = _interopRequireDefault(require_differenceInSeconds());
+    var _index8 = _interopRequireDefault(require_isValid());
+    var _index9 = _interopRequireDefault(require_requiredArgs());
+    var _index10 = _interopRequireDefault(require_toDate());
+    var _index11 = _interopRequireDefault(require_sub());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { default: obj };
+    }
+    function intervalToDuration2(_ref) {
+      var start = _ref.start, end = _ref.end;
+      (0, _index9.default)(1, arguments);
+      var dateLeft = (0, _index10.default)(start);
+      var dateRight = (0, _index10.default)(end);
+      if (!(0, _index8.default)(dateLeft)) {
+        throw new RangeError("Start Date is invalid");
+      }
+      if (!(0, _index8.default)(dateRight)) {
+        throw new RangeError("End Date is invalid");
+      }
+      var duration = {
+        years: 0,
+        months: 0,
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      };
+      var sign = (0, _index.default)(dateLeft, dateRight);
+      duration.years = Math.abs((0, _index2.default)(dateLeft, dateRight));
+      var remainingMonths = (0, _index11.default)(dateLeft, {
+        years: sign * duration.years
+      });
+      duration.months = Math.abs((0, _index3.default)(remainingMonths, dateRight));
+      var remainingDays = (0, _index11.default)(remainingMonths, {
+        months: sign * duration.months
+      });
+      duration.days = Math.abs((0, _index4.default)(remainingDays, dateRight));
+      var remainingHours = (0, _index11.default)(remainingDays, {
+        days: sign * duration.days
+      });
+      duration.hours = Math.abs((0, _index5.default)(remainingHours, dateRight));
+      var remainingMinutes = (0, _index11.default)(remainingHours, {
+        hours: sign * duration.hours
+      });
+      duration.minutes = Math.abs((0, _index6.default)(remainingMinutes, dateRight));
+      var remainingSeconds = (0, _index11.default)(remainingMinutes, {
+        minutes: sign * duration.minutes
+      });
+      duration.seconds = Math.abs((0, _index7.default)(remainingSeconds, dateRight));
+      return duration;
+    }
+    module.exports = exports.default;
+  }
+});
+
 // src/third-party/collection.tsx
-import * as React55 from "react";
+import * as React53 from "react";
 import {
   getBlockCollectionId,
   getBlockParentPage as getBlockParentPage2,
@@ -3332,14 +3306,14 @@ import {
 import { useLocalStorage, useWindowSize } from "react-use";
 
 // src/components/page-icon.tsx
-import * as React21 from "react";
+import * as React20 from "react";
 import { getBlockIcon, getBlockTitle as getBlockTitle3 } from "notion-utils";
 
 // src/context.tsx
-import * as React19 from "react";
+import * as React18 from "react";
 
 // src/components/asset-wrapper.tsx
-import * as React15 from "react";
+import * as React14 from "react";
 import { parsePageId as parsePageId2 } from "notion-utils";
 
 // src/utils.ts
@@ -3421,41 +3395,19 @@ var getYoutubeId = (url) => {
 };
 
 // src/components/eoi.tsx
-import * as React3 from "react";
+import * as React2 from "react";
 
 // src/icons/type-github.tsx
 import * as React from "react";
 function SvgTypeGitHub(props) {
-  return /* @__PURE__ */ React.createElement("svg", __spreadValues({ viewBox: "0 0 260 260" }, props), /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement(
-    "path",
-    {
-      d: "M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z",
-      fill: "#161614"
-    }
-  )));
+  return /* @__PURE__ */ React.createElement("svg", __spreadValues({
+    viewBox: "0 0 260 260"
+  }, props), /* @__PURE__ */ React.createElement("g", null, /* @__PURE__ */ React.createElement("path", {
+    d: "M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z",
+    fill: "#161614"
+  })));
 }
 var type_github_default = SvgTypeGitHub;
-
-// src/components/mention-preview-card.tsx
-import React2 from "react";
-function capitalizeFirstLetter(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-var MentionPreviewCard = ({ owner, lastUpdated, externalImage, title, domain }) => {
-  return /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle" }, externalImage && /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-domain-warp" }, /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-logo" }, externalImage), /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-domain" }, capitalizeFirstLetter(domain.split(".")[0]))), /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-title" }, title), owner && /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item" }, /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item-name" }, "Owner"), /* @__PURE__ */ React2.createElement("span", { className: "notion-external-subtitle-item-desc" }, owner)), lastUpdated && /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item" }, /* @__PURE__ */ React2.createElement("div", { className: "notion-external-subtitle-item-name" }, "Updated"), /* @__PURE__ */ React2.createElement("span", { className: "notion-external-subtitle-item-desc" }, lastUpdated)), domain === "github.com" && /* @__PURE__ */ React2.createElement("div", { className: "notion-preview-card-github-shields" }, /* @__PURE__ */ React2.createElement(
-    "img",
-    {
-      src: `https://img.shields.io/github/stars/${owner}/${title}?logo=github`,
-      alt: ""
-    }
-  ), /* @__PURE__ */ React2.createElement(
-    "img",
-    {
-      src: `https://img.shields.io/github/last-commit/${owner}/${title}`,
-      alt: ""
-    }
-  )));
-};
 
 // src/components/eoi.tsx
 var EOI = ({ block, inline, className }) => {
@@ -3472,7 +3424,7 @@ var EOI = ({ block, inline, className }) => {
   let externalImage;
   switch (domain) {
     case "github.com":
-      externalImage = /* @__PURE__ */ React3.createElement(type_github_default, null);
+      externalImage = /* @__PURE__ */ React2.createElement(type_github_default, null);
       if (owner) {
         const parts = owner.split("/");
         owner = parts[parts.length - 1];
@@ -3487,49 +3439,43 @@ var EOI = ({ block, inline, className }) => {
       }
       return null;
   }
-  return /* @__PURE__ */ React3.createElement(
-    components.Link,
-    {
-      target: "_blank",
-      rel: "noopener noreferrer",
-      href: original_url,
-      className: cs(
-        "notion-external",
-        inline ? "notion-external-mention" : "notion-external-block notion-row",
-        className
-      )
-    },
-    externalImage && /* @__PURE__ */ React3.createElement("div", { className: "notion-external-image" }, externalImage),
-    /* @__PURE__ */ React3.createElement("div", { className: "notion-external-description" }, /* @__PURE__ */ React3.createElement("div", { className: "notion-external-title" }, title), (owner || lastUpdated) && /* @__PURE__ */ React3.createElement(
-      MentionPreviewCard,
-      {
-        title,
-        owner,
-        lastUpdated,
-        domain,
-        externalImage
-      }
-    ))
-  );
+  return /* @__PURE__ */ React2.createElement(components.Link, {
+    target: "_blank",
+    rel: "noopener noreferrer",
+    href: original_url,
+    className: cs(
+      "notion-external",
+      inline ? "notion-external-mention" : "notion-external-block notion-row",
+      className
+    )
+  }, externalImage && /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-image"
+  }, externalImage), /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-description"
+  }, /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-title"
+  }, title), (owner || lastUpdated) && /* @__PURE__ */ React2.createElement("div", {
+    className: "notion-external-subtitle"
+  }, owner && /* @__PURE__ */ React2.createElement("span", null, owner), owner && lastUpdated && /* @__PURE__ */ React2.createElement("span", null, " \u2022 "), lastUpdated && /* @__PURE__ */ React2.createElement("span", null, "Updated ", lastUpdated))));
 };
 
 // src/components/text.tsx
-import * as React6 from "react";
+import * as React5 from "react";
 import { parsePageId } from "notion-utils";
 
 // src/components/graceful-image.tsx
-import * as React4 from "react";
+import * as React3 from "react";
 import { Img } from "react-image";
 var GracefulImage = (props) => {
   if (isBrowser) {
-    return /* @__PURE__ */ React4.createElement(Img, __spreadValues({}, props));
+    return /* @__PURE__ */ React3.createElement(Img, __spreadValues({}, props));
   } else {
-    return /* @__PURE__ */ React4.createElement("img", __spreadValues({}, props));
+    return /* @__PURE__ */ React3.createElement("img", __spreadValues({}, props));
   }
 };
 
 // src/components/page-title.tsx
-import * as React5 from "react";
+import * as React4 from "react";
 import { getBlockTitle } from "notion-utils";
 var PageTitleImpl = (_a) => {
   var _b = _a, { block, className, defaultIcon } = _b, rest = __objRest(_b, ["block", "className", "defaultIcon"]);
@@ -3543,38 +3489,51 @@ var PageTitleImpl = (_a) => {
       return null;
     }
     const titleDecoration = [[title]];
-    return /* @__PURE__ */ React5.createElement("span", __spreadValues({ className: cs("notion-page-title", className) }, rest), /* @__PURE__ */ React5.createElement(
-      PageIcon,
-      {
-        block,
-        defaultIcon,
-        className: "notion-page-title-icon"
-      }
-    ), /* @__PURE__ */ React5.createElement("span", { className: "notion-page-title-text" }, /* @__PURE__ */ React5.createElement(Text, { value: titleDecoration, block })));
+    return /* @__PURE__ */ React4.createElement("span", __spreadValues({
+      className: cs("notion-page-title", className)
+    }, rest), /* @__PURE__ */ React4.createElement(PageIcon, {
+      block,
+      defaultIcon,
+      className: "notion-page-title-icon"
+    }), /* @__PURE__ */ React4.createElement("span", {
+      className: "notion-page-title-text"
+    }, /* @__PURE__ */ React4.createElement(Text, {
+      value: titleDecoration,
+      block
+    })));
   }
   if (!((_a2 = block.properties) == null ? void 0 : _a2.title)) {
     return null;
   }
-  return /* @__PURE__ */ React5.createElement("span", __spreadValues({ className: cs("notion-page-title", className) }, rest), /* @__PURE__ */ React5.createElement(
-    PageIcon,
-    {
-      block,
-      defaultIcon,
-      className: "notion-page-title-icon"
-    }
-  ), /* @__PURE__ */ React5.createElement("span", { className: "notion-page-title-text" }, /* @__PURE__ */ React5.createElement(Text, { value: (_b2 = block.properties) == null ? void 0 : _b2.title, block })));
+  return /* @__PURE__ */ React4.createElement("span", __spreadValues({
+    className: cs("notion-page-title", className)
+  }, rest), /* @__PURE__ */ React4.createElement(PageIcon, {
+    block,
+    defaultIcon,
+    className: "notion-page-title-icon"
+  }), /* @__PURE__ */ React4.createElement("span", {
+    className: "notion-page-title-text"
+  }, /* @__PURE__ */ React4.createElement(Text, {
+    value: (_b2 = block.properties) == null ? void 0 : _b2.title,
+    block
+  })));
 };
-var PageTitle = React5.memo(PageTitleImpl);
+var PageTitle = React4.memo(PageTitleImpl);
 
 // src/components/text.tsx
 var Text = ({ value, block, linkProps, linkProtocol }) => {
   const { components, recordMap, mapPageUrl, mapImageUrl, rootDomain } = useNotionContext();
-  return /* @__PURE__ */ React6.createElement(React6.Fragment, null, value == null ? void 0 : value.map(([text, decorations], index) => {
+  return /* @__PURE__ */ React5.createElement(React5.Fragment, null, value == null ? void 0 : value.map(([text, decorations], index) => {
     if (!decorations) {
       if (text === ",") {
-        return /* @__PURE__ */ React6.createElement("span", { key: index, style: { padding: "0.5em" } });
+        return /* @__PURE__ */ React5.createElement("span", {
+          key: index,
+          style: { padding: "0.5em" }
+        });
       } else {
-        return /* @__PURE__ */ React6.createElement(React6.Fragment, { key: index }, text);
+        return /* @__PURE__ */ React5.createElement(React5.Fragment, {
+          key: index
+        }, text);
       }
     }
     const formatted = decorations.reduce(
@@ -3588,14 +3547,12 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
               console.log('"p" missing block', blockId);
               return null;
             }
-            return /* @__PURE__ */ React6.createElement(
-              components.PageLink,
-              {
-                className: "notion-link",
-                href: mapPageUrl(blockId)
-              },
-              /* @__PURE__ */ React6.createElement(PageTitle, { block: linkedBlock })
-            );
+            return /* @__PURE__ */ React5.createElement(components.PageLink, {
+              className: "notion-link",
+              href: mapPageUrl(blockId)
+            }, /* @__PURE__ */ React5.createElement(PageTitle, {
+              block: linkedBlock
+            }));
           }
           case "\u2023": {
             const linkType = decorator[1][0];
@@ -3608,14 +3565,11 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
                   return null;
                 }
                 const name = [user.given_name, user.family_name].filter(Boolean).join(" ");
-                return /* @__PURE__ */ React6.createElement(
-                  GracefulImage,
-                  {
-                    className: "notion-user",
-                    src: mapImageUrl(user.profile_photo, block),
-                    alt: name
-                  }
-                );
+                return /* @__PURE__ */ React5.createElement(GracefulImage, {
+                  className: "notion-user",
+                  src: mapImageUrl(user.profile_photo, block),
+                  alt: name
+                });
               }
               default: {
                 const linkedBlock = (_c = recordMap.block[id]) == null ? void 0 : _c.value;
@@ -3623,34 +3577,41 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
                   console.log('"\u2023" missing block', linkType, id);
                   return null;
                 }
-                return /* @__PURE__ */ React6.createElement(
-                  components.PageLink,
-                  __spreadProps(__spreadValues({
-                    className: "notion-link",
-                    href: mapPageUrl(id)
-                  }, linkProps), {
-                    target: "_blank",
-                    rel: "noopener noreferrer"
-                  }),
-                  /* @__PURE__ */ React6.createElement(PageTitle, { block: linkedBlock })
-                );
+                return /* @__PURE__ */ React5.createElement(components.PageLink, __spreadProps(__spreadValues({
+                  className: "notion-link",
+                  href: mapPageUrl(id)
+                }, linkProps), {
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                }), /* @__PURE__ */ React5.createElement(PageTitle, {
+                  block: linkedBlock
+                }));
               }
             }
           }
           case "h":
-            return /* @__PURE__ */ React6.createElement("span", { className: `notion-${decorator[1]}` }, element);
+            return /* @__PURE__ */ React5.createElement("span", {
+              className: `notion-${decorator[1]}`
+            }, element);
           case "c":
-            return /* @__PURE__ */ React6.createElement("code", { className: "notion-inline-code" }, element);
+            return /* @__PURE__ */ React5.createElement("code", {
+              className: "notion-inline-code"
+            }, element);
           case "b":
-            return /* @__PURE__ */ React6.createElement("b", null, element);
+            return /* @__PURE__ */ React5.createElement("b", null, element);
           case "i":
-            return /* @__PURE__ */ React6.createElement("em", null, element);
+            return /* @__PURE__ */ React5.createElement("em", null, element);
           case "s":
-            return /* @__PURE__ */ React6.createElement("s", null, element);
+            return /* @__PURE__ */ React5.createElement("s", null, element);
           case "_":
-            return /* @__PURE__ */ React6.createElement("span", { className: "notion-inline-underscore" }, element);
+            return /* @__PURE__ */ React5.createElement("span", {
+              className: "notion-inline-underscore"
+            }, element);
           case "e":
-            return /* @__PURE__ */ React6.createElement(components.Equation, { math: decorator[1], inline: true });
+            return /* @__PURE__ */ React5.createElement(components.Equation, {
+              math: decorator[1],
+              inline: true
+            });
           case "m":
             return element;
           case "a": {
@@ -3659,23 +3620,15 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
             const id = parsePageId(pathname, { uuid: true });
             if ((v[0] === "/" || v.includes(rootDomain)) && id) {
               const href = v.includes(rootDomain) ? v : `${mapPageUrl(id)}${getHashFragmentValue(v)}`;
-              return /* @__PURE__ */ React6.createElement(
-                components.PageLink,
-                __spreadValues({
-                  className: "notion-link",
-                  href
-                }, linkProps),
-                element
-              );
+              return /* @__PURE__ */ React5.createElement(components.PageLink, __spreadValues({
+                className: "notion-link",
+                href
+              }, linkProps), element);
             } else {
-              return /* @__PURE__ */ React6.createElement(
-                components.Link,
-                __spreadValues({
-                  className: "notion-link",
-                  href: linkProtocol ? `${linkProtocol}:${decorator[1]}` : decorator[1]
-                }, linkProps),
-                element
-              );
+              return /* @__PURE__ */ React5.createElement(components.Link, __spreadValues({
+                className: "notion-link",
+                href: linkProtocol ? `${linkProtocol}:${decorator[1]}` : decorator[1]
+              }, linkProps), element);
             }
           }
           case "d": {
@@ -3684,10 +3637,6 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
             if (type === "date") {
               const startDate = v.start_date;
               return formatDate(startDate);
-            } else if (type === "datetime") {
-              const startDate = v.start_date;
-              const startTime = v.start_time;
-              return `${formatDate(startDate)} ${startTime}`;
             } else if (type === "daterange") {
               const startDate = v.start_date;
               const endDate = v.end_date;
@@ -3704,19 +3653,19 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
               return null;
             }
             const name = [user.given_name, user.family_name].filter(Boolean).join(" ");
-            return /* @__PURE__ */ React6.createElement(
-              GracefulImage,
-              {
-                className: "notion-user",
-                src: mapImageUrl(user.profile_photo, block),
-                alt: name
-              }
-            );
+            return /* @__PURE__ */ React5.createElement(GracefulImage, {
+              className: "notion-user",
+              src: mapImageUrl(user.profile_photo, block),
+              alt: name
+            });
           }
           case "eoi": {
             const blockId = decorator[1];
             const externalObjectInstance = (_e = recordMap.block[blockId]) == null ? void 0 : _e.value;
-            return /* @__PURE__ */ React6.createElement(EOI, { block: externalObjectInstance, inline: true });
+            return /* @__PURE__ */ React5.createElement(EOI, {
+              block: externalObjectInstance,
+              inline: true
+            });
           }
           default:
             if (true) {
@@ -3725,14 +3674,16 @@ var Text = ({ value, block, linkProps, linkProtocol }) => {
             return element;
         }
       },
-      /* @__PURE__ */ React6.createElement(React6.Fragment, null, text)
+      /* @__PURE__ */ React5.createElement(React5.Fragment, null, text)
     );
-    return /* @__PURE__ */ React6.createElement(React6.Fragment, { key: index }, formatted);
+    return /* @__PURE__ */ React5.createElement(React5.Fragment, {
+      key: index
+    }, formatted);
   }));
 };
 
 // src/components/lazy-image.tsx
-import * as React7 from "react";
+import * as React6 from "react";
 import { normalizeUrl } from "notion-utils";
 import { ImageState, LazyImageFull } from "react-lazy-images";
 var LazyImage = (_a) => {
@@ -3755,9 +3706,9 @@ var LazyImage = (_a) => {
   ]);
   var _a2, _b2, _c;
   const { recordMap, zoom, previewImages, forceCustomImages, components } = useNotionContext();
-  const zoomRef = React7.useRef(zoom ? zoom.clone() : null);
+  const zoomRef = React6.useRef(zoom ? zoom.clone() : null);
   const previewImage = previewImages ? (_c = (_a2 = recordMap == null ? void 0 : recordMap.preview_images) == null ? void 0 : _a2[src]) != null ? _c : (_b2 = recordMap == null ? void 0 : recordMap.preview_images) == null ? void 0 : _b2[normalizeUrl(src)] : null;
-  const onLoad = React7.useCallback(
+  const onLoad = React6.useCallback(
     (e) => {
       if (zoomable && (e.target.src || e.target.srcset)) {
         if (zoomRef.current) {
@@ -3768,7 +3719,7 @@ var LazyImage = (_a) => {
     },
     [zoomRef, zoomable]
   );
-  const attachZoom = React7.useCallback(
+  const attachZoom = React6.useCallback(
     (image) => {
       if (zoomRef.current && image) {
         ;
@@ -3777,30 +3728,31 @@ var LazyImage = (_a) => {
     },
     [zoomRef]
   );
-  const attachZoomRef = React7.useMemo(
+  const attachZoomRef = React6.useMemo(
     () => zoomable ? attachZoom : void 0,
     [zoomable, attachZoom]
   );
   if (previewImage) {
     const aspectRatio = previewImage.originalHeight / previewImage.originalWidth;
     if (components.Image) {
-      return /* @__PURE__ */ React7.createElement(
-        components.Image,
-        {
-          src,
-          alt,
-          style,
-          className,
-          width: previewImage.originalWidth,
-          height: previewImage.originalHeight,
-          blurDataURL: previewImage.dataURIBase64,
-          placeholder: "blur",
-          priority,
-          onLoad
-        }
-      );
+      return /* @__PURE__ */ React6.createElement(components.Image, {
+        src,
+        alt,
+        style,
+        className,
+        width: previewImage.originalWidth,
+        height: previewImage.originalHeight,
+        blurDataURL: previewImage.dataURIBase64,
+        placeholder: "blur",
+        priority,
+        onLoad
+      });
     }
-    return /* @__PURE__ */ React7.createElement(LazyImageFull, __spreadProps(__spreadValues({ src }, rest), { experimentalDecode: true }), ({ imageState, ref }) => {
+    return /* @__PURE__ */ React6.createElement(LazyImageFull, __spreadProps(__spreadValues({
+      src
+    }, rest), {
+      experimentalDecode: true
+    }), ({ imageState, ref }) => {
       const isLoaded = imageState === ImageState.LoadSuccess;
       const wrapperStyle = {
         width: "100%"
@@ -3812,170 +3764,161 @@ var LazyImage = (_a) => {
         imgStyle.position = "absolute";
         wrapperStyle.paddingBottom = `${aspectRatio * 100}%`;
       }
-      return /* @__PURE__ */ React7.createElement(
-        "div",
-        {
-          className: cs(
-            "lazy-image-wrapper",
-            isLoaded && "lazy-image-loaded",
-            className
-          ),
-          style: wrapperStyle
-        },
-        /* @__PURE__ */ React7.createElement(
-          "img",
-          {
-            className: "lazy-image-preview",
-            src: previewImage.dataURIBase64,
-            alt,
-            ref,
-            style,
-            decoding: "async"
-          }
+      return /* @__PURE__ */ React6.createElement("div", {
+        className: cs(
+          "lazy-image-wrapper",
+          isLoaded && "lazy-image-loaded",
+          className
         ),
-        /* @__PURE__ */ React7.createElement(
-          "img",
-          {
-            className: "lazy-image-real",
-            src,
-            alt,
-            ref: attachZoomRef,
-            style: __spreadValues(__spreadValues({}, style), imgStyle),
-            width: previewImage.originalWidth,
-            height: previewImage.originalHeight,
-            decoding: "async",
-            loading: "lazy"
-          }
-        )
-      );
-    });
-  } else {
-    if (components.Image && forceCustomImages) {
-      return /* @__PURE__ */ React7.createElement(
-        components.Image,
-        {
-          src,
-          alt,
-          className,
-          style,
-          width: null,
-          height: height || null,
-          priority,
-          onLoad
-        }
-      );
-    }
-    return /* @__PURE__ */ React7.createElement(
-      "img",
-      __spreadValues({
-        className,
+        style: wrapperStyle
+      }, /* @__PURE__ */ React6.createElement("img", {
+        className: "lazy-image-preview",
+        src: previewImage.dataURIBase64,
+        alt,
+        ref,
         style,
+        decoding: "async"
+      }), /* @__PURE__ */ React6.createElement("img", {
+        className: "lazy-image-real",
         src,
         alt,
         ref: attachZoomRef,
-        loading: "lazy",
-        decoding: "async"
-      }, rest)
-    );
+        style: __spreadValues(__spreadValues({}, style), imgStyle),
+        width: previewImage.originalWidth,
+        height: previewImage.originalHeight,
+        decoding: "async",
+        loading: "lazy"
+      }));
+    });
+  } else {
+    if (components.Image && forceCustomImages) {
+      return /* @__PURE__ */ React6.createElement(components.Image, {
+        src,
+        alt,
+        className,
+        style,
+        width: null,
+        height: height || null,
+        priority,
+        onLoad
+      });
+    }
+    return /* @__PURE__ */ React6.createElement("img", __spreadValues({
+      className,
+      style,
+      src,
+      alt,
+      ref: attachZoomRef,
+      loading: "lazy",
+      decoding: "async"
+    }, rest));
   }
 };
 
 // src/components/header.tsx
-import * as React12 from "react";
+import * as React11 from "react";
 import { getPageBreadcrumbs } from "notion-utils";
 import { useHotkeys } from "react-hotkeys-hook";
 
 // src/icons/search-icon.tsx
-import * as React8 from "react";
+import * as React7 from "react";
 var SearchIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React8.createElement("svg", __spreadValues({ className: cs("notion-icon", className), viewBox: "0 0 17 17" }, rest), /* @__PURE__ */ React8.createElement("path", { d: "M6.78027 13.6729C8.24805 13.6729 9.60156 13.1982 10.709 12.4072L14.875 16.5732C15.0684 16.7666 15.3232 16.8633 15.5957 16.8633C16.167 16.8633 16.5713 16.4238 16.5713 15.8613C16.5713 15.5977 16.4834 15.3516 16.29 15.1582L12.1504 11.0098C13.0205 9.86719 13.5391 8.45215 13.5391 6.91406C13.5391 3.19629 10.498 0.155273 6.78027 0.155273C3.0625 0.155273 0.0214844 3.19629 0.0214844 6.91406C0.0214844 10.6318 3.0625 13.6729 6.78027 13.6729ZM6.78027 12.2139C3.87988 12.2139 1.48047 9.81445 1.48047 6.91406C1.48047 4.01367 3.87988 1.61426 6.78027 1.61426C9.68066 1.61426 12.0801 4.01367 12.0801 6.91406C12.0801 9.81445 9.68066 12.2139 6.78027 12.2139Z" }));
+  return /* @__PURE__ */ React7.createElement("svg", __spreadValues({
+    className: cs("notion-icon", className),
+    viewBox: "0 0 17 17"
+  }, rest), /* @__PURE__ */ React7.createElement("path", {
+    d: "M6.78027 13.6729C8.24805 13.6729 9.60156 13.1982 10.709 12.4072L14.875 16.5732C15.0684 16.7666 15.3232 16.8633 15.5957 16.8633C16.167 16.8633 16.5713 16.4238 16.5713 15.8613C16.5713 15.5977 16.4834 15.3516 16.29 15.1582L12.1504 11.0098C13.0205 9.86719 13.5391 8.45215 13.5391 6.91406C13.5391 3.19629 10.498 0.155273 6.78027 0.155273C3.0625 0.155273 0.0214844 3.19629 0.0214844 6.91406C0.0214844 10.6318 3.0625 13.6729 6.78027 13.6729ZM6.78027 12.2139C3.87988 12.2139 1.48047 9.81445 1.48047 6.91406C1.48047 4.01367 3.87988 1.61426 6.78027 1.61426C9.68066 1.61426 12.0801 4.01367 12.0801 6.91406C12.0801 9.81445 9.68066 12.2139 6.78027 12.2139Z"
+  }));
 };
 
 // src/components/search-dialog.tsx
 var import_lodash = __toESM(require_lodash(), 1);
-import * as React11 from "react";
+import * as React10 from "react";
 import { getBlockParentPage, getBlockTitle as getBlockTitle2 } from "notion-utils";
 
 // src/icons/clear-icon.tsx
-import * as React9 from "react";
+import * as React8 from "react";
 var ClearIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React9.createElement("svg", __spreadProps(__spreadValues({ className: cs("notion-icon", className) }, rest), { viewBox: "0 0 30 30" }), /* @__PURE__ */ React9.createElement("path", { d: "M15,0C6.716,0,0,6.716,0,15s6.716,15,15,15s15-6.716,15-15S23.284,0,15,0z M22,20.6L20.6,22L15,16.4L9.4,22L8,20.6l5.6-5.6 L8,9.4L9.4,8l5.6,5.6L20.6,8L22,9.4L16.4,15L22,20.6z" }));
+  return /* @__PURE__ */ React8.createElement("svg", __spreadProps(__spreadValues({
+    className: cs("notion-icon", className)
+  }, rest), {
+    viewBox: "0 0 30 30"
+  }), /* @__PURE__ */ React8.createElement("path", {
+    d: "M15,0C6.716,0,0,6.716,0,15s6.716,15,15,15s15-6.716,15-15S23.284,0,15,0z M22,20.6L20.6,22L15,16.4L9.4,22L8,20.6l5.6-5.6 L8,9.4L9.4,8l5.6,5.6L20.6,8L22,9.4L16.4,15L22,20.6z"
+  }));
 };
 
 // src/icons/loading-icon.tsx
-import * as React10 from "react";
+import * as React9 from "react";
 var LoadingIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React10.createElement("svg", __spreadProps(__spreadValues({ className: cs("notion-icon", className) }, rest), { viewBox: "0 0 24 24" }), /* @__PURE__ */ React10.createElement("defs", null, /* @__PURE__ */ React10.createElement(
-    "linearGradient",
-    {
-      x1: "28.1542969%",
-      y1: "63.7402344%",
-      x2: "74.6289062%",
-      y2: "17.7832031%",
-      id: "linearGradient-1"
-    },
-    /* @__PURE__ */ React10.createElement("stop", { stopColor: "rgba(164, 164, 164, 1)", offset: "0%" }),
-    /* @__PURE__ */ React10.createElement(
-      "stop",
-      {
-        stopColor: "rgba(164, 164, 164, 0)",
-        stopOpacity: "0",
-        offset: "100%"
-      }
-    )
-  )), /* @__PURE__ */ React10.createElement("g", { id: "Page-1", stroke: "none", strokeWidth: "1", fill: "none" }, /* @__PURE__ */ React10.createElement("g", { transform: "translate(-236.000000, -286.000000)" }, /* @__PURE__ */ React10.createElement("g", { transform: "translate(238.000000, 286.000000)" }, /* @__PURE__ */ React10.createElement(
-    "circle",
-    {
-      id: "Oval-2",
-      stroke: "url(#linearGradient-1)",
-      strokeWidth: "4",
-      cx: "10",
-      cy: "12",
-      r: "10"
-    }
-  ), /* @__PURE__ */ React10.createElement(
-    "path",
-    {
-      d: "M10,2 C4.4771525,2 0,6.4771525 0,12",
-      id: "Oval-2",
-      stroke: "rgba(164, 164, 164, 1)",
-      strokeWidth: "4"
-    }
-  ), /* @__PURE__ */ React10.createElement(
-    "rect",
-    {
-      id: "Rectangle-1",
-      fill: "rgba(164, 164, 164, 1)",
-      x: "8",
-      y: "0",
-      width: "4",
-      height: "4",
-      rx: "8"
-    }
-  )))));
+  return /* @__PURE__ */ React9.createElement("svg", __spreadProps(__spreadValues({
+    className: cs("notion-icon", className)
+  }, rest), {
+    viewBox: "0 0 24 24"
+  }), /* @__PURE__ */ React9.createElement("defs", null, /* @__PURE__ */ React9.createElement("linearGradient", {
+    x1: "28.1542969%",
+    y1: "63.7402344%",
+    x2: "74.6289062%",
+    y2: "17.7832031%",
+    id: "linearGradient-1"
+  }, /* @__PURE__ */ React9.createElement("stop", {
+    stopColor: "rgba(164, 164, 164, 1)",
+    offset: "0%"
+  }), /* @__PURE__ */ React9.createElement("stop", {
+    stopColor: "rgba(164, 164, 164, 0)",
+    stopOpacity: "0",
+    offset: "100%"
+  }))), /* @__PURE__ */ React9.createElement("g", {
+    id: "Page-1",
+    stroke: "none",
+    strokeWidth: "1",
+    fill: "none"
+  }, /* @__PURE__ */ React9.createElement("g", {
+    transform: "translate(-236.000000, -286.000000)"
+  }, /* @__PURE__ */ React9.createElement("g", {
+    transform: "translate(238.000000, 286.000000)"
+  }, /* @__PURE__ */ React9.createElement("circle", {
+    id: "Oval-2",
+    stroke: "url(#linearGradient-1)",
+    strokeWidth: "4",
+    cx: "10",
+    cy: "12",
+    r: "10"
+  }), /* @__PURE__ */ React9.createElement("path", {
+    d: "M10,2 C4.4771525,2 0,6.4771525 0,12",
+    id: "Oval-2",
+    stroke: "rgba(164, 164, 164, 1)",
+    strokeWidth: "4"
+  }), /* @__PURE__ */ React9.createElement("rect", {
+    id: "Rectangle-1",
+    fill: "rgba(164, 164, 164, 1)",
+    x: "8",
+    y: "0",
+    width: "4",
+    height: "4",
+    rx: "8"
+  })))));
 };
 
 // src/components/search-dialog.tsx
-var SearchDialog = class extends React11.Component {
+var SearchDialog = class extends React10.Component {
   constructor(props) {
     super(props);
-    __publicField(this, "state", {
+    this.state = {
       isLoading: false,
       query: "",
       searchResult: null,
       searchError: null
-    });
-    __publicField(this, "_inputRef");
-    __publicField(this, "_search");
-    __publicField(this, "_onAfterOpen", () => {
+    };
+    this._onAfterOpen = () => {
       if (this._inputRef.current) {
         this._inputRef.current.focus();
       }
-    });
-    __publicField(this, "_onChangeQuery", (e) => {
+    };
+    this._onChangeQuery = (e) => {
       const query = e.target.value;
       this.setState({ query });
       if (!query.trim()) {
@@ -3984,18 +3927,18 @@ var SearchDialog = class extends React11.Component {
       } else {
         this._search();
       }
-    });
-    __publicField(this, "_onClearQuery", () => {
+    };
+    this._onClearQuery = () => {
       this._onChangeQuery({ target: { value: "" } });
-    });
-    __publicField(this, "_warmupSearch", () => __async(this, null, function* () {
+    };
+    this._warmupSearch = () => __async(this, null, function* () {
       const { searchNotion, rootBlockId } = this.props;
       yield searchNotion({
         query: "",
         ancestorId: rootBlockId
       });
-    }));
-    __publicField(this, "_searchImpl", () => __async(this, null, function* () {
+    });
+    this._searchImpl = () => __async(this, null, function* () {
       const { searchNotion, rootBlockId } = this.props;
       const { query } = this.state;
       if (!query.trim()) {
@@ -4048,8 +3991,8 @@ var SearchDialog = class extends React11.Component {
       if (this.state.query === query) {
         this.setState({ isLoading: false, searchResult, searchError });
       }
-    }));
-    this._inputRef = React11.createRef();
+    });
+    this._inputRef = React10.createRef();
   }
   componentDidMount() {
     this._search = (0, import_lodash.default)(this._searchImpl.bind(this), 1e3);
@@ -4059,91 +4002,101 @@ var SearchDialog = class extends React11.Component {
     const { isOpen, onClose } = this.props;
     const { isLoading, query, searchResult, searchError } = this.state;
     const hasQuery = !!query.trim();
-    return /* @__PURE__ */ React11.createElement(NotionContextConsumer, null, (ctx2) => {
+    return /* @__PURE__ */ React10.createElement(NotionContextConsumer, null, (ctx2) => {
       const { components, defaultPageIcon, mapPageUrl } = ctx2;
-      return /* @__PURE__ */ React11.createElement(
-        components.Modal,
-        {
-          isOpen,
-          contentLabel: "Search",
-          className: "notion-search",
-          overlayClassName: "notion-search-overlay",
-          onRequestClose: onClose,
-          onAfterOpen: this._onAfterOpen
-        },
-        /* @__PURE__ */ React11.createElement("div", { className: "quickFindMenu" }, /* @__PURE__ */ React11.createElement("div", { className: "searchBar" }, /* @__PURE__ */ React11.createElement("div", { className: "inlineIcon" }, isLoading ? /* @__PURE__ */ React11.createElement(LoadingIcon, { className: "loadingIcon" }) : /* @__PURE__ */ React11.createElement(SearchIcon, null)), /* @__PURE__ */ React11.createElement(
-          "input",
-          {
-            className: "searchInput",
-            placeholder: "Search",
-            value: query,
-            ref: this._inputRef,
-            onChange: this._onChangeQuery
+      return /* @__PURE__ */ React10.createElement(components.Modal, {
+        isOpen,
+        contentLabel: "Search",
+        className: "notion-search",
+        overlayClassName: "notion-search-overlay",
+        onRequestClose: onClose,
+        onAfterOpen: this._onAfterOpen
+      }, /* @__PURE__ */ React10.createElement("div", {
+        className: "quickFindMenu"
+      }, /* @__PURE__ */ React10.createElement("div", {
+        className: "searchBar"
+      }, /* @__PURE__ */ React10.createElement("div", {
+        className: "inlineIcon"
+      }, isLoading ? /* @__PURE__ */ React10.createElement(LoadingIcon, {
+        className: "loadingIcon"
+      }) : /* @__PURE__ */ React10.createElement(SearchIcon, null)), /* @__PURE__ */ React10.createElement("input", {
+        className: "searchInput",
+        placeholder: "Search",
+        value: query,
+        ref: this._inputRef,
+        onChange: this._onChangeQuery
+      }), query && /* @__PURE__ */ React10.createElement("div", {
+        role: "button",
+        className: "clearButton",
+        onClick: this._onClearQuery
+      }, /* @__PURE__ */ React10.createElement(ClearIcon, {
+        className: "clearIcon"
+      }))), hasQuery && searchResult && /* @__PURE__ */ React10.createElement(React10.Fragment, null, searchResult.results.length ? /* @__PURE__ */ React10.createElement(NotionContextProvider, __spreadProps(__spreadValues({}, ctx2), {
+        recordMap: searchResult.recordMap
+      }), /* @__PURE__ */ React10.createElement("div", {
+        className: "resultsPane"
+      }, searchResult.results.map((result) => {
+        var _a;
+        return /* @__PURE__ */ React10.createElement(components.PageLink, {
+          key: result.id,
+          className: cs("result", "notion-page-link"),
+          href: mapPageUrl(
+            result.page.id,
+            searchResult.recordMap
+          )
+        }, /* @__PURE__ */ React10.createElement(PageTitle, {
+          block: result.page,
+          defaultIcon: defaultPageIcon
+        }), ((_a = result.highlight) == null ? void 0 : _a.html) && /* @__PURE__ */ React10.createElement("div", {
+          className: "notion-search-result-highlight",
+          dangerouslySetInnerHTML: {
+            __html: result.highlight.html
           }
-        ), query && /* @__PURE__ */ React11.createElement(
-          "div",
-          {
-            role: "button",
-            className: "clearButton",
-            onClick: this._onClearQuery
-          },
-          /* @__PURE__ */ React11.createElement(ClearIcon, { className: "clearIcon" })
-        )), hasQuery && searchResult && /* @__PURE__ */ React11.createElement(React11.Fragment, null, searchResult.results.length ? /* @__PURE__ */ React11.createElement(
-          NotionContextProvider,
-          __spreadProps(__spreadValues({}, ctx2), {
-            recordMap: searchResult.recordMap
-          }),
-          /* @__PURE__ */ React11.createElement("div", { className: "resultsPane" }, searchResult.results.map((result) => {
-            var _a;
-            return /* @__PURE__ */ React11.createElement(
-              components.PageLink,
-              {
-                key: result.id,
-                className: cs("result", "notion-page-link"),
-                href: mapPageUrl(
-                  result.page.id,
-                  searchResult.recordMap
-                )
-              },
-              /* @__PURE__ */ React11.createElement(
-                PageTitle,
-                {
-                  block: result.page,
-                  defaultIcon: defaultPageIcon
-                }
-              ),
-              ((_a = result.highlight) == null ? void 0 : _a.html) && /* @__PURE__ */ React11.createElement(
-                "div",
-                {
-                  className: "notion-search-result-highlight",
-                  dangerouslySetInnerHTML: {
-                    __html: result.highlight.html
-                  }
-                }
-              )
-            );
-          })),
-          /* @__PURE__ */ React11.createElement("footer", { className: "resultsFooter" }, /* @__PURE__ */ React11.createElement("div", null, /* @__PURE__ */ React11.createElement("span", { className: "resultsCount" }, searchResult.total), searchResult.total === 1 ? " result" : " results"))
-        ) : /* @__PURE__ */ React11.createElement("div", { className: "noResultsPane" }, /* @__PURE__ */ React11.createElement("div", { className: "noResults" }, "No results"), /* @__PURE__ */ React11.createElement("div", { className: "noResultsDetail" }, "Try different search terms"))), hasQuery && !searchResult && searchError && /* @__PURE__ */ React11.createElement("div", { className: "noResultsPane" }, /* @__PURE__ */ React11.createElement("div", { className: "noResults" }, "Search error")))
-      );
+        }));
+      })), /* @__PURE__ */ React10.createElement("footer", {
+        className: "resultsFooter"
+      }, /* @__PURE__ */ React10.createElement("div", null, /* @__PURE__ */ React10.createElement("span", {
+        className: "resultsCount"
+      }, searchResult.total), searchResult.total === 1 ? " result" : " results"))) : /* @__PURE__ */ React10.createElement("div", {
+        className: "noResultsPane"
+      }, /* @__PURE__ */ React10.createElement("div", {
+        className: "noResults"
+      }, "No results"), /* @__PURE__ */ React10.createElement("div", {
+        className: "noResultsDetail"
+      }, "Try different search terms"))), hasQuery && !searchResult && searchError && /* @__PURE__ */ React10.createElement("div", {
+        className: "noResultsPane"
+      }, /* @__PURE__ */ React10.createElement("div", {
+        className: "noResults"
+      }, "Search error"))));
     });
   }
 };
 
 // src/components/header.tsx
 var Header = ({ block }) => {
-  return /* @__PURE__ */ React12.createElement("header", { className: "notion-header" }, /* @__PURE__ */ React12.createElement("div", { className: "notion-nav-header" }, /* @__PURE__ */ React12.createElement(Breadcrumbs, { block }), /* @__PURE__ */ React12.createElement(Search, { block })));
+  return /* @__PURE__ */ React11.createElement("header", {
+    className: "notion-header"
+  }, /* @__PURE__ */ React11.createElement("div", {
+    className: "notion-nav-header"
+  }, /* @__PURE__ */ React11.createElement(Breadcrumbs, {
+    block
+  }), /* @__PURE__ */ React11.createElement(Search, {
+    block
+  })));
 };
 var Breadcrumbs = ({ block, rootOnly = false }) => {
   const { recordMap, mapPageUrl, components } = useNotionContext();
-  const breadcrumbs = React12.useMemo(() => {
+  const breadcrumbs = React11.useMemo(() => {
     const breadcrumbs2 = getPageBreadcrumbs(recordMap, block.id);
     if (rootOnly) {
       return [breadcrumbs2[0]].filter(Boolean);
     }
     return breadcrumbs2;
   }, [recordMap, block.id, rootOnly]);
-  return /* @__PURE__ */ React12.createElement("div", { className: "breadcrumbs", key: "breadcrumbs" }, breadcrumbs.map((breadcrumb, index) => {
+  return /* @__PURE__ */ React11.createElement("div", {
+    className: "breadcrumbs",
+    key: "breadcrumbs"
+  }, breadcrumbs.map((breadcrumb, index) => {
     if (!breadcrumb) {
       return null;
     }
@@ -4152,31 +4105,35 @@ var Breadcrumbs = ({ block, rootOnly = false }) => {
       pageLink: components.PageLink
     };
     if (breadcrumb.active) {
-      componentMap.pageLink = (props) => /* @__PURE__ */ React12.createElement("div", __spreadValues({}, props));
+      componentMap.pageLink = (props) => /* @__PURE__ */ React11.createElement("div", __spreadValues({}, props));
     } else {
       pageLinkProps.href = mapPageUrl(breadcrumb.pageId);
     }
-    return /* @__PURE__ */ React12.createElement(React12.Fragment, { key: breadcrumb.pageId }, /* @__PURE__ */ React12.createElement(
-      componentMap.pageLink,
-      __spreadValues({
-        className: cs("breadcrumb", breadcrumb.active && "active")
-      }, pageLinkProps),
-      breadcrumb.icon && /* @__PURE__ */ React12.createElement(PageIcon, { className: "icon", block: breadcrumb.block }),
-      breadcrumb.title && /* @__PURE__ */ React12.createElement("span", { className: "title" }, breadcrumb.title)
-    ), index < breadcrumbs.length - 1 && /* @__PURE__ */ React12.createElement("span", { className: "spacer" }, "/"));
+    return /* @__PURE__ */ React11.createElement(React11.Fragment, {
+      key: breadcrumb.pageId
+    }, /* @__PURE__ */ React11.createElement(componentMap.pageLink, __spreadValues({
+      className: cs("breadcrumb", breadcrumb.active && "active")
+    }, pageLinkProps), breadcrumb.icon && /* @__PURE__ */ React11.createElement(PageIcon, {
+      className: "icon",
+      block: breadcrumb.block
+    }), breadcrumb.title && /* @__PURE__ */ React11.createElement("span", {
+      className: "title"
+    }, breadcrumb.title)), index < breadcrumbs.length - 1 && /* @__PURE__ */ React11.createElement("span", {
+      className: "spacer"
+    }, "/"));
   }));
 };
 var Search = ({ block, search, title = "Search" }) => {
   const { searchNotion, rootPageId, isShowingSearch, onHideSearch } = useNotionContext();
   const onSearchNotion = search || searchNotion;
-  const [isSearchOpen, setIsSearchOpen] = React12.useState(isShowingSearch);
-  React12.useEffect(() => {
+  const [isSearchOpen, setIsSearchOpen] = React11.useState(isShowingSearch);
+  React11.useEffect(() => {
     setIsSearchOpen(isShowingSearch);
   }, [isShowingSearch]);
-  const onOpenSearch = React12.useCallback(() => {
+  const onOpenSearch = React11.useCallback(() => {
     setIsSearchOpen(true);
   }, []);
-  const onCloseSearch = React12.useCallback(() => {
+  const onCloseSearch = React11.useCallback(() => {
     setIsSearchOpen(false);
     if (onHideSearch) {
       onHideSearch();
@@ -4193,32 +4150,28 @@ var Search = ({ block, search, title = "Search" }) => {
     event.stopPropagation();
   });
   const hasSearch = !!onSearchNotion;
-  return /* @__PURE__ */ React12.createElement(React12.Fragment, null, hasSearch && /* @__PURE__ */ React12.createElement(
-    "div",
-    {
-      role: "button",
-      className: cs("breadcrumb", "button", "notion-search-button"),
-      onClick: onOpenSearch
-    },
-    /* @__PURE__ */ React12.createElement(SearchIcon, { className: "searchIcon" }),
-    title && /* @__PURE__ */ React12.createElement("span", { className: "title" }, title)
-  ), isSearchOpen && hasSearch && /* @__PURE__ */ React12.createElement(
-    SearchDialog,
-    {
-      isOpen: isSearchOpen,
-      rootBlockId: rootPageId || (block == null ? void 0 : block.id),
-      onClose: onCloseSearch,
-      searchNotion: onSearchNotion
-    }
-  ));
+  return /* @__PURE__ */ React11.createElement(React11.Fragment, null, hasSearch && /* @__PURE__ */ React11.createElement("div", {
+    role: "button",
+    className: cs("breadcrumb", "button", "notion-search-button"),
+    onClick: onOpenSearch
+  }, /* @__PURE__ */ React11.createElement(SearchIcon, {
+    className: "searchIcon"
+  }), title && /* @__PURE__ */ React11.createElement("span", {
+    className: "title"
+  }, title)), isSearchOpen && hasSearch && /* @__PURE__ */ React11.createElement(SearchDialog, {
+    isOpen: isSearchOpen,
+    rootBlockId: rootPageId || (block == null ? void 0 : block.id),
+    onClose: onCloseSearch,
+    searchNotion: onSearchNotion
+  }));
 };
 
 // src/components/asset.tsx
-import * as React14 from "react";
+import * as React13 from "react";
 import { getTextContent } from "notion-utils";
 
 // src/components/lite-youtube-embed.tsx
-import * as React13 from "react";
+import * as React12 from "react";
 var qs = (params) => {
   return Object.keys(params).map(
     (key) => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`
@@ -4237,7 +4190,7 @@ var LiteYouTubeEmbed = ({
   className
 }) => {
   const muteParam = mute || defaultPlay ? "1" : "0";
-  const queryString = React13.useMemo(
+  const queryString = React12.useMemo(
     () => qs(__spreadValues({ autoplay: "1", mute: muteParam }, params)),
     [muteParam, params]
   );
@@ -4245,65 +4198,70 @@ var LiteYouTubeEmbed = ({
   const posterUrl = `https://i.ytimg.com/vi/${id}/${resolution}.jpg`;
   const ytUrl = "https://www.youtube-nocookie.com";
   const iframeSrc = `${ytUrl}/embed/${id}?${queryString}`;
-  const [isPreconnected, setIsPreconnected] = React13.useState(false);
-  const [iframeInitialized, setIframeInitialized] = React13.useState(defaultPlay);
-  const [isIframeLoaded, setIsIframeLoaded] = React13.useState(false);
-  const warmConnections = React13.useCallback(() => {
+  const [isPreconnected, setIsPreconnected] = React12.useState(false);
+  const [iframeInitialized, setIframeInitialized] = React12.useState(defaultPlay);
+  const [isIframeLoaded, setIsIframeLoaded] = React12.useState(false);
+  const warmConnections = React12.useCallback(() => {
     if (isPreconnected)
       return;
     setIsPreconnected(true);
   }, [isPreconnected]);
-  const onLoadIframe = React13.useCallback(() => {
+  const onLoadIframe = React12.useCallback(() => {
     if (iframeInitialized)
       return;
     setIframeInitialized(true);
   }, [iframeInitialized]);
-  const onIframeLoaded = React13.useCallback(() => {
+  const onIframeLoaded = React12.useCallback(() => {
     setIsIframeLoaded(true);
   }, []);
-  return /* @__PURE__ */ React13.createElement(React13.Fragment, null, /* @__PURE__ */ React13.createElement("link", { rel: "preload", href: posterUrl, as: "image" }), isPreconnected && /* @__PURE__ */ React13.createElement(React13.Fragment, null, /* @__PURE__ */ React13.createElement("link", { rel: "preconnect", href: ytUrl }), /* @__PURE__ */ React13.createElement("link", { rel: "preconnect", href: "https://www.google.com" })), isPreconnected && adLinksPreconnect && /* @__PURE__ */ React13.createElement(React13.Fragment, null, /* @__PURE__ */ React13.createElement("link", { rel: "preconnect", href: "https://static.doubleclick.net" }), /* @__PURE__ */ React13.createElement("link", { rel: "preconnect", href: "https://googleads.g.doubleclick.net" })), /* @__PURE__ */ React13.createElement(
-    "div",
-    {
-      onClick: onLoadIframe,
-      onPointerOver: warmConnections,
-      className: cs(
-        "notion-yt-lite",
-        isIframeLoaded && "notion-yt-loaded",
-        iframeInitialized && "notion-yt-initialized",
-        className
-      ),
-      style
-    },
-    /* @__PURE__ */ React13.createElement(
-      "img",
-      {
-        src: posterUrl,
-        className: "notion-yt-thumbnail",
-        loading: lazyImage ? "lazy" : void 0,
-        alt
-      }
+  return /* @__PURE__ */ React12.createElement(React12.Fragment, null, /* @__PURE__ */ React12.createElement("link", {
+    rel: "preload",
+    href: posterUrl,
+    as: "image"
+  }), isPreconnected && /* @__PURE__ */ React12.createElement(React12.Fragment, null, /* @__PURE__ */ React12.createElement("link", {
+    rel: "preconnect",
+    href: ytUrl
+  }), /* @__PURE__ */ React12.createElement("link", {
+    rel: "preconnect",
+    href: "https://www.google.com"
+  })), isPreconnected && adLinksPreconnect && /* @__PURE__ */ React12.createElement(React12.Fragment, null, /* @__PURE__ */ React12.createElement("link", {
+    rel: "preconnect",
+    href: "https://static.doubleclick.net"
+  }), /* @__PURE__ */ React12.createElement("link", {
+    rel: "preconnect",
+    href: "https://googleads.g.doubleclick.net"
+  })), /* @__PURE__ */ React12.createElement("div", {
+    onClick: onLoadIframe,
+    onPointerOver: warmConnections,
+    className: cs(
+      "notion-yt-lite",
+      isIframeLoaded && "notion-yt-loaded",
+      iframeInitialized && "notion-yt-initialized",
+      className
     ),
-    /* @__PURE__ */ React13.createElement("div", { className: "notion-yt-playbtn" }),
-    iframeInitialized && /* @__PURE__ */ React13.createElement(
-      "iframe",
-      {
-        width: "560",
-        height: "315",
-        frameBorder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowFullScreen: true,
-        title: iframeTitle,
-        src: iframeSrc,
-        onLoad: onIframeLoaded
-      }
-    )
-  ));
+    style
+  }, /* @__PURE__ */ React12.createElement("img", {
+    src: posterUrl,
+    className: "notion-yt-thumbnail",
+    loading: lazyImage ? "lazy" : void 0,
+    alt
+  }), /* @__PURE__ */ React12.createElement("div", {
+    className: "notion-yt-playbtn"
+  }), iframeInitialized && /* @__PURE__ */ React12.createElement("iframe", {
+    width: "560",
+    height: "315",
+    frameBorder: "0",
+    allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+    allowFullScreen: true,
+    title: iframeTitle,
+    src: iframeSrc,
+    onLoad: onIframeLoaded
+  })));
 };
 
 // src/components/asset.tsx
 var isServer = typeof window === "undefined";
 var supportedAssetTypes = [
-  "replit",
   "video",
   "image",
   "embed",
@@ -4413,18 +4371,16 @@ var Asset = ({ block, zoomable = true, children }) => {
     const id = src.split("?")[0].split("/").pop();
     if (!id)
       return null;
-    content = /* @__PURE__ */ React14.createElement(
-      "div",
-      {
-        style: __spreadProps(__spreadValues({}, assetStyle), {
-          maxWidth: 420,
-          width: "100%",
-          marginLeft: "auto",
-          marginRight: "auto"
-        })
-      },
-      /* @__PURE__ */ React14.createElement(components.Tweet, { id })
-    );
+    content = /* @__PURE__ */ React13.createElement("div", {
+      style: __spreadProps(__spreadValues({}, assetStyle), {
+        maxWidth: 420,
+        width: "100%",
+        marginLeft: "auto",
+        marginRight: "auto"
+      })
+    }, /* @__PURE__ */ React13.createElement(components.Tweet, {
+      id
+    }));
   } else if (block.type === "pdf") {
     style.overflow = "auto";
     style.background = "rgb(226, 226, 226)";
@@ -4433,68 +4389,57 @@ var Asset = ({ block, zoomable = true, children }) => {
       style.padding = "8px 16px";
     }
     if (!isServer) {
-      content = /* @__PURE__ */ React14.createElement(components.Pdf, { file: source });
+      content = /* @__PURE__ */ React13.createElement(components.Pdf, {
+        file: source
+      });
     }
-  } else if (block.type === "embed" || block.type === "video" || block.type === "figma" || block.type === "typeform" || block.type === "gist" || block.type === "maps" || block.type === "excalidraw" || block.type === "codepen" || block.type === "drive" || block.type === "replit") {
+  } else if (block.type === "embed" || block.type === "video" || block.type === "figma" || block.type === "typeform" || block.type === "gist" || block.type === "maps" || block.type === "excalidraw" || block.type === "codepen" || block.type === "drive") {
     if (block.type === "video" && source && source.indexOf("youtube") < 0 && source.indexOf("youtu.be") < 0 && source.indexOf("vimeo") < 0 && source.indexOf("wistia") < 0 && source.indexOf("loom") < 0 && source.indexOf("videoask") < 0 && source.indexOf("getcloudapp") < 0) {
       style.paddingBottom = void 0;
-      content = /* @__PURE__ */ React14.createElement(
-        "video",
-        {
-          playsInline: true,
-          controls: true,
-          preload: "metadata",
-          style: assetStyle,
-          src: source,
-          title: block.type
-        }
-      );
+      content = /* @__PURE__ */ React13.createElement("video", {
+        playsInline: true,
+        controls: true,
+        preload: "metadata",
+        style: assetStyle,
+        src: source,
+        title: block.type
+      });
     } else {
       let src = ((_f = block.format) == null ? void 0 : _f.display_source) || source;
       if (src) {
         const youtubeVideoId = block.type === "video" ? getYoutubeId(src) : null;
         if (youtubeVideoId) {
-          content = /* @__PURE__ */ React14.createElement(
-            LiteYouTubeEmbed,
-            {
-              id: youtubeVideoId,
-              style: assetStyle,
-              className: "notion-asset-object-fit"
-            }
-          );
+          content = /* @__PURE__ */ React13.createElement(LiteYouTubeEmbed, {
+            id: youtubeVideoId,
+            style: assetStyle,
+            className: "notion-asset-object-fit"
+          });
         } else if (block.type === "gist") {
           if (!src.endsWith(".pibb")) {
             src = `${src}.pibb`;
           }
           assetStyle.width = "100%";
           style.paddingBottom = "50%";
-          content = /* @__PURE__ */ React14.createElement(
-            "iframe",
-            {
-              style: assetStyle,
-              className: "notion-asset-object-fit",
-              src,
-              title: "GitHub Gist",
-              frameBorder: "0",
-              loading: "lazy",
-              scrolling: "auto"
-            }
-          );
+          content = /* @__PURE__ */ React13.createElement("iframe", {
+            style: assetStyle,
+            className: "notion-asset-object-fit",
+            src,
+            title: "GitHub Gist",
+            frameBorder: "0",
+            loading: "lazy",
+            scrolling: "auto"
+          });
         } else {
-          src += block.type === "typeform" ? "&disable-auto-focus=true" : "";
-          content = /* @__PURE__ */ React14.createElement(
-            "iframe",
-            {
-              className: "notion-asset-object-fit",
-              style: assetStyle,
-              src,
-              title: `iframe ${block.type}`,
-              frameBorder: "0",
-              allowFullScreen: true,
-              loading: "lazy",
-              scrolling: "auto"
-            }
-          );
+          content = /* @__PURE__ */ React13.createElement("iframe", {
+            className: "notion-asset-object-fit",
+            style: assetStyle,
+            src,
+            title: `iframe ${block.type}`,
+            frameBorder: "0",
+            allowFullScreen: true,
+            loading: "lazy",
+            scrolling: "auto"
+          });
         }
       }
     }
@@ -4505,18 +4450,17 @@ var Asset = ({ block, zoomable = true, children }) => {
     const src = mapImageUrl(source, block);
     const caption = getTextContent((_j = block.properties) == null ? void 0 : _j.caption);
     const alt = caption || "notion image";
-    content = /* @__PURE__ */ React14.createElement(
-      LazyImage,
-      {
-        src,
-        alt,
-        zoomable,
-        height: style.height,
-        style: assetStyle
-      }
-    );
+    content = /* @__PURE__ */ React13.createElement(LazyImage, {
+      src,
+      alt,
+      zoomable,
+      height: style.height,
+      style: assetStyle
+    });
   }
-  return /* @__PURE__ */ React14.createElement(React14.Fragment, null, /* @__PURE__ */ React14.createElement("div", { style }, content, block.type === "image" && children), block.type !== "image" && children);
+  return /* @__PURE__ */ React13.createElement(React13.Fragment, null, /* @__PURE__ */ React13.createElement("div", {
+    style
+  }, content, block.type === "image" && children), block.type !== "image" && children);
 };
 
 // src/components/asset-wrapper.tsx
@@ -4536,32 +4480,32 @@ var AssetWrapper = ({ blockId, block }) => {
       }
     }
   }
-  const figure = /* @__PURE__ */ React15.createElement(
-    "figure",
-    {
-      className: cs(
-        "notion-asset-wrapper",
-        `notion-asset-wrapper-${block.type}`,
-        ((_d = value.format) == null ? void 0 : _d.block_full_width) && "notion-asset-wrapper-full",
-        blockId
-      )
-    },
-    /* @__PURE__ */ React15.createElement(Asset, { block: value, zoomable: zoom && !isURL }, ((_e = value == null ? void 0 : value.properties) == null ? void 0 : _e.caption) && !isURL && /* @__PURE__ */ React15.createElement("figcaption", { className: "notion-asset-caption" }, /* @__PURE__ */ React15.createElement(Text, { value: value.properties.caption, block })))
-  );
+  const figure = /* @__PURE__ */ React14.createElement("figure", {
+    className: cs(
+      "notion-asset-wrapper",
+      `notion-asset-wrapper-${block.type}`,
+      ((_d = value.format) == null ? void 0 : _d.block_full_width) && "notion-asset-wrapper-full",
+      blockId
+    )
+  }, /* @__PURE__ */ React14.createElement(Asset, {
+    block: value,
+    zoomable: zoom && !isURL
+  }, ((_e = value == null ? void 0 : value.properties) == null ? void 0 : _e.caption) && !isURL && /* @__PURE__ */ React14.createElement("figcaption", {
+    className: "notion-asset-caption"
+  }, /* @__PURE__ */ React14.createElement(Text, {
+    value: value.properties.caption,
+    block
+  }))));
   if (isURL) {
     const caption = (_f = value == null ? void 0 : value.properties) == null ? void 0 : _f.caption[0][0];
     const id = parsePageId2(caption, { uuid: true });
     const isPage = caption.charAt(0) === "/" && id;
     const captionHostname = extractHostname(caption);
-    return /* @__PURE__ */ React15.createElement(
-      components.PageLink,
-      {
-        style: urlStyle,
-        href: isPage ? mapPageUrl(id) : caption,
-        target: captionHostname && captionHostname !== rootDomain && !caption.startsWith("/") ? "blank_" : null
-      },
-      figure
-    );
+    return /* @__PURE__ */ React14.createElement(components.PageLink, {
+      style: urlStyle,
+      href: isPage ? mapPageUrl(id) : caption,
+      target: captionHostname && captionHostname !== rootDomain && !caption.startsWith("/") ? "blank_" : null
+    }, figure);
   }
   return figure;
 };
@@ -4582,12 +4526,16 @@ function extractHostname(url) {
 }
 
 // src/components/checkbox.tsx
-import * as React17 from "react";
+import * as React16 from "react";
 
 // src/icons/check.tsx
-import * as React16 from "react";
+import * as React15 from "react";
 function SvgCheck(props) {
-  return /* @__PURE__ */ React16.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React16.createElement("path", { d: "M5.5 12L14 3.5 12.5 2l-7 7-4-4.003L0 6.499z" }));
+  return /* @__PURE__ */ React15.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React15.createElement("path", {
+    d: "M5.5 12L14 3.5 12.5 2l-7 7-4-4.003L0 6.499z"
+  }));
 }
 var check_default = SvgCheck;
 
@@ -4595,18 +4543,24 @@ var check_default = SvgCheck;
 var Checkbox = ({ isChecked }) => {
   let content = null;
   if (isChecked) {
-    content = /* @__PURE__ */ React17.createElement("div", { className: "notion-property-checkbox-checked" }, /* @__PURE__ */ React17.createElement(check_default, null));
+    content = /* @__PURE__ */ React16.createElement("div", {
+      className: "notion-property-checkbox-checked"
+    }, /* @__PURE__ */ React16.createElement(check_default, null));
   } else {
-    content = /* @__PURE__ */ React17.createElement("div", { className: "notion-property-checkbox-unchecked" });
+    content = /* @__PURE__ */ React16.createElement("div", {
+      className: "notion-property-checkbox-unchecked"
+    });
   }
-  return /* @__PURE__ */ React17.createElement("span", { className: "notion-property notion-property-checkbox" }, content);
+  return /* @__PURE__ */ React16.createElement("span", {
+    className: "notion-property notion-property-checkbox"
+  }, content);
 };
 
 // src/next.tsx
-import * as React18 from "react";
+import * as React17 from "react";
 import isEqual from "react-fast-compare";
 var wrapNextImage = (NextImage) => {
-  return React18.memo(function ReactNotionXNextImage(_a) {
+  return React17.memo(function ReactNotionXNextImage(_a) {
     var _b = _a, {
       src,
       alt,
@@ -4627,19 +4581,16 @@ var wrapNextImage = (NextImage) => {
     if (!layout) {
       layout = width && height ? "intrinsic" : "fill";
     }
-    return /* @__PURE__ */ React18.createElement(
-      NextImage,
-      __spreadValues({
-        className,
-        src,
-        alt,
-        width: layout === "intrinsic" && width,
-        height: layout === "intrinsic" && height,
-        objectFit: style == null ? void 0 : style.objectFit,
-        objectPosition: style == null ? void 0 : style.objectPosition,
-        layout
-      }, rest)
-    );
+    return /* @__PURE__ */ React17.createElement(NextImage, __spreadValues({
+      className,
+      src,
+      alt,
+      width: layout === "intrinsic" && width,
+      height: layout === "intrinsic" && height,
+      objectFit: style == null ? void 0 : style.objectFit,
+      objectPosition: style == null ? void 0 : style.objectPosition,
+      layout
+    }, rest));
   }, isEqual);
 };
 var wrapNextLink = (NextLink) => function ReactNotionXNextLink(_a) {
@@ -4662,32 +4613,31 @@ var wrapNextLink = (NextLink) => function ReactNotionXNextLink(_a) {
     "shallow",
     "locale"
   ]);
-  return /* @__PURE__ */ React18.createElement(
-    NextLink,
-    {
-      href,
-      as,
-      passHref,
-      prefetch,
-      replace,
-      scroll,
-      shallow,
-      locale
-    },
-    /* @__PURE__ */ React18.createElement("a", __spreadValues({}, linkProps))
-  );
+  return /* @__PURE__ */ React17.createElement(NextLink, {
+    href,
+    as,
+    passHref,
+    prefetch,
+    replace,
+    scroll,
+    shallow,
+    locale
+  }, /* @__PURE__ */ React17.createElement("a", __spreadValues({}, linkProps)));
 };
 
 // src/context.tsx
-var DefaultLink = (props) => /* @__PURE__ */ React19.createElement("a", __spreadValues({ target: "_blank", rel: "noopener noreferrer" }, props));
-var DefaultLinkMemo = React19.memo(DefaultLink);
-var DefaultPageLink = (props) => /* @__PURE__ */ React19.createElement("a", __spreadValues({}, props));
-var DefaultPageLinkMemo = React19.memo(DefaultPageLink);
-var DefaultEmbed = (props) => /* @__PURE__ */ React19.createElement(AssetWrapper, __spreadValues({}, props));
+var DefaultLink = (props) => /* @__PURE__ */ React18.createElement("a", __spreadValues({
+  target: "_blank",
+  rel: "noopener noreferrer"
+}, props));
+var DefaultLinkMemo = React18.memo(DefaultLink);
+var DefaultPageLink = (props) => /* @__PURE__ */ React18.createElement("a", __spreadValues({}, props));
+var DefaultPageLinkMemo = React18.memo(DefaultPageLink);
+var DefaultEmbed = (props) => /* @__PURE__ */ React18.createElement(AssetWrapper, __spreadValues({}, props));
 var DefaultHeader = Header;
 var dummyLink = (_a) => {
   var _b = _a, { href, rel, target, title } = _b, rest = __objRest(_b, ["href", "rel", "target", "title"]);
-  return /* @__PURE__ */ React19.createElement("span", __spreadValues({}, rest));
+  return /* @__PURE__ */ React18.createElement("span", __spreadValues({}, rest));
 };
 var dummyComponent = (name) => () => {
   console.warn(
@@ -4698,17 +4648,14 @@ var dummyComponent = (name) => () => {
 var dummyOverrideFn = (_, defaultValueFn) => defaultValueFn();
 var defaultComponents = {
   Image: null,
-  // disable custom images by default
   Link: DefaultLinkMemo,
   PageLink: DefaultPageLinkMemo,
   Checkbox,
   Callout: void 0,
-  // use the built-in callout rendering by default
   Code: dummyComponent("Code"),
   Equation: dummyComponent("Equation"),
   Collection: dummyComponent("Collection"),
   Property: void 0,
-  // use the built-in property rendering by default
   propertyTextValue: dummyOverrideFn,
   propertySelectValue: dummyOverrideFn,
   propertyRelationValue: dummyOverrideFn,
@@ -4759,7 +4706,7 @@ var defaultNotionContext = {
   defaultPageCoverPosition: 0.5,
   zoom: null
 };
-var ctx = React19.createContext(defaultNotionContext);
+var ctx = React18.createContext(defaultNotionContext);
 var NotionContextProvider = (_a) => {
   var _b = _a, {
     components: themeComponents = {},
@@ -4779,7 +4726,7 @@ var NotionContextProvider = (_a) => {
       delete rest[key];
     }
   }
-  const wrappedThemeComponents = React19.useMemo(
+  const wrappedThemeComponents = React18.useMemo(
     () => __spreadValues({}, themeComponents),
     [themeComponents]
   );
@@ -4794,7 +4741,7 @@ var NotionContextProvider = (_a) => {
       delete wrappedThemeComponents[key];
     }
   }
-  const value = React19.useMemo(
+  const value = React18.useMemo(
     () => __spreadProps(__spreadValues(__spreadValues({}, defaultNotionContext), rest), {
       rootPageId,
       mapPageUrl: mapPageUrl != null ? mapPageUrl : defaultMapPageUrl(rootPageId),
@@ -4803,18 +4750,27 @@ var NotionContextProvider = (_a) => {
     }),
     [mapImageUrl, mapPageUrl, wrappedThemeComponents, rootPageId, rest]
   );
-  return /* @__PURE__ */ React19.createElement(ctx.Provider, { value }, children);
+  return /* @__PURE__ */ React18.createElement(ctx.Provider, {
+    value
+  }, children);
 };
 var NotionContextConsumer = ctx.Consumer;
 var useNotionContext = () => {
-  return React19.useContext(ctx);
+  return React18.useContext(ctx);
 };
 
 // src/icons/default-page-icon.tsx
-import * as React20 from "react";
+import * as React19 from "react";
 var DefaultPageIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React20.createElement("svg", __spreadProps(__spreadValues({ className }, rest), { viewBox: "0 0 30 30", width: "16" }), /* @__PURE__ */ React20.createElement("path", { d: "M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z" }));
+  return /* @__PURE__ */ React19.createElement("svg", __spreadProps(__spreadValues({
+    className
+  }, rest), {
+    viewBox: "0 0 30 30",
+    width: "16"
+  }), /* @__PURE__ */ React19.createElement("path", {
+    d: "M16,1H4v28h22V11L16,1z M16,3.828L23.172,11H16V3.828z M24,27H6V3h8v10h10V27z M8,17h14v-2H8V17z M8,21h14v-2H8V21z M8,25h14v-2H8V25z"
+  }));
 };
 
 // src/components/page-icon.tsx
@@ -4838,96 +4794,99 @@ var PageIconImpl = ({
     if (icon && isUrl(icon)) {
       const url = mapImageUrl(icon, block);
       isImage = true;
-      content = /* @__PURE__ */ React21.createElement(
-        LazyImage,
-        {
-          src: url,
-          alt: title || "page icon",
-          className: cs(className, "notion-page-icon")
-        }
-      );
+      content = /* @__PURE__ */ React20.createElement(LazyImage, {
+        src: url,
+        alt: title || "page icon",
+        className: cs(className, "notion-page-icon")
+      });
     } else if (icon && icon.startsWith("/icons/")) {
       const url = "https://www.notion.so" + icon + "?mode=" + (darkMode ? "dark" : "light");
-      content = /* @__PURE__ */ React21.createElement(
-        LazyImage,
-        {
-          src: url,
-          alt: title || "page icon",
-          className: cs(className, "notion-page-icon")
-        }
-      );
+      content = /* @__PURE__ */ React20.createElement(LazyImage, {
+        src: url,
+        alt: title || "page icon",
+        className: cs(className, "notion-page-icon")
+      });
     } else if (!icon) {
       if (!hideDefaultIcon) {
         isImage = true;
-        content = /* @__PURE__ */ React21.createElement(
-          DefaultPageIcon,
-          {
-            className: cs(className, "notion-page-icon"),
-            alt: title ? title : "page icon"
-          }
-        );
+        content = /* @__PURE__ */ React20.createElement(DefaultPageIcon, {
+          className: cs(className, "notion-page-icon"),
+          alt: title ? title : "page icon"
+        });
       }
     } else {
       isImage = false;
-      content = /* @__PURE__ */ React21.createElement(
-        "span",
-        {
-          className: cs(className, "notion-page-icon"),
-          role: "img",
-          "aria-label": icon
-        },
-        icon
-      );
+      content = /* @__PURE__ */ React20.createElement("span", {
+        className: cs(className, "notion-page-icon"),
+        role: "img",
+        "aria-label": icon
+      }, icon);
     }
   }
   if (!content) {
     return null;
   }
-  return /* @__PURE__ */ React21.createElement(
-    "div",
-    {
-      className: cs(
-        inline ? "notion-page-icon-inline" : "notion-page-icon-hero",
-        isImage ? "notion-page-icon-image" : "notion-page-icon-span"
-      )
-    },
-    content
-  );
+  return /* @__PURE__ */ React20.createElement("div", {
+    className: cs(
+      inline ? "notion-page-icon-inline" : "notion-page-icon-hero",
+      isImage ? "notion-page-icon-image" : "notion-page-icon-span"
+    )
+  }, content);
 };
-var PageIcon = React21.memo(PageIconImpl);
+var PageIcon = React20.memo(PageIconImpl);
 
 // src/icons/collection-view-board.tsx
-import * as React22 from "react";
+import * as React21 from "react";
 function SvgCollectionViewBoard(props) {
-  return /* @__PURE__ */ React22.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React22.createElement("path", { d: "M12 1.5H2a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V2a.5.5 0 00-.5-.5zM2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 3h2v6H3V3zm3 0h2v8H6V3zm3 0h2v4H9V3z" }));
+  return /* @__PURE__ */ React21.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React21.createElement("path", {
+    d: "M12 1.5H2a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V2a.5.5 0 00-.5-.5zM2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 3h2v6H3V3zm3 0h2v8H6V3zm3 0h2v4H9V3z"
+  }));
 }
 var collection_view_board_default = SvgCollectionViewBoard;
 
 // src/icons/collection-view-calendar.tsx
-import * as React23 from "react";
+import * as React22 from "react";
 function SvgCollectionViewCalendar(props) {
-  return /* @__PURE__ */ React23.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React23.createElement("path", { d: "M2.564 4.004c-.586 0-.71.024-.833.09a.319.319 0 00-.141.14c-.066.124-.09.247-.09.834v6.368c0 .586.024.71.09.833a.319.319 0 00.14.141c.124.066.248.09.834.09h8.872c.586 0 .71-.024.833-.09a.319.319 0 00.141-.14c.066-.124.09-.248.09-.834V5.068c0-.587-.024-.71-.09-.834a.319.319 0 00-.14-.14c-.124-.066-.248-.09-.834-.09H2.564zm0-4.004h8.872c.892 0 1.215.093 1.54.267.327.174.583.43.757.756.174.326.267.65.267 1.54v8.873c0 .892-.093 1.215-.267 1.54-.174.327-.43.583-.756.757-.326.174-.65.267-1.54.267H2.563c-.892 0-1.215-.093-1.54-.267a1.817 1.817 0 01-.757-.756C.093 12.65 0 12.327 0 11.437V2.563c0-.892.093-1.215.267-1.54.174-.327.43-.583.756-.757C1.35.093 1.673 0 2.563 0zm4.044 7.88c.179.11.318.256.418.436.1.18.148.394.148.64 0 .304-.08.597-.238.876-.16.28-.392.498-.692.65-.299.15-.685.224-1.16.224-.46 0-.827-.055-1.1-.166a1.687 1.687 0 01-.68-.492 2.227 2.227 0 01-.404-.802l.083-.127 1.37-.182.112.08c.05.258.126.431.221.52a.507.507 0 00.364.133.495.495 0 00.386-.169c.105-.115.158-.27.158-.472 0-.205-.051-.358-.15-.463a.527.527 0 00-.407-.157 1.65 1.65 0 00-.417.077l-.127-.104.07-.98.115-.091c.072.01.127.015.164.015.154 0 .28-.047.38-.144.1-.096.15-.205.15-.335a.388.388 0 00-.106-.29c-.07-.07-.168-.105-.3-.105a.444.444 0 00-.324.118c-.083.08-.143.232-.176.457l-.117.084-1.297-.233-.079-.123c.114-.435.334-.772.66-1.006.326-.234.78-.349 1.36-.349.666 0 1.153.126 1.462.384.31.259.467.589.467.982 0 .233-.064.446-.192.636a1.43 1.43 0 01-.37.365c.1.034.182.072.248.113zm1.747-.145a5.186 5.186 0 01-.806.31l-.129-.097V6.824l.07-.096c.455-.147.807-.322 1.055-.524.246-.202.439-.45.579-.747l.09-.057h1.135l.1.1v5.021l-.1.1H8.961l-.1-.1V7.428a4.053 4.053 0 01-.506.307z" }));
+  return /* @__PURE__ */ React22.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React22.createElement("path", {
+    d: "M2.564 4.004c-.586 0-.71.024-.833.09a.319.319 0 00-.141.14c-.066.124-.09.247-.09.834v6.368c0 .586.024.71.09.833a.319.319 0 00.14.141c.124.066.248.09.834.09h8.872c.586 0 .71-.024.833-.09a.319.319 0 00.141-.14c.066-.124.09-.248.09-.834V5.068c0-.587-.024-.71-.09-.834a.319.319 0 00-.14-.14c-.124-.066-.248-.09-.834-.09H2.564zm0-4.004h8.872c.892 0 1.215.093 1.54.267.327.174.583.43.757.756.174.326.267.65.267 1.54v8.873c0 .892-.093 1.215-.267 1.54-.174.327-.43.583-.756.757-.326.174-.65.267-1.54.267H2.563c-.892 0-1.215-.093-1.54-.267a1.817 1.817 0 01-.757-.756C.093 12.65 0 12.327 0 11.437V2.563c0-.892.093-1.215.267-1.54.174-.327.43-.583.756-.757C1.35.093 1.673 0 2.563 0zm4.044 7.88c.179.11.318.256.418.436.1.18.148.394.148.64 0 .304-.08.597-.238.876-.16.28-.392.498-.692.65-.299.15-.685.224-1.16.224-.46 0-.827-.055-1.1-.166a1.687 1.687 0 01-.68-.492 2.227 2.227 0 01-.404-.802l.083-.127 1.37-.182.112.08c.05.258.126.431.221.52a.507.507 0 00.364.133.495.495 0 00.386-.169c.105-.115.158-.27.158-.472 0-.205-.051-.358-.15-.463a.527.527 0 00-.407-.157 1.65 1.65 0 00-.417.077l-.127-.104.07-.98.115-.091c.072.01.127.015.164.015.154 0 .28-.047.38-.144.1-.096.15-.205.15-.335a.388.388 0 00-.106-.29c-.07-.07-.168-.105-.3-.105a.444.444 0 00-.324.118c-.083.08-.143.232-.176.457l-.117.084-1.297-.233-.079-.123c.114-.435.334-.772.66-1.006.326-.234.78-.349 1.36-.349.666 0 1.153.126 1.462.384.31.259.467.589.467.982 0 .233-.064.446-.192.636a1.43 1.43 0 01-.37.365c.1.034.182.072.248.113zm1.747-.145a5.186 5.186 0 01-.806.31l-.129-.097V6.824l.07-.096c.455-.147.807-.322 1.055-.524.246-.202.439-.45.579-.747l.09-.057h1.135l.1.1v5.021l-.1.1H8.961l-.1-.1V7.428a4.053 4.053 0 01-.506.307z"
+  }));
 }
 var collection_view_calendar_default = SvgCollectionViewCalendar;
 
 // src/icons/collection-view-gallery.tsx
-import * as React24 from "react";
+import * as React23 from "react";
 function SvgCollectionViewGallery(props) {
-  return /* @__PURE__ */ React24.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React24.createElement("path", { d: "M12 1.5H2a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V2a.5.5 0 00-.5-.5zM2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 3h3.5v3.5H3V3zm4.5 0H11v3.5H7.5V3zM3 7.5h3.5V11H3V7.5zm4.5 0H11V11H7.5V7.5z" }));
+  return /* @__PURE__ */ React23.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React23.createElement("path", {
+    d: "M12 1.5H2a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V2a.5.5 0 00-.5-.5zM2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 3h3.5v3.5H3V3zm4.5 0H11v3.5H7.5V3zM3 7.5h3.5V11H3V7.5zm4.5 0H11V11H7.5V7.5z"
+  }));
 }
 var collection_view_gallery_default = SvgCollectionViewGallery;
 
 // src/icons/collection-view-list.tsx
-import * as React25 from "react";
+import * as React24 from "react";
 function SvgCollectionViewList(props) {
-  return /* @__PURE__ */ React25.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React25.createElement("path", { d: "M12 1.5H2a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V2a.5.5 0 00-.5-.5zM2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 3h6v1.5H3V3zm0 2.5h8V7H3V5.5zM3 8h4v1.5H3V8z" }));
+  return /* @__PURE__ */ React24.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React24.createElement("path", {
+    d: "M12 1.5H2a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V2a.5.5 0 00-.5-.5zM2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 3h6v1.5H3V3zm0 2.5h8V7H3V5.5zM3 8h4v1.5H3V8z"
+  }));
 }
 var collection_view_list_default = SvgCollectionViewList;
 
 // src/icons/collection-view-table.tsx
-import * as React26 from "react";
+import * as React25 from "react";
 function SvgCollectionViewTable(props) {
-  return /* @__PURE__ */ React26.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React26.createElement("path", { d: "M2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm3.75 5.67v2.66h6.75V5.67H5.75zm0 4.17v2.66h5.75a1 1 0 001-1V9.84H5.75zM1.5 5.67v2.66h2.75V5.67H1.5zm0 4.17v1.66a1 1 0 001 1h1.75V9.84H1.5zm1-8.34a1 1 0 00-1 1v1.66h2.75V1.5H2.5zm3.25 0v2.66h6.75V2.5a1 1 0 00-1-1H5.75z" }));
+  return /* @__PURE__ */ React25.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React25.createElement("path", {
+    d: "M2 0h10a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2zm3.75 5.67v2.66h6.75V5.67H5.75zm0 4.17v2.66h5.75a1 1 0 001-1V9.84H5.75zM1.5 5.67v2.66h2.75V5.67H1.5zm0 4.17v1.66a1 1 0 001 1h1.75V9.84H1.5zm1-8.34a1 1 0 00-1 1v1.66h2.75V1.5H2.5zm3.25 0v2.66h6.75V2.5a1 1 0 00-1-1H5.75z"
+  }));
 }
 var collection_view_table_default = SvgCollectionViewTable;
 
@@ -4953,127 +4912,184 @@ var CollectionViewIcon = (_a) => {
 };
 
 // src/third-party/collection-row.tsx
-import * as React46 from "react";
-
-// src/third-party/collection-column-title.tsx
 import * as React44 from "react";
 
+// src/third-party/collection-column-title.tsx
+import * as React42 from "react";
+
 // src/icons/type-checkbox.tsx
-import * as React27 from "react";
+import * as React26 from "react";
 function SvgTypeCheckbox(props) {
-  return /* @__PURE__ */ React27.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React27.createElement("path", { d: "M0 3a3 3 0 013-3h8a3 3 0 013 3v8a3 3 0 01-3 3H3a3 3 0 01-3-3V3zm3-1.5A1.5 1.5 0 001.5 3v8A1.5 1.5 0 003 12.5h8a1.5 1.5 0 001.5-1.5V3A1.5 1.5 0 0011 1.5H3zm-.167 5.316l.566-.542.177-.17.347-.332.346.334.176.17 1.139 1.098 3.699-3.563.177-.17.347-.335.347.334.177.17.563.543.177.171.372.36-.372.36-.177.17-4.786 4.615-.177.171-.347.334-.347-.334-.177-.17-2.23-2.15-.177-.172-.375-.361.376-.36.179-.17z" }));
+  return /* @__PURE__ */ React26.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React26.createElement("path", {
+    d: "M0 3a3 3 0 013-3h8a3 3 0 013 3v8a3 3 0 01-3 3H3a3 3 0 01-3-3V3zm3-1.5A1.5 1.5 0 001.5 3v8A1.5 1.5 0 003 12.5h8a1.5 1.5 0 001.5-1.5V3A1.5 1.5 0 0011 1.5H3zm-.167 5.316l.566-.542.177-.17.347-.332.346.334.176.17 1.139 1.098 3.699-3.563.177-.17.347-.335.347.334.177.17.563.543.177.171.372.36-.372.36-.177.17-4.786 4.615-.177.171-.347.334-.347-.334-.177-.17-2.23-2.15-.177-.172-.375-.361.376-.36.179-.17z"
+  }));
 }
 var type_checkbox_default = SvgTypeCheckbox;
 
 // src/icons/type-date.tsx
-import * as React28 from "react";
+import * as React27 from "react";
 function SvgTypeDate(props) {
-  return /* @__PURE__ */ React28.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React28.createElement("path", { d: "M10.889 5.5H3.11v1.556h7.778V5.5zm1.555-4.444h-.777V0H10.11v1.056H3.89V0H2.333v1.056h-.777c-.864 0-1.548.7-1.548 1.555L0 12.5c0 .856.692 1.5 1.556 1.5h10.888C13.3 14 14 13.356 14 12.5V2.611c0-.855-.7-1.555-1.556-1.555zm0 11.444H1.556V3.944h10.888V12.5zM8.556 8.611H3.11v1.556h5.445V8.61z" }));
+  return /* @__PURE__ */ React27.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React27.createElement("path", {
+    d: "M10.889 5.5H3.11v1.556h7.778V5.5zm1.555-4.444h-.777V0H10.11v1.056H3.89V0H2.333v1.056h-.777c-.864 0-1.548.7-1.548 1.555L0 12.5c0 .856.692 1.5 1.556 1.5h10.888C13.3 14 14 13.356 14 12.5V2.611c0-.855-.7-1.555-1.556-1.555zm0 11.444H1.556V3.944h10.888V12.5zM8.556 8.611H3.11v1.556h5.445V8.61z"
+  }));
 }
 var type_date_default = SvgTypeDate;
 
 // src/icons/type-email.tsx
-import * as React29 from "react";
+import * as React28 from "react";
 function SvgTypeEmail(props) {
-  return /* @__PURE__ */ React29.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React29.createElement("path", { d: "M14 6.225c0 .822-.133 1.574-.4 2.256-.267.683-.644 1.218-1.13 1.606-.488.388-.946.6-1.494.6-.429 0-.808-.102-1.139-.305a1.753 1.753 0 01-.713-.8c-.613.736-1.563 1.104-2.531 1.104-1.027 0-1.835-.304-2.427-.912-.591-.608-.887-1.44-.887-2.496 0-1.204.389-2.175 1.166-2.911.776-.736 1.791-1.105 3.044-1.105.498 0 2.032.212 2.252.268.51.13.86.593.835 1.112l-.156 3.287c0 .794.22 1.19.66 1.19.372 0 .668-.267.888-.8.22-.534.33-1.232.33-2.094 0-.919-.194-1.731-.582-2.436a3.924 3.924 0 00-1.64-1.614c-.704-.371-1.509-.557-2.413-.557-1.172 0-2.19.237-3.053.711a4.785 4.785 0 00-1.988 2.05c-.46.894-.691 1.926-.691 3.096 0 1.576.428 2.784 1.283 3.627.855.841 2.094 1.262 3.718 1.262.615 0 1.29-.067 2.027-.2.225-.042.518-.108.877-.2a.863.863 0 011.025.527.76.76 0 01-.502.993c-1.052.316-2.17.488-3.357.516-2.204 0-3.922-.57-5.154-1.713C.616 11.146 0 9.56 0 7.527c0-1.41.315-2.69.944-3.84A6.792 6.792 0 013.63.98C4.794.327 6.131 0 7.645 0c1.276 0 2.514.29 3.418.77.905.481 1.574 1.228 2.12 2.176.544.947.817 2.04.817 3.28zm-8.615 1.01c0 1.208.488 1.811 1.466 1.811.511 0 .9-.181 1.168-.545.267-.363.429-.954.486-1.772l.11-1.896a4.638 4.638 0 00-.98-.095c-.71 0-1.263.224-1.658.67-.395.446-.592 1.055-.592 1.828z" }));
+  return /* @__PURE__ */ React28.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React28.createElement("path", {
+    d: "M14 6.225c0 .822-.133 1.574-.4 2.256-.267.683-.644 1.218-1.13 1.606-.488.388-.946.6-1.494.6-.429 0-.808-.102-1.139-.305a1.753 1.753 0 01-.713-.8c-.613.736-1.563 1.104-2.531 1.104-1.027 0-1.835-.304-2.427-.912-.591-.608-.887-1.44-.887-2.496 0-1.204.389-2.175 1.166-2.911.776-.736 1.791-1.105 3.044-1.105.498 0 2.032.212 2.252.268.51.13.86.593.835 1.112l-.156 3.287c0 .794.22 1.19.66 1.19.372 0 .668-.267.888-.8.22-.534.33-1.232.33-2.094 0-.919-.194-1.731-.582-2.436a3.924 3.924 0 00-1.64-1.614c-.704-.371-1.509-.557-2.413-.557-1.172 0-2.19.237-3.053.711a4.785 4.785 0 00-1.988 2.05c-.46.894-.691 1.926-.691 3.096 0 1.576.428 2.784 1.283 3.627.855.841 2.094 1.262 3.718 1.262.615 0 1.29-.067 2.027-.2.225-.042.518-.108.877-.2a.863.863 0 011.025.527.76.76 0 01-.502.993c-1.052.316-2.17.488-3.357.516-2.204 0-3.922-.57-5.154-1.713C.616 11.146 0 9.56 0 7.527c0-1.41.315-2.69.944-3.84A6.792 6.792 0 013.63.98C4.794.327 6.131 0 7.645 0c1.276 0 2.514.29 3.418.77.905.481 1.574 1.228 2.12 2.176.544.947.817 2.04.817 3.28zm-8.615 1.01c0 1.208.488 1.811 1.466 1.811.511 0 .9-.181 1.168-.545.267-.363.429-.954.486-1.772l.11-1.896a4.638 4.638 0 00-.98-.095c-.71 0-1.263.224-1.658.67-.395.446-.592 1.055-.592 1.828z"
+  }));
 }
 var type_email_default = SvgTypeEmail;
 
 // src/icons/type-file.tsx
-import * as React30 from "react";
+import * as React29 from "react";
 function SvgTypeFile(props) {
-  return /* @__PURE__ */ React30.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React30.createElement("path", { d: "M5.946 14a4.975 4.975 0 01-3.497-1.415A4.731 4.731 0 011 9.174c0-1.288.515-2.5 1.449-3.41L7.456.986c1.345-1.313 3.722-1.318 5.08.007a3.453 3.453 0 010 4.961L8.03 10.241c-.867.847-2.293.848-3.17-.006a2.158 2.158 0 010-3.102l1.744-1.701 1.272 1.24-1.744 1.701a.43.43 0 000 .621c.23.223.405.223.636 0l4.503-4.288a1.723 1.723 0 00-.007-2.473c-.68-.663-1.864-.663-2.543 0L3.713 7.011a3.006 3.006 0 00-.915 2.163c0 .82.328 1.591.922 2.17 1.19 1.162 3.262 1.162 4.451 0l2.248-2.192 1.272 1.24-2.248 2.193A4.978 4.978 0 015.946 14z" }));
+  return /* @__PURE__ */ React29.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React29.createElement("path", {
+    d: "M5.946 14a4.975 4.975 0 01-3.497-1.415A4.731 4.731 0 011 9.174c0-1.288.515-2.5 1.449-3.41L7.456.986c1.345-1.313 3.722-1.318 5.08.007a3.453 3.453 0 010 4.961L8.03 10.241c-.867.847-2.293.848-3.17-.006a2.158 2.158 0 010-3.102l1.744-1.701 1.272 1.24-1.744 1.701a.43.43 0 000 .621c.23.223.405.223.636 0l4.503-4.288a1.723 1.723 0 00-.007-2.473c-.68-.663-1.864-.663-2.543 0L3.713 7.011a3.006 3.006 0 00-.915 2.163c0 .82.328 1.591.922 2.17 1.19 1.162 3.262 1.162 4.451 0l2.248-2.192 1.272 1.24-2.248 2.193A4.978 4.978 0 015.946 14z"
+  }));
 }
 var type_file_default = SvgTypeFile;
 
 // src/icons/type-formula.tsx
-import * as React31 from "react";
+import * as React30 from "react";
 function SvgTypeFormula(props) {
-  return /* @__PURE__ */ React31.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React31.createElement("path", { d: "M7.779 7.063l-3.157 4.224a.49.49 0 00-.072.218.35.35 0 00.346.357h6.242c.476 0 .862.398.862.889v.36c0 .491-.386.889-.862.889H1.862A.876.876 0 011 13.111v-.425a.82.82 0 01.177-.54L4.393 7.8a1.367 1.367 0 00-.006-1.625L1.4 2.194a.822.822 0 01-.18-.544V.89C1.22.398 1.604 0 2.08 0h8.838c.476 0 .861.398.861.889v.36c0 .491-.385.89-.86.89H5.135c-.19 0-.345.159-.345.356a.489.489 0 00.07.216l2.92 3.975c.049.062.063.107.06.188a.246.246 0 01-.062.189z" }));
+  return /* @__PURE__ */ React30.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React30.createElement("path", {
+    d: "M7.779 7.063l-3.157 4.224a.49.49 0 00-.072.218.35.35 0 00.346.357h6.242c.476 0 .862.398.862.889v.36c0 .491-.386.889-.862.889H1.862A.876.876 0 011 13.111v-.425a.82.82 0 01.177-.54L4.393 7.8a1.367 1.367 0 00-.006-1.625L1.4 2.194a.822.822 0 01-.18-.544V.89C1.22.398 1.604 0 2.08 0h8.838c.476 0 .861.398.861.889v.36c0 .491-.385.89-.86.89H5.135c-.19 0-.345.159-.345.356a.489.489 0 00.07.216l2.92 3.975c.049.062.063.107.06.188a.246.246 0 01-.062.189z"
+  }));
 }
 var type_formula_default = SvgTypeFormula;
 
 // src/icons/type-multi-select.tsx
-import * as React32 from "react";
+import * as React31 from "react";
 function SvgTypeMultiSelect(props) {
-  return /* @__PURE__ */ React32.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React32.createElement("path", { d: "M4 3a1 1 0 011-1h7a1 1 0 110 2H5a1 1 0 01-1-1zm0 4a1 1 0 011-1h7a1 1 0 110 2H5a1 1 0 01-1-1zm0 4a1 1 0 011-1h7a1 1 0 110 2H5a1 1 0 01-1-1zM2 4a1 1 0 110-2 1 1 0 010 2zm0 4a1 1 0 110-2 1 1 0 010 2zm0 4a1 1 0 110-2 1 1 0 010 2z" }));
+  return /* @__PURE__ */ React31.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React31.createElement("path", {
+    d: "M4 3a1 1 0 011-1h7a1 1 0 110 2H5a1 1 0 01-1-1zm0 4a1 1 0 011-1h7a1 1 0 110 2H5a1 1 0 01-1-1zm0 4a1 1 0 011-1h7a1 1 0 110 2H5a1 1 0 01-1-1zM2 4a1 1 0 110-2 1 1 0 010 2zm0 4a1 1 0 110-2 1 1 0 010 2zm0 4a1 1 0 110-2 1 1 0 010 2z"
+  }));
 }
 var type_multi_select_default = SvgTypeMultiSelect;
 
 // src/icons/type-number.tsx
-import * as React33 from "react";
+import * as React32 from "react";
 function SvgTypeNumber(props) {
-  return /* @__PURE__ */ React33.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React33.createElement("path", { d: "M4.462 0c-.595 0-1.078.482-1.078 1.078v2.306H1.078a1.078 1.078 0 100 2.155h2.306v2.922H1.078a1.078 1.078 0 100 2.155h2.306v2.306a1.078 1.078 0 002.155 0v-2.306H8.46v2.306a1.078 1.078 0 002.156 0v-2.306h2.306a1.078 1.078 0 100-2.155h-2.306V5.539h2.306a1.078 1.078 0 100-2.155h-2.306V1.078a1.078 1.078 0 00-2.156 0v2.306H5.54V1.078C5.54.482 5.056 0 4.461 0zm1.077 8.46V5.54H8.46v2.92H5.54z" }));
+  return /* @__PURE__ */ React32.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React32.createElement("path", {
+    d: "M4.462 0c-.595 0-1.078.482-1.078 1.078v2.306H1.078a1.078 1.078 0 100 2.155h2.306v2.922H1.078a1.078 1.078 0 100 2.155h2.306v2.306a1.078 1.078 0 002.155 0v-2.306H8.46v2.306a1.078 1.078 0 002.156 0v-2.306h2.306a1.078 1.078 0 100-2.155h-2.306V5.539h2.306a1.078 1.078 0 100-2.155h-2.306V1.078a1.078 1.078 0 00-2.156 0v2.306H5.54V1.078C5.54.482 5.056 0 4.461 0zm1.077 8.46V5.54H8.46v2.92H5.54z"
+  }));
 }
 var type_number_default = SvgTypeNumber;
 
 // src/icons/type-person.tsx
-import * as React34 from "react";
+import * as React33 from "react";
 function SvgTypePerson(props) {
-  return /* @__PURE__ */ React34.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React34.createElement("path", { d: "M9.625 10.847C8.912 10.289 8.121 9.926 7 9.26v-.54a3.33 3.33 0 00.538-.888c.408-.1.774-.498.774-.832 0-.482-.202-.673-.44-.829 0-.015.003-.03.003-.046 0-.711-.438-2.625-2.625-2.625-2.188 0-2.625 1.915-2.625 2.625 0 .017.003.03.003.046-.238.156-.44.347-.44.829 0 .334.366.731.774.833.146.343.326.643.538.886v.541c-1.12.665-1.912 1.028-2.625 1.587C.041 11.498 0 12.469 0 14h10.5c0-1.531-.041-2.502-.875-3.153zm3.5-3.5c-.713-.558-1.504-.921-2.625-1.587v-.54c.212-.244.392-.544.538-.888.408-.1.774-.498.774-.832 0-.482-.202-.673-.44-.829 0-.015.003-.03.003-.046C11.375 1.914 10.937 0 8.75 0 6.562 0 6.125 1.915 6.125 2.625c0 .017.003.03.003.046-.016.012-.03.025-.047.036 1.751.359 2.516 1.841 2.647 3.04.248.262.46.65.46 1.253 0 .603-.417 1.203-1.004 1.515-.057.109-.117.214-.181.315l.437.245c.64.357 1.194.666 1.724 1.081.138.108.256.224.365.343H14c0-1.53-.041-2.5-.875-3.153z" }));
+  return /* @__PURE__ */ React33.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React33.createElement("path", {
+    d: "M9.625 10.847C8.912 10.289 8.121 9.926 7 9.26v-.54a3.33 3.33 0 00.538-.888c.408-.1.774-.498.774-.832 0-.482-.202-.673-.44-.829 0-.015.003-.03.003-.046 0-.711-.438-2.625-2.625-2.625-2.188 0-2.625 1.915-2.625 2.625 0 .017.003.03.003.046-.238.156-.44.347-.44.829 0 .334.366.731.774.833.146.343.326.643.538.886v.541c-1.12.665-1.912 1.028-2.625 1.587C.041 11.498 0 12.469 0 14h10.5c0-1.531-.041-2.502-.875-3.153zm3.5-3.5c-.713-.558-1.504-.921-2.625-1.587v-.54c.212-.244.392-.544.538-.888.408-.1.774-.498.774-.832 0-.482-.202-.673-.44-.829 0-.015.003-.03.003-.046C11.375 1.914 10.937 0 8.75 0 6.562 0 6.125 1.915 6.125 2.625c0 .017.003.03.003.046-.016.012-.03.025-.047.036 1.751.359 2.516 1.841 2.647 3.04.248.262.46.65.46 1.253 0 .603-.417 1.203-1.004 1.515-.057.109-.117.214-.181.315l.437.245c.64.357 1.194.666 1.724 1.081.138.108.256.224.365.343H14c0-1.53-.041-2.5-.875-3.153z"
+  }));
 }
 var type_person_default = SvgTypePerson;
 
 // src/icons/type-person-2.tsx
-import * as React35 from "react";
+import * as React34 from "react";
 function SvgTypePerson2(props) {
-  return /* @__PURE__ */ React35.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React35.createElement("path", { d: "M13.125 10.035c-.571-.55-2.324-1.504-3.5-2.16v-.834c.224-.322.42-.671.566-1.055.394-.242.746-.702.746-1.173 0-.458-.005-.87-.47-1.208C10.305 1.558 9.436 0 7 0S3.695 1.558 3.533 3.605c-.465.338-.47.75-.47 1.208 0 .471.352.93.746 1.173.146.384.342.733.566 1.055v.834c-1.176.656-2.929 1.61-3.5 2.16C.165 10.72 0 11.812 0 14h14c0-2.188-.164-3.281-.875-3.965z" }));
+  return /* @__PURE__ */ React34.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React34.createElement("path", {
+    d: "M13.125 10.035c-.571-.55-2.324-1.504-3.5-2.16v-.834c.224-.322.42-.671.566-1.055.394-.242.746-.702.746-1.173 0-.458-.005-.87-.47-1.208C10.305 1.558 9.436 0 7 0S3.695 1.558 3.533 3.605c-.465.338-.47.75-.47 1.208 0 .471.352.93.746 1.173.146.384.342.733.566 1.055v.834c-1.176.656-2.929 1.61-3.5 2.16C.165 10.72 0 11.812 0 14h14c0-2.188-.164-3.281-.875-3.965z"
+  }));
 }
 var type_person_2_default = SvgTypePerson2;
 
 // src/icons/type-phone-number.tsx
-import * as React36 from "react";
+import * as React35 from "react";
 function SvgTypePhoneNumber(props) {
-  return /* @__PURE__ */ React36.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React36.createElement("path", { d: "M2.207.013a.487.487 0 00-.29.02C.87.438.213 1.93.058 2.955c-.484 3.33 2.15 6.215 4.57 8.113 2.149 1.684 6.273 4.453 8.713 1.781.31-.329.678-.813.658-1.297-.058-.813-.813-1.394-1.394-1.84-.445-.329-1.375-1.239-1.956-1.22-.522.02-.851.562-1.18.891l-.582.581c-.096.097-1.336-.716-1.471-.813a9.881 9.881 0 01-1.414-1.104A9.13 9.13 0 014.86 6.732c-.097-.136-.89-1.317-.813-1.414 0 0 .677-.736.871-1.026.407-.62.717-1.104.252-1.84-.174-.27-.387-.484-.62-.716-.406-.387-.813-.794-1.278-1.123-.251-.194-.677-.542-1.065-.6z" }));
+  return /* @__PURE__ */ React35.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React35.createElement("path", {
+    d: "M2.207.013a.487.487 0 00-.29.02C.87.438.213 1.93.058 2.955c-.484 3.33 2.15 6.215 4.57 8.113 2.149 1.684 6.273 4.453 8.713 1.781.31-.329.678-.813.658-1.297-.058-.813-.813-1.394-1.394-1.84-.445-.329-1.375-1.239-1.956-1.22-.522.02-.851.562-1.18.891l-.582.581c-.096.097-1.336-.716-1.471-.813a9.881 9.881 0 01-1.414-1.104A9.13 9.13 0 014.86 6.732c-.097-.136-.89-1.317-.813-1.414 0 0 .677-.736.871-1.026.407-.62.717-1.104.252-1.84-.174-.27-.387-.484-.62-.716-.406-.387-.813-.794-1.278-1.123-.251-.194-.677-.542-1.065-.6z"
+  }));
 }
 var type_phone_number_default = SvgTypePhoneNumber;
 
 // src/icons/type-relation.tsx
-import * as React37 from "react";
+import * as React36 from "react";
 function SvgTypeRelation(props) {
-  return /* @__PURE__ */ React37.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React37.createElement("path", { d: "M4.5 1v2h5.086L1 11.586 2.414 13 11 4.414V9.5h2V1z" }));
+  return /* @__PURE__ */ React36.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React36.createElement("path", {
+    d: "M4.5 1v2h5.086L1 11.586 2.414 13 11 4.414V9.5h2V1z"
+  }));
 }
 var type_relation_default = SvgTypeRelation;
 
 // src/icons/type-select.tsx
-import * as React38 from "react";
+import * as React37 from "react";
 function SvgTypeSelect(props) {
-  return /* @__PURE__ */ React38.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React38.createElement("path", { d: "M7 13A6 6 0 107 1a6 6 0 000 12zM3.751 5.323A.2.2 0 013.909 5h6.182a.2.2 0 01.158.323L7.158 9.297a.2.2 0 01-.316 0L3.751 5.323z" }));
+  return /* @__PURE__ */ React37.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React37.createElement("path", {
+    d: "M7 13A6 6 0 107 1a6 6 0 000 12zM3.751 5.323A.2.2 0 013.909 5h6.182a.2.2 0 01.158.323L7.158 9.297a.2.2 0 01-.316 0L3.751 5.323z"
+  }));
 }
 var type_select_default = SvgTypeSelect;
 
-// src/icons/type-status.tsx
-import * as React39 from "react";
-function SvgTypeStatus(props) {
-  return /* @__PURE__ */ React39.createElement("svg", __spreadValues({ viewBox: "0 0 16 16" }, props), /* @__PURE__ */ React39.createElement("path", { d: "M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z" }));
-}
-var type_status_default = SvgTypeStatus;
-
 // src/icons/type-text.tsx
-import * as React40 from "react";
+import * as React38 from "react";
 function SvgTypeText(props) {
-  return /* @__PURE__ */ React40.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React40.createElement("path", { d: "M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z" }));
+  return /* @__PURE__ */ React38.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React38.createElement("path", {
+    d: "M7 4.568a.5.5 0 00-.5-.5h-6a.5.5 0 00-.5.5v1.046a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V4.568zM.5 1a.5.5 0 00-.5.5v1.045a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V1.5a.5.5 0 00-.5-.5H.5zM0 8.682a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V7.636a.5.5 0 00-.5-.5H.5a.5.5 0 00-.5.5v1.046zm0 3.068a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-1.045a.5.5 0 00-.5-.5h-9a.5.5 0 00-.5.5v1.045z"
+  }));
 }
 var type_text_default = SvgTypeText;
 
 // src/icons/type-timestamp.tsx
-import * as React41 from "react";
+import * as React39 from "react";
 function SvgTypeTimestamp(props) {
-  return /* @__PURE__ */ React41.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React41.createElement("path", { d: "M6.986 14c-1.79 0-3.582-.69-4.944-2.068-2.723-2.72-2.723-7.172 0-9.892 2.725-2.72 7.182-2.72 9.906 0A6.972 6.972 0 0114 6.996c0 1.88-.728 3.633-2.052 4.955A7.058 7.058 0 016.986 14zm3.285-6.99v1.645H5.526v-5.47h1.841v3.63h2.904v.194zm1.89-.014c0-1.379-.542-2.67-1.522-3.648-2.006-2.005-5.287-2.007-7.297-.009l-.009.009a5.168 5.168 0 000 7.295c2.01 2.007 5.297 2.007 7.306 0a5.119 5.119 0 001.521-3.647z" }));
+  return /* @__PURE__ */ React39.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React39.createElement("path", {
+    d: "M6.986 14c-1.79 0-3.582-.69-4.944-2.068-2.723-2.72-2.723-7.172 0-9.892 2.725-2.72 7.182-2.72 9.906 0A6.972 6.972 0 0114 6.996c0 1.88-.728 3.633-2.052 4.955A7.058 7.058 0 016.986 14zm3.285-6.99v1.645H5.526v-5.47h1.841v3.63h2.904v.194zm1.89-.014c0-1.379-.542-2.67-1.522-3.648-2.006-2.005-5.287-2.007-7.297-.009l-.009.009a5.168 5.168 0 000 7.295c2.01 2.007 5.297 2.007 7.306 0a5.119 5.119 0 001.521-3.647z"
+  }));
 }
 var type_timestamp_default = SvgTypeTimestamp;
 
 // src/icons/type-title.tsx
-import * as React42 from "react";
+import * as React40 from "react";
 function SvgTypeTitle(props) {
-  return /* @__PURE__ */ React42.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React42.createElement("path", { d: "M7.74 8.697a.81.81 0 01.073.308.894.894 0 01-.9.888.867.867 0 01-.825-.592l-.333-.961H2.058l-.333.961a.882.882 0 01-.838.592A.884.884 0 010 9.005c0-.11.025-.222.062-.308l2.403-6.211c.222-.58.776-.986 1.442-.986.653 0 1.22.407 1.442.986l2.39 6.211zM2.6 6.824h2.613L3.907 3.102 2.6 6.824zm8.8-3.118c1.355 0 2.6.542 2.6 2.255V9.08a.8.8 0 01-.789.814.797.797 0 01-.788-.703c-.395.468-1.097.764-1.874.764-.949 0-2.07-.64-2.07-1.972 0-1.392 1.121-1.897 2.07-1.897.789 0 1.491.246 1.886.727v-.826c0-.604-.518-.998-1.306-.998-.469 0-.888.123-1.32.394a.64.64 0 01-.307.086.602.602 0 01-.592-.604c0-.221.123-.419.284-.517a3.963 3.963 0 012.206-.641zm-.222 5.188c.505 0 .998-.172 1.257-.517v-.74c-.259-.345-.752-.517-1.257-.517-.616 0-1.122.332-1.122.9 0 .554.506.874 1.122.874zM.656 11.125h12.688a.656.656 0 110 1.313H.656a.656.656 0 110-1.313z" }));
+  return /* @__PURE__ */ React40.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React40.createElement("path", {
+    d: "M7.74 8.697a.81.81 0 01.073.308.894.894 0 01-.9.888.867.867 0 01-.825-.592l-.333-.961H2.058l-.333.961a.882.882 0 01-.838.592A.884.884 0 010 9.005c0-.11.025-.222.062-.308l2.403-6.211c.222-.58.776-.986 1.442-.986.653 0 1.22.407 1.442.986l2.39 6.211zM2.6 6.824h2.613L3.907 3.102 2.6 6.824zm8.8-3.118c1.355 0 2.6.542 2.6 2.255V9.08a.8.8 0 01-.789.814.797.797 0 01-.788-.703c-.395.468-1.097.764-1.874.764-.949 0-2.07-.64-2.07-1.972 0-1.392 1.121-1.897 2.07-1.897.789 0 1.491.246 1.886.727v-.826c0-.604-.518-.998-1.306-.998-.469 0-.888.123-1.32.394a.64.64 0 01-.307.086.602.602 0 01-.592-.604c0-.221.123-.419.284-.517a3.963 3.963 0 012.206-.641zm-.222 5.188c.505 0 .998-.172 1.257-.517v-.74c-.259-.345-.752-.517-1.257-.517-.616 0-1.122.332-1.122.9 0 .554.506.874 1.122.874zM.656 11.125h12.688a.656.656 0 110 1.313H.656a.656.656 0 110-1.313z"
+  }));
 }
 var type_title_default = SvgTypeTitle;
 
 // src/icons/type-url.tsx
-import * as React43 from "react";
+import * as React41 from "react";
 function SvgTypeUrl(props) {
-  return /* @__PURE__ */ React43.createElement("svg", __spreadValues({ viewBox: "0 0 14 14" }, props), /* @__PURE__ */ React43.createElement("path", { d: "M3.733 3.867h3.734c1.03 0 1.866.837 1.866 1.866 0 1.03-.837 1.867-1.866 1.867h-.934a.934.934 0 000 1.867h.934a3.734 3.734 0 000-7.467H3.733A3.73 3.73 0 001.89 8.977a4.637 4.637 0 01.314-2.18 1.854 1.854 0 01-.336-1.064c0-1.03.837-1.866 1.866-1.866zm8.377 1.422a4.6 4.6 0 01-.316 2.176c.212.303.34.67.34 1.068 0 1.03-.838 1.867-1.867 1.867H6.533a1.869 1.869 0 01-1.866-1.867c0-1.03.837-1.866 1.866-1.866h.934a.934.934 0 000-1.867h-.934a3.733 3.733 0 000 7.467h3.734a3.73 3.73 0 001.843-6.978z" }));
+  return /* @__PURE__ */ React41.createElement("svg", __spreadValues({
+    viewBox: "0 0 14 14"
+  }, props), /* @__PURE__ */ React41.createElement("path", {
+    d: "M3.733 3.867h3.734c1.03 0 1.866.837 1.866 1.866 0 1.03-.837 1.867-1.866 1.867h-.934a.934.934 0 000 1.867h.934a3.734 3.734 0 000-7.467H3.733A3.73 3.73 0 001.89 8.977a4.637 4.637 0 01.314-2.18 1.854 1.854 0 01-.336-1.064c0-1.03.837-1.866 1.866-1.866zm8.377 1.422a4.6 4.6 0 01-.316 2.176c.212.303.34.67.34 1.068 0 1.03-.838 1.867-1.867 1.867H6.533a1.869 1.869 0 01-1.866-1.867c0-1.03.837-1.866 1.866-1.866h.934a.934.934 0 000-1.867h-.934a3.733 3.733 0 000 7.467h3.734a3.73 3.73 0 001.843-6.978z"
+  }));
 }
 var type_url_default = SvgTypeUrl;
 
@@ -5083,7 +5099,6 @@ var iconMap2 = {
   text: type_text_default,
   number: type_number_default,
   select: type_select_default,
-  status: type_status_default,
   multi_select: type_multi_select_default,
   date: type_date_default,
   person: type_person_default,
@@ -5113,19 +5128,20 @@ var PropertyIcon = (_a) => {
 
 // src/third-party/collection-column-title.tsx
 var CollectionColumnTitle = ({ schema }) => {
-  return /* @__PURE__ */ React44.createElement("div", { className: "notion-collection-column-title" }, /* @__PURE__ */ React44.createElement(
-    PropertyIcon,
-    {
-      className: "notion-collection-column-title-icon",
-      type: schema.type
-    }
-  ), /* @__PURE__ */ React44.createElement("div", { className: "notion-collection-column-title-body" }, schema.name));
+  return /* @__PURE__ */ React42.createElement("div", {
+    className: "notion-collection-column-title"
+  }, /* @__PURE__ */ React42.createElement(PropertyIcon, {
+    className: "notion-collection-column-title-icon",
+    type: schema.type
+  }), /* @__PURE__ */ React42.createElement("div", {
+    className: "notion-collection-column-title-body"
+  }, schema.name));
 };
 
 // src/third-party/property.tsx
 var import_format2 = __toESM(require_format(), 1);
 var import_format_number = __toESM(require_format_number(), 1);
-import * as React45 from "react";
+import * as React43 from "react";
 
 // src/third-party/eval-formula.ts
 var import_add = __toESM(require_add(), 1);
@@ -5394,7 +5410,7 @@ function evalFunctionFormula(formula, ctx2) {
     case "month":
       return (0, import_getMonth.default)(evalFormula(args[0], ctx2));
     case "now":
-      return /* @__PURE__ */ new Date();
+      return new Date();
     case "start":
       return evalFormula(args[0], __spreadProps(__spreadValues({}, ctx2), { endDate: false }));
     case "timestamp":
@@ -5412,13 +5428,12 @@ function evalFunctionFormula(formula, ctx2) {
 var Property = (props) => {
   const { components } = useNotionContext();
   if (components.Property) {
-    return /* @__PURE__ */ React45.createElement(components.Property, __spreadValues({}, props));
+    return /* @__PURE__ */ React43.createElement(components.Property, __spreadValues({}, props));
   } else {
-    return /* @__PURE__ */ React45.createElement(PropertyImplMemo, __spreadValues({}, props));
+    return /* @__PURE__ */ React43.createElement(PropertyImplMemo, __spreadValues({}, props));
   }
 };
 var PropertyImpl = (props) => {
-  var _a;
   const { components, mapImageUrl, mapPageUrl } = useNotionContext();
   const {
     schema,
@@ -5428,25 +5443,34 @@ var PropertyImpl = (props) => {
     inline = false,
     linkToTitlePage = true
   } = props;
-  const renderTextValue = React45.useMemo(
+  const renderTextValue = React43.useMemo(
     () => function TextProperty() {
-      return /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+      return /* @__PURE__ */ React43.createElement(Text, {
+        value: data,
+        block
+      });
     },
     [block, data]
   );
-  const renderDateValue = React45.useMemo(
+  const renderDateValue = React43.useMemo(
     () => function DateProperty() {
-      return /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+      return /* @__PURE__ */ React43.createElement(Text, {
+        value: data,
+        block
+      });
     },
     [block, data]
   );
-  const renderRelationValue = React45.useMemo(
+  const renderRelationValue = React43.useMemo(
     () => function RelationProperty() {
-      return /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+      return /* @__PURE__ */ React43.createElement(Text, {
+        value: data,
+        block
+      });
     },
     [block, data]
   );
-  const renderFormulaValue = React45.useMemo(
+  const renderFormulaValue = React43.useMemo(
     () => function FormulaProperty() {
       let content2;
       try {
@@ -5466,61 +5490,65 @@ var PropertyImpl = (props) => {
     },
     [block == null ? void 0 : block.properties, collection == null ? void 0 : collection.schema, schema]
   );
-  const renderTitleValue = React45.useMemo(
+  const renderTitleValue = React43.useMemo(
     () => function FormulaTitle() {
       if (block && linkToTitlePage) {
-        return /* @__PURE__ */ React45.createElement(
-          components.PageLink,
-          {
-            className: cs("notion-page-link"),
-            href: mapPageUrl(block.id)
-          },
-          /* @__PURE__ */ React45.createElement(PageTitle, { block })
-        );
+        return /* @__PURE__ */ React43.createElement(components.PageLink, {
+          className: cs("notion-page-link"),
+          href: mapPageUrl(block.id)
+        }, /* @__PURE__ */ React43.createElement(PageTitle, {
+          block
+        }));
       } else {
-        return /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+        return /* @__PURE__ */ React43.createElement(Text, {
+          value: data,
+          block
+        });
       }
     },
     [block, components, data, linkToTitlePage, mapPageUrl]
   );
-  const renderPersonValue = React45.useMemo(
+  const renderPersonValue = React43.useMemo(
     () => function PersonProperty() {
-      return /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+      return /* @__PURE__ */ React43.createElement(Text, {
+        value: data,
+        block
+      });
     },
     [block, data]
   );
-  const renderFileValue = React45.useMemo(
+  const renderFileValue = React43.useMemo(
     () => function FileProperty() {
       const files = data.filter((v) => v.length === 2).map((f) => f.flat().flat());
-      return files.map((file, i) => /* @__PURE__ */ React45.createElement(
-        components.Link,
-        {
-          key: i,
-          className: "notion-property-file",
-          href: mapImageUrl(file[2], block),
-          target: "_blank",
-          rel: "noreferrer noopener"
-        },
-        /* @__PURE__ */ React45.createElement(
-          GracefulImage,
-          {
-            alt: file[0],
-            src: mapImageUrl(file[2], block),
-            loading: "lazy"
-          }
-        )
-      ));
+      return files.map((file, i) => /* @__PURE__ */ React43.createElement(components.Link, {
+        key: i,
+        className: "notion-property-file",
+        href: mapImageUrl(file[2], block),
+        target: "_blank",
+        rel: "noreferrer noopener"
+      }, /* @__PURE__ */ React43.createElement(GracefulImage, {
+        alt: file[0],
+        src: mapImageUrl(file[2], block),
+        loading: "lazy"
+      })));
     },
     [block, components, data, mapImageUrl]
   );
-  const renderCheckboxValue = React45.useMemo(
+  const renderCheckboxValue = React43.useMemo(
     () => function CheckboxProperty() {
       const isChecked = data && data[0][0] === "Yes";
-      return /* @__PURE__ */ React45.createElement("div", { className: "notion-property-checkbox-container" }, /* @__PURE__ */ React45.createElement(Checkbox, { isChecked, blockId: void 0 }), /* @__PURE__ */ React45.createElement("span", { className: "notion-property-checkbox-text" }, schema.name));
+      return /* @__PURE__ */ React43.createElement("div", {
+        className: "notion-property-checkbox-container"
+      }, /* @__PURE__ */ React43.createElement(Checkbox, {
+        isChecked,
+        blockId: void 0
+      }), /* @__PURE__ */ React43.createElement("span", {
+        className: "notion-property-checkbox-text"
+      }, schema.name));
     },
     [data, schema]
   );
-  const renderUrlValue = React45.useMemo(
+  const renderUrlValue = React43.useMemo(
     () => function UrlProperty() {
       const d = JSON.parse(JSON.stringify(data));
       if (inline) {
@@ -5530,39 +5558,47 @@ var PropertyImpl = (props) => {
         } catch (err) {
         }
       }
-      return /* @__PURE__ */ React45.createElement(
-        Text,
-        {
-          value: d,
-          block,
-          inline,
-          linkProps: {
-            target: "_blank",
-            rel: "noreferrer noopener"
-          }
+      return /* @__PURE__ */ React43.createElement(Text, {
+        value: d,
+        block,
+        inline,
+        linkProps: {
+          target: "_blank",
+          rel: "noreferrer noopener"
         }
-      );
+      });
     },
     [block, data, inline]
   );
-  const renderEmailValue = React45.useMemo(
+  const renderEmailValue = React43.useMemo(
     () => function EmailProperty() {
-      return /* @__PURE__ */ React45.createElement(Text, { value: data, linkProtocol: "mailto", block });
+      return /* @__PURE__ */ React43.createElement(Text, {
+        value: data,
+        linkProtocol: "mailto",
+        block
+      });
     },
     [block, data]
   );
-  const renderPhoneNumberValue = React45.useMemo(
+  const renderPhoneNumberValue = React43.useMemo(
     () => function PhoneNumberProperty() {
-      return /* @__PURE__ */ React45.createElement(Text, { value: data, linkProtocol: "tel", block });
+      return /* @__PURE__ */ React43.createElement(Text, {
+        value: data,
+        linkProtocol: "tel",
+        block
+      });
     },
     [block, data]
   );
-  const renderNumberValue = React45.useMemo(
+  const renderNumberValue = React43.useMemo(
     () => function NumberProperty() {
       const value = parseFloat(data[0][0] || "0");
       let output = "";
       if (isNaN(value)) {
-        return /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+        return /* @__PURE__ */ React43.createElement(Text, {
+          value: data,
+          block
+        });
       } else {
         switch (schema.number_format) {
           case "number_with_commas":
@@ -5603,20 +5639,26 @@ var PropertyImpl = (props) => {
             );
             break;
           default:
-            return /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+            return /* @__PURE__ */ React43.createElement(Text, {
+              value: data,
+              block
+            });
         }
-        return /* @__PURE__ */ React45.createElement(Text, { value: [[output]], block });
+        return /* @__PURE__ */ React43.createElement(Text, {
+          value: [[output]],
+          block
+        });
       }
     },
     [block, data, schema]
   );
-  const renderCreatedTimeValue = React45.useMemo(
+  const renderCreatedTimeValue = React43.useMemo(
     () => function CreatedTimeProperty() {
       return (0, import_format2.default)(new Date(block == null ? void 0 : block.created_time), "MMM d, YYY hh:mm aa");
     },
     [block == null ? void 0 : block.created_time]
   );
-  const renderLastEditedTimeValue = React45.useMemo(
+  const renderLastEditedTimeValue = React43.useMemo(
     () => function LastEditedTimeProperty() {
       return (0, import_format2.default)(new Date(block == null ? void 0 : block.last_edited_time), "MMM d, YYY hh:mm aa");
     },
@@ -5637,49 +5679,12 @@ var PropertyImpl = (props) => {
       case "title":
         content = components.propertyTitleValue(props, renderTitleValue);
         break;
-      case "status": {
-        const value = data[0][0] || "";
-        const option = (_a = schema.options) == null ? void 0 : _a.find((option2) => value === option2.value);
-        const color = (option == null ? void 0 : option.color) || "default-inferred";
-        content = components.propertySelectValue(
-          __spreadProps(__spreadValues({}, props), {
-            value,
-            option,
-            color
-          }),
-          () => /* @__PURE__ */ React45.createElement(
-            "div",
-            {
-              className: cs(
-                `notion-property-${schema.type}-item`,
-                color && `notion-item-${color}`
-              )
-            },
-            /* @__PURE__ */ React45.createElement(
-              "span",
-              {
-                className: cs(`notion-item-bullet-${color}`),
-                style: {
-                  marginRight: "5px",
-                  borderRadius: "100%",
-                  height: "8px",
-                  width: "8px",
-                  display: "inline-flex",
-                  flexShrink: 0
-                }
-              }
-            ),
-            value
-          )
-        );
-        break;
-      }
       case "select":
       case "multi_select": {
         const values = (data[0][0] || "").split(",");
         content = values.map((value, index) => {
-          var _a2;
-          const option = (_a2 = schema.options) == null ? void 0 : _a2.find(
+          var _a;
+          const option = (_a = schema.options) == null ? void 0 : _a.find(
             (option2) => value === option2.value
           );
           const color = option == null ? void 0 : option.color;
@@ -5690,17 +5695,13 @@ var PropertyImpl = (props) => {
               option,
               color
             }),
-            () => /* @__PURE__ */ React45.createElement(
-              "div",
-              {
-                key: index,
-                className: cs(
-                  `notion-property-${schema.type}-item`,
-                  color && `notion-item-${color}`
-                )
-              },
-              value
-            )
+            () => /* @__PURE__ */ React43.createElement("div", {
+              key: index,
+              className: cs(
+                `notion-property-${schema.type}-item`,
+                color && `notion-item-${color}`
+              )
+            }, value)
           );
         });
         break;
@@ -5752,13 +5753,18 @@ var PropertyImpl = (props) => {
         content = components.propertyDateValue(props, renderDateValue);
         break;
       default:
-        content = /* @__PURE__ */ React45.createElement(Text, { value: data, block });
+        content = /* @__PURE__ */ React43.createElement(Text, {
+          value: data,
+          block
+        });
         break;
     }
   }
-  return /* @__PURE__ */ React45.createElement("span", { className: `notion-property notion-property-${schema.type}` }, content);
+  return /* @__PURE__ */ React43.createElement("span", {
+    className: `notion-property notion-property-${schema.type}`
+  }, content);
 };
-var PropertyImplMemo = React45.memo(PropertyImpl);
+var PropertyImplMemo = React43.memo(PropertyImpl);
 
 // src/third-party/collection-row.tsx
 var CollectionRow = ({ block, pageHeader = false, className }) => {
@@ -5792,38 +5798,53 @@ var CollectionRow = ({ block, pageHeader = false, className }) => {
   } else {
     propertyIds.sort((a, b) => schemas[a].name.localeCompare(schemas[b].name));
   }
-  return /* @__PURE__ */ React46.createElement("div", { className: cs("notion-collection-row", className) }, /* @__PURE__ */ React46.createElement("div", { className: "notion-collection-row-body" }, propertyIds.map((propertyId) => {
+  return /* @__PURE__ */ React44.createElement("div", {
+    className: cs("notion-collection-row", className)
+  }, /* @__PURE__ */ React44.createElement("div", {
+    className: "notion-collection-row-body"
+  }, propertyIds.map((propertyId) => {
     var _a2;
     const schema = schemas[propertyId];
-    return /* @__PURE__ */ React46.createElement("div", { className: "notion-collection-row-property", key: propertyId }, /* @__PURE__ */ React46.createElement(CollectionColumnTitle, { schema }), /* @__PURE__ */ React46.createElement("div", { className: "notion-collection-row-value" }, /* @__PURE__ */ React46.createElement(
-      Property,
-      {
-        schema,
-        data: (_a2 = block.properties) == null ? void 0 : _a2[propertyId],
-        propertyId,
-        block,
-        collection,
-        pageHeader
-      }
-    )));
+    return /* @__PURE__ */ React44.createElement("div", {
+      className: "notion-collection-row-property",
+      key: propertyId
+    }, /* @__PURE__ */ React44.createElement(CollectionColumnTitle, {
+      schema
+    }), /* @__PURE__ */ React44.createElement("div", {
+      className: "notion-collection-row-value"
+    }, /* @__PURE__ */ React44.createElement(Property, {
+      schema,
+      data: (_a2 = block.properties) == null ? void 0 : _a2[propertyId],
+      propertyId,
+      block,
+      collection,
+      pageHeader
+    })));
   })));
 };
 
 // src/third-party/collection-view.tsx
-import * as React54 from "react";
+import * as React52 from "react";
 
 // src/third-party/collection-view-board.tsx
-import * as React50 from "react";
+import * as React48 from "react";
 
 // src/icons/empty-icon.tsx
-import * as React47 from "react";
+import * as React45 from "react";
 var EmptyIcon = (props) => {
   const _a = props, { className } = _a, rest = __objRest(_a, ["className"]);
-  return /* @__PURE__ */ React47.createElement("svg", __spreadProps(__spreadValues({ className }, rest), { viewBox: "0 0 14 14", width: "14" }), /* @__PURE__ */ React47.createElement("path", { d: "M11.0918,0 C11.5383,0 11.9307,0.295898 12.0533,0.725586 L13.9615,7.40332 C13.9871,7.49316 14,7.58594 14,7.67871 L14,13 C14,13.5527 13.5522,14 13,14 L1,14 C0.447754,14 0,13.5527 0,13 L0,7.67871 C0,7.58594 0.0129395,7.49316 0.0384521,7.40332 L1.94666,0.725586 C2.06934,0.295898 2.46167,0 2.9082,0 L11.0918,0 Z M4.27271,1.5 C3.83728,1.5 3.45178,1.78223 3.31982,2.19727 L1.91455,6.61328 C1.70947,7.25879 2.1908,7.91699 2.86755,7.91699 L4.70837,7.91699 C4.70837,8.93652 5.16663,10.168 7,10.168 C8.83337,10.168 9.29163,8.93652 9.29163,7.91699 L11.1478,7.89355 C11.8201,7.88477 12.2927,7.22852 12.0876,6.58887 L10.681,2.19531 C10.5485,1.78125 10.1635,1.5 9.72864,1.5 L4.27271,1.5 Z" }));
+  return /* @__PURE__ */ React45.createElement("svg", __spreadProps(__spreadValues({
+    className
+  }, rest), {
+    viewBox: "0 0 14 14",
+    width: "14"
+  }), /* @__PURE__ */ React45.createElement("path", {
+    d: "M11.0918,0 C11.5383,0 11.9307,0.295898 12.0533,0.725586 L13.9615,7.40332 C13.9871,7.49316 14,7.58594 14,7.67871 L14,13 C14,13.5527 13.5522,14 13,14 L1,14 C0.447754,14 0,13.5527 0,13 L0,7.67871 C0,7.58594 0.0129395,7.49316 0.0384521,7.40332 L1.94666,0.725586 C2.06934,0.295898 2.46167,0 2.9082,0 L11.0918,0 Z M4.27271,1.5 C3.83728,1.5 3.45178,1.78223 3.31982,2.19727 L1.91455,6.61328 C1.70947,7.25879 2.1908,7.91699 2.86755,7.91699 L4.70837,7.91699 C4.70837,8.93652 5.16663,10.168 7,10.168 C8.83337,10.168 9.29163,8.93652 9.29163,7.91699 L11.1478,7.89355 C11.8201,7.88477 12.2927,7.22852 12.0876,6.58887 L10.681,2.19531 C10.5485,1.78125 10.1635,1.5 9.72864,1.5 L4.27271,1.5 Z"
+  }));
 };
 
 // src/third-party/collection-card.tsx
-import * as React48 from "react";
+import * as React46 from "react";
 import { getTextContent as getTextContent3 } from "notion-utils";
 var CollectionCard = (_a) => {
   var _b = _a, {
@@ -5869,36 +5890,32 @@ var CollectionCard = (_a) => {
       if (source) {
         const src = mapImageUrl(source, contentBlock);
         const caption = (_j = (_i = (_h = contentBlock.properties) == null ? void 0 : _h.caption) == null ? void 0 : _i[0]) == null ? void 0 : _j[0];
-        coverContent = /* @__PURE__ */ React48.createElement(
-          LazyImage,
-          {
-            src,
-            alt: caption || "notion image",
-            style: {
-              objectFit: coverAspect
-            }
+        coverContent = /* @__PURE__ */ React46.createElement(LazyImage, {
+          src,
+          alt: caption || "notion image",
+          style: {
+            objectFit: coverAspect
           }
-        );
+        });
       }
     }
     if (!coverContent) {
-      coverContent = /* @__PURE__ */ React48.createElement("div", { className: "notion-collection-card-cover-empty" });
+      coverContent = /* @__PURE__ */ React46.createElement("div", {
+        className: "notion-collection-card-cover-empty"
+      });
     }
   } else if ((cover == null ? void 0 : cover.type) === "page_cover") {
     const { page_cover } = block.format || {};
     if (page_cover) {
       const coverPosition2 = (1 - page_cover_position) * 100;
-      coverContent = /* @__PURE__ */ React48.createElement(
-        LazyImage,
-        {
-          src: mapImageUrl(page_cover, block),
-          alt: getTextContent3((_k = block.properties) == null ? void 0 : _k.title),
-          style: {
-            objectFit: coverAspect,
-            objectPosition: `center ${coverPosition2}%`
-          }
+      coverContent = /* @__PURE__ */ React46.createElement(LazyImage, {
+        src: mapImageUrl(page_cover, block),
+        alt: getTextContent3((_k = block.properties) == null ? void 0 : _k.title),
+        style: {
+          objectFit: coverAspect,
+          objectPosition: `center ${coverPosition2}%`
         }
-      );
+      });
     }
   } else if ((cover == null ? void 0 : cover.type) === "property") {
     const { property } = cover;
@@ -5909,20 +5926,23 @@ var CollectionCard = (_a) => {
         const files = data.filter((v) => v.length === 2).map((f) => f.flat().flat());
         const file = files[0];
         if (file) {
-          coverContent = /* @__PURE__ */ React48.createElement("span", { className: `notion-property-${schema.type}` }, /* @__PURE__ */ React48.createElement(
-            LazyImage,
-            {
-              alt: file[0],
-              src: mapImageUrl(file[2], block),
-              style: {
-                objectFit: coverAspect,
-                objectPosition: `center ${coverPosition}%`
-              }
+          coverContent = /* @__PURE__ */ React46.createElement("span", {
+            className: `notion-property-${schema.type}`
+          }, /* @__PURE__ */ React46.createElement(LazyImage, {
+            alt: file[0],
+            src: mapImageUrl(file[2], block),
+            style: {
+              objectFit: coverAspect,
+              objectPosition: `center ${coverPosition}%`
             }
-          ));
+          }));
         }
       } else {
-        coverContent = /* @__PURE__ */ React48.createElement(Property, { propertyId: property, schema, data });
+        coverContent = /* @__PURE__ */ React46.createElement(Property, {
+          propertyId: property,
+          schema,
+          data
+        });
       }
     }
   }
@@ -5943,80 +5963,69 @@ var CollectionCard = (_a) => {
   if (linkProperties && linkProperties.length > 0 && linkProperties[0].length > 0 && linkProperties[0][0].length > 0) {
     url = linkProperties[0][0][0];
   }
-  const innerCard = /* @__PURE__ */ React48.createElement(React48.Fragment, null, (coverContent || (cover == null ? void 0 : cover.type) !== "none") && /* @__PURE__ */ React48.createElement("div", { className: "notion-collection-card-cover" }, coverContent), /* @__PURE__ */ React48.createElement("div", { className: "notion-collection-card-body" }, /* @__PURE__ */ React48.createElement("div", { className: "notion-collection-card-property" }, /* @__PURE__ */ React48.createElement(
-    Property,
-    {
-      schema: collection.schema.title,
-      data: (_n = block == null ? void 0 : block.properties) == null ? void 0 : _n.title,
-      block,
-      collection
-    }
-  )), properties == null ? void 0 : properties.filter(
+  const innerCard = /* @__PURE__ */ React46.createElement(React46.Fragment, null, (coverContent || (cover == null ? void 0 : cover.type) !== "none") && /* @__PURE__ */ React46.createElement("div", {
+    className: "notion-collection-card-cover"
+  }, coverContent), /* @__PURE__ */ React46.createElement("div", {
+    className: "notion-collection-card-body"
+  }, /* @__PURE__ */ React46.createElement("div", {
+    className: "notion-collection-card-property"
+  }, /* @__PURE__ */ React46.createElement(Property, {
+    schema: collection.schema.title,
+    data: (_n = block == null ? void 0 : block.properties) == null ? void 0 : _n.title,
+    block,
+    collection
+  })), properties == null ? void 0 : properties.filter(
     (p) => p.visible && p.property !== "title" && collection.schema[p.property]
   ).map((p) => {
     if (!block.properties)
       return null;
     const schema = collection.schema[p.property];
     const data = block.properties[p.property];
-    return /* @__PURE__ */ React48.createElement("div", { className: "notion-collection-card-property", key: p.property }, /* @__PURE__ */ React48.createElement(
-      Property,
-      {
-        schema,
-        data,
-        block,
-        collection,
-        inline: true
-      }
-    ));
+    return /* @__PURE__ */ React46.createElement("div", {
+      className: "notion-collection-card-property",
+      key: p.property
+    }, /* @__PURE__ */ React46.createElement(Property, {
+      schema,
+      data,
+      block,
+      collection,
+      inline: true
+    }));
   })));
-  return /* @__PURE__ */ React48.createElement(
-    NotionContextProvider,
-    __spreadProps(__spreadValues({}, ctx2), {
-      components: __spreadProps(__spreadValues({}, ctx2.components), {
-        // Disable <a> tabs in all child components so we don't create invalid DOM
-        // trees with stacked <a> tags.
-        Link: (props) => {
-          var _a3, _b3, _c2;
-          return /* @__PURE__ */ React48.createElement("form", { action: props.href, target: "_blank" }, /* @__PURE__ */ React48.createElement(
-            "input",
-            {
-              type: "submit",
-              value: (_c2 = (_b3 = (_a3 = props == null ? void 0 : props.children) == null ? void 0 : _a3.props) == null ? void 0 : _b3.children) != null ? _c2 : props.href,
-              className: "nested-form-link notion-link"
-            }
-          ));
-        },
-        PageLink: dummyLink
-      })
-    }),
-    isLinkCollectionToUrlProperty && url ? /* @__PURE__ */ React48.createElement(
-      components.Link,
-      __spreadValues({
-        className: cs(
-          "notion-collection-card",
-          `notion-collection-card-size-${coverSize}`,
-          className
-        ),
-        href: url
-      }, rest),
-      innerCard
-    ) : /* @__PURE__ */ React48.createElement(
-      components.PageLink,
-      __spreadValues({
-        className: cs(
-          "notion-collection-card",
-          `notion-collection-card-size-${coverSize}`,
-          className
-        ),
-        href: mapPageUrl(block.id)
-      }, rest),
-      innerCard
-    )
-  );
+  return /* @__PURE__ */ React46.createElement(NotionContextProvider, __spreadProps(__spreadValues({}, ctx2), {
+    components: __spreadProps(__spreadValues({}, ctx2.components), {
+      Link: (props) => {
+        var _a3, _b3, _c2;
+        return /* @__PURE__ */ React46.createElement("form", {
+          action: props.href,
+          target: "_blank"
+        }, /* @__PURE__ */ React46.createElement("input", {
+          type: "submit",
+          value: (_c2 = (_b3 = (_a3 = props == null ? void 0 : props.children) == null ? void 0 : _a3.props) == null ? void 0 : _b3.children) != null ? _c2 : props.href,
+          className: "nested-form-link notion-link"
+        }));
+      },
+      PageLink: dummyLink
+    })
+  }), isLinkCollectionToUrlProperty && url ? /* @__PURE__ */ React46.createElement(components.Link, __spreadValues({
+    className: cs(
+      "notion-collection-card",
+      `notion-collection-card-size-${coverSize}`,
+      className
+    ),
+    href: url
+  }, rest), innerCard) : /* @__PURE__ */ React46.createElement(components.PageLink, __spreadValues({
+    className: cs(
+      "notion-collection-card",
+      `notion-collection-card-size-${coverSize}`,
+      className
+    ),
+    href: mapPageUrl(block.id)
+  }, rest), innerCard));
 };
 
 // src/third-party/collection-group.tsx
-import * as React49 from "react";
+import * as React47 from "react";
 var CollectionGroup = (_a) => {
   var _b = _a, {
     collectionViewComponent: CollectionViewComponent,
@@ -6039,13 +6048,21 @@ var CollectionGroup = (_a) => {
   ]);
   if (hidden)
     return null;
-  return /* @__PURE__ */ React49.createElement("details", __spreadValues({ open: true, className: "notion-collection-group" }, detailsProps), /* @__PURE__ */ React49.createElement("summary", __spreadValues({ className: "notion-collection-group-title" }, summaryProps), /* @__PURE__ */ React49.createElement("div", null, /* @__PURE__ */ React49.createElement(Property, { schema, data: [[value]], collection }), /* @__PURE__ */ React49.createElement("span", { className: "notion-board-th-count" }, collectionGroup == null ? void 0 : collectionGroup.total))), /* @__PURE__ */ React49.createElement(
-    CollectionViewComponent,
-    __spreadValues({
-      collection,
-      collectionGroup
-    }, rest)
-  ));
+  return /* @__PURE__ */ React47.createElement("details", __spreadValues({
+    open: true,
+    className: "notion-collection-group"
+  }, detailsProps), /* @__PURE__ */ React47.createElement("summary", __spreadValues({
+    className: "notion-collection-group-title"
+  }, summaryProps), /* @__PURE__ */ React47.createElement("div", null, /* @__PURE__ */ React47.createElement(Property, {
+    schema,
+    data: [[value]],
+    collection
+  }), /* @__PURE__ */ React47.createElement("span", {
+    className: "notion-board-th-count"
+  }, collectionGroup == null ? void 0 : collectionGroup.total))), /* @__PURE__ */ React47.createElement(CollectionViewComponent, __spreadValues({
+    collection,
+    collectionGroup
+  }, rest)));
 };
 
 // src/third-party/collection-utils.ts
@@ -6100,32 +6117,28 @@ var CollectionViewBoard = ({
       collectionData,
       padding
     );
-    return collectionGroups.map((group, index) => /* @__PURE__ */ React50.createElement(
-      CollectionGroup,
-      __spreadProps(__spreadValues({
-        key: index
-      }, group), {
-        summaryProps: {
-          style: {
-            paddingLeft: padding
-          }
-        },
-        collectionViewComponent: (props) => /* @__PURE__ */ React50.createElement(Board, __spreadValues({ padding }, props))
-      })
-    ));
+    return collectionGroups.map((group, index) => /* @__PURE__ */ React48.createElement(CollectionGroup, __spreadProps(__spreadValues({
+      key: index
+    }, group), {
+      summaryProps: {
+        style: {
+          paddingLeft: padding
+        }
+      },
+      collectionViewComponent: (props) => /* @__PURE__ */ React48.createElement(Board, __spreadValues({
+        padding
+      }, props))
+    })));
   }
-  return /* @__PURE__ */ React50.createElement(
-    Board,
-    {
-      padding,
-      collectionView,
-      collection,
-      collectionData
-    }
-  );
+  return /* @__PURE__ */ React48.createElement(Board, {
+    padding,
+    collectionView,
+    collection,
+    collectionData
+  });
 };
 function Board({ collectionView, collectionData, collection, padding }) {
-  var _a, _b, _c, _d;
+  var _a, _b;
   const { recordMap } = useNotionContext();
   const {
     board_cover = { type: "none" },
@@ -6133,83 +6146,88 @@ function Board({ collectionView, collectionData, collection, padding }) {
     board_cover_aspect = "cover"
   } = (collectionView == null ? void 0 : collectionView.format) || {};
   const boardGroups = ((_a = collectionView == null ? void 0 : collectionView.format) == null ? void 0 : _a.board_columns) || ((_b = collectionView == null ? void 0 : collectionView.format) == null ? void 0 : _b.board_groups2) || [];
-  const boardGroupBy = (_d = (_c = collectionView == null ? void 0 : collectionView.format) == null ? void 0 : _c.board_columns_by) == null ? void 0 : _d.groupBy;
-  const boardStyle = React50.useMemo(
+  const boardStyle = React48.useMemo(
     () => ({
       paddingLeft: padding
     }),
     [padding]
   );
-  return /* @__PURE__ */ React50.createElement("div", { className: "notion-board" }, /* @__PURE__ */ React50.createElement(
-    "div",
-    {
-      className: cs(
-        "notion-board-view",
-        `notion-board-view-size-${board_cover_size}`
-      ),
-      style: boardStyle
-    },
-    /* @__PURE__ */ React50.createElement("div", { className: "notion-board-header" }, /* @__PURE__ */ React50.createElement("div", { className: "notion-board-header-inner" }, boardGroups.map((p, index) => {
-      var _a2, _b2, _c2, _d2;
-      if (!((_a2 = collectionData.board_columns) == null ? void 0 : _a2.results)) {
+  return /* @__PURE__ */ React48.createElement("div", {
+    className: "notion-board"
+  }, /* @__PURE__ */ React48.createElement("div", {
+    className: cs(
+      "notion-board-view",
+      `notion-board-view-size-${board_cover_size}`
+    ),
+    style: boardStyle
+  }, /* @__PURE__ */ React48.createElement("div", {
+    className: "notion-board-header"
+  }, /* @__PURE__ */ React48.createElement("div", {
+    className: "notion-board-header-inner"
+  }, boardGroups.map((p, index) => {
+    var _a2, _b2, _c;
+    if (!((_a2 = collectionData.board_columns) == null ? void 0 : _a2.results)) {
+      return null;
+    }
+    const group = collectionData.board_columns.results[index];
+    const schema = collection.schema[p.property];
+    if (!group || !schema || p.hidden) {
+      return null;
+    }
+    return /* @__PURE__ */ React48.createElement("div", {
+      className: "notion-board-th",
+      key: index
+    }, /* @__PURE__ */ React48.createElement("div", {
+      className: "notion-board-th-body"
+    }, ((_b2 = group.value) == null ? void 0 : _b2.value) ? /* @__PURE__ */ React48.createElement(Property, {
+      schema,
+      data: [[(_c = group.value) == null ? void 0 : _c.value]],
+      collection
+    }) : /* @__PURE__ */ React48.createElement("span", null, /* @__PURE__ */ React48.createElement(EmptyIcon, {
+      className: "notion-board-th-empty"
+    }), " No Select"), /* @__PURE__ */ React48.createElement("span", {
+      className: "notion-board-th-count"
+    }, group.total)));
+  }))), /* @__PURE__ */ React48.createElement("div", {
+    className: "notion-board-header-placeholder"
+  }), /* @__PURE__ */ React48.createElement("div", {
+    className: "notion-board-body"
+  }, boardGroups.map((p, index) => {
+    var _a2, _b2, _c, _d, _e;
+    const boardResults = (_a2 = collectionData.board_columns) == null ? void 0 : _a2.results;
+    if (!boardResults)
+      return null;
+    if (!((_b2 = p == null ? void 0 : p.value) == null ? void 0 : _b2.type))
+      return null;
+    const schema = collection.schema[p.property];
+    const group = collectionData[`results:${(_c = p == null ? void 0 : p.value) == null ? void 0 : _c.type}:${((_d = p == null ? void 0 : p.value) == null ? void 0 : _d.value) || "uncategorized"}`];
+    if (!group || !schema || p.hidden) {
+      return null;
+    }
+    return /* @__PURE__ */ React48.createElement("div", {
+      className: "notion-board-group",
+      key: index
+    }, (_e = group.blockIds) == null ? void 0 : _e.map((blockId) => {
+      var _a3, _b3;
+      const block = (_a3 = recordMap.block[blockId]) == null ? void 0 : _a3.value;
+      if (!block)
         return null;
-      }
-      const group = collectionData.board_columns.results[index];
-      const schema = collection.schema[p.property];
-      if (!group || !schema || p.hidden) {
-        return null;
-      }
-      return /* @__PURE__ */ React50.createElement("div", { className: "notion-board-th", key: index }, /* @__PURE__ */ React50.createElement("div", { className: "notion-board-th-body" }, ((_b2 = group.value) == null ? void 0 : _b2.value) ? /* @__PURE__ */ React50.createElement(
-        Property,
-        {
-          schema,
-          data: [
-            [
-              ((_c2 = group.value) == null ? void 0 : _c2.value[boardGroupBy]) || ((_d2 = group.value) == null ? void 0 : _d2.value)
-            ]
-          ],
-          collection
-        }
-      ) : /* @__PURE__ */ React50.createElement("span", null, /* @__PURE__ */ React50.createElement(EmptyIcon, { className: "notion-board-th-empty" }), " No Select"), /* @__PURE__ */ React50.createElement("span", { className: "notion-board-th-count" }, group.total)));
-    }))),
-    /* @__PURE__ */ React50.createElement("div", { className: "notion-board-header-placeholder" }),
-    /* @__PURE__ */ React50.createElement("div", { className: "notion-board-body" }, boardGroups.map((p, index) => {
-      var _a2, _b2, _c2, _d2, _e;
-      const boardResults = (_a2 = collectionData.board_columns) == null ? void 0 : _a2.results;
-      if (!boardResults)
-        return null;
-      if (!((_b2 = p == null ? void 0 : p.value) == null ? void 0 : _b2.type))
-        return null;
-      const schema = collection.schema[p.property];
-      const group = collectionData[`results:${(_c2 = p == null ? void 0 : p.value) == null ? void 0 : _c2.type}:${((_d2 = p == null ? void 0 : p.value) == null ? void 0 : _d2.value) || "uncategorized"}`];
-      if (!group || !schema || p.hidden) {
-        return null;
-      }
-      return /* @__PURE__ */ React50.createElement("div", { className: "notion-board-group", key: index }, (_e = group.blockIds) == null ? void 0 : _e.map((blockId) => {
-        var _a3, _b3;
-        const block = (_a3 = recordMap.block[blockId]) == null ? void 0 : _a3.value;
-        if (!block)
-          return null;
-        return /* @__PURE__ */ React50.createElement(
-          CollectionCard,
-          {
-            className: "notion-board-group-card",
-            collection,
-            block,
-            cover: board_cover,
-            coverSize: board_cover_size,
-            coverAspect: board_cover_aspect,
-            properties: (_b3 = collectionView.format) == null ? void 0 : _b3.board_properties,
-            key: blockId
-          }
-        );
-      }));
-    }))
-  ));
+      return /* @__PURE__ */ React48.createElement(CollectionCard, {
+        className: "notion-board-group-card",
+        collection,
+        block,
+        cover: board_cover,
+        coverSize: board_cover_size,
+        coverAspect: board_cover_aspect,
+        properties: (_b3 = collectionView.format) == null ? void 0 : _b3.board_properties,
+        key: blockId
+      });
+    }));
+  }))));
 }
 
 // src/third-party/collection-view-gallery.tsx
-import * as React51 from "react";
+import * as React49 from "react";
 var defaultBlockIds = [];
 var CollectionViewGallery = ({
   collection,
@@ -6224,24 +6242,18 @@ var CollectionViewGallery = ({
       collectionView,
       collectionData
     );
-    return collectionGroups.map((group, index) => /* @__PURE__ */ React51.createElement(
-      CollectionGroup,
-      __spreadProps(__spreadValues({
-        key: index
-      }, group), {
-        collectionViewComponent: Gallery
-      })
-    ));
+    return collectionGroups.map((group, index) => /* @__PURE__ */ React49.createElement(CollectionGroup, __spreadProps(__spreadValues({
+      key: index
+    }, group), {
+      collectionViewComponent: Gallery
+    })));
   }
   const blockIds = ((_e = (_d = (_b = collectionData["collection_group_results"]) == null ? void 0 : _b.blockIds) != null ? _d : (_c = collectionData["results:relation:uncategorized"]) == null ? void 0 : _c.blockIds) != null ? _e : collectionData.blockIds) || defaultBlockIds;
-  return /* @__PURE__ */ React51.createElement(
-    Gallery,
-    {
-      collectionView,
-      collection,
-      blockIds
-    }
-  );
+  return /* @__PURE__ */ React49.createElement(Gallery, {
+    collectionView,
+    collection,
+    blockIds
+  });
 };
 function Gallery({ blockIds, collectionView, collection }) {
   const { recordMap } = useNotionContext();
@@ -6250,37 +6262,34 @@ function Gallery({ blockIds, collectionView, collection }) {
     gallery_cover_size = "medium",
     gallery_cover_aspect = "cover"
   } = collectionView.format || {};
-  return /* @__PURE__ */ React51.createElement("div", { className: "notion-gallery" }, /* @__PURE__ */ React51.createElement("div", { className: "notion-gallery-view" }, /* @__PURE__ */ React51.createElement(
-    "div",
-    {
-      className: cs(
-        "notion-gallery-grid",
-        `notion-gallery-grid-size-${gallery_cover_size}`
-      )
-    },
-    blockIds == null ? void 0 : blockIds.map((blockId) => {
-      var _a, _b;
-      const block = (_a = recordMap.block[blockId]) == null ? void 0 : _a.value;
-      if (!block)
-        return null;
-      return /* @__PURE__ */ React51.createElement(
-        CollectionCard,
-        {
-          collection,
-          block,
-          cover: gallery_cover,
-          coverSize: gallery_cover_size,
-          coverAspect: gallery_cover_aspect,
-          properties: (_b = collectionView.format) == null ? void 0 : _b.gallery_properties,
-          key: blockId
-        }
-      );
-    })
-  )));
+  return /* @__PURE__ */ React49.createElement("div", {
+    className: "notion-gallery"
+  }, /* @__PURE__ */ React49.createElement("div", {
+    className: "notion-gallery-view"
+  }, /* @__PURE__ */ React49.createElement("div", {
+    className: cs(
+      "notion-gallery-grid",
+      `notion-gallery-grid-size-${gallery_cover_size}`
+    )
+  }, blockIds == null ? void 0 : blockIds.map((blockId) => {
+    var _a, _b;
+    const block = (_a = recordMap.block[blockId]) == null ? void 0 : _a.value;
+    if (!block)
+      return null;
+    return /* @__PURE__ */ React49.createElement(CollectionCard, {
+      collection,
+      block,
+      cover: gallery_cover,
+      coverSize: gallery_cover_size,
+      coverAspect: gallery_cover_aspect,
+      properties: (_b = collectionView.format) == null ? void 0 : _b.gallery_properties,
+      key: blockId
+    });
+  }))));
 }
 
 // src/third-party/collection-view-list.tsx
-import * as React52 from "react";
+import * as React50 from "react";
 var defaultBlockIds2 = [];
 var CollectionViewList = ({
   collection,
@@ -6295,73 +6304,69 @@ var CollectionViewList = ({
       collectionView,
       collectionData
     );
-    return collectionGroups.map((group, key) => /* @__PURE__ */ React52.createElement(CollectionGroup, __spreadProps(__spreadValues({ key }, group), { collectionViewComponent: List })));
+    return collectionGroups.map((group, key) => /* @__PURE__ */ React50.createElement(CollectionGroup, __spreadProps(__spreadValues({
+      key
+    }, group), {
+      collectionViewComponent: List
+    })));
   }
   const blockIds = ((_c = (_b = collectionData["collection_group_results"]) == null ? void 0 : _b.blockIds) != null ? _c : collectionData.blockIds) || defaultBlockIds2;
-  return /* @__PURE__ */ React52.createElement(
-    List,
-    {
-      blockIds,
-      collection,
-      collectionView
-    }
-  );
+  return /* @__PURE__ */ React50.createElement(List, {
+    blockIds,
+    collection,
+    collectionView
+  });
 };
 function List({ blockIds, collection, collectionView }) {
   const { components, recordMap, mapPageUrl } = useNotionContext();
-  return /* @__PURE__ */ React52.createElement("div", { className: "notion-list-collection" }, /* @__PURE__ */ React52.createElement("div", { className: "notion-list-view" }, /* @__PURE__ */ React52.createElement("div", { className: "notion-list-body" }, blockIds == null ? void 0 : blockIds.map((blockId) => {
+  return /* @__PURE__ */ React50.createElement("div", {
+    className: "notion-list-collection"
+  }, /* @__PURE__ */ React50.createElement("div", {
+    className: "notion-list-view"
+  }, /* @__PURE__ */ React50.createElement("div", {
+    className: "notion-list-body"
+  }, blockIds == null ? void 0 : blockIds.map((blockId) => {
     var _a, _b, _c, _d;
     const block = (_a = recordMap.block[blockId]) == null ? void 0 : _a.value;
     if (!block)
       return null;
     const titleSchema = collection.schema.title;
     const titleData = (_b = block == null ? void 0 : block.properties) == null ? void 0 : _b.title;
-    return /* @__PURE__ */ React52.createElement(
-      components.PageLink,
-      {
-        className: "notion-list-item notion-page-link",
-        href: mapPageUrl(block.id),
-        key: blockId
-      },
-      /* @__PURE__ */ React52.createElement("div", { className: "notion-list-item-title" }, /* @__PURE__ */ React52.createElement(
-        Property,
-        {
-          schema: titleSchema,
-          data: titleData,
-          block,
-          collection
-        }
-      )),
-      /* @__PURE__ */ React52.createElement("div", { className: "notion-list-item-body" }, (_d = (_c = collectionView.format) == null ? void 0 : _c.list_properties) == null ? void 0 : _d.filter((p) => p.visible).map((p) => {
-        var _a2;
-        const schema = collection.schema[p.property];
-        const data = block && ((_a2 = block.properties) == null ? void 0 : _a2[p.property]);
-        if (!schema) {
-          return null;
-        }
-        return /* @__PURE__ */ React52.createElement(
-          "div",
-          {
-            className: "notion-list-item-property",
-            key: p.property
-          },
-          /* @__PURE__ */ React52.createElement(
-            Property,
-            {
-              schema,
-              data,
-              block,
-              collection
-            }
-          )
-        );
-      }))
-    );
+    return /* @__PURE__ */ React50.createElement(components.PageLink, {
+      className: "notion-list-item notion-page-link",
+      href: mapPageUrl(block.id),
+      key: blockId
+    }, /* @__PURE__ */ React50.createElement("div", {
+      className: "notion-list-item-title"
+    }, /* @__PURE__ */ React50.createElement(Property, {
+      schema: titleSchema,
+      data: titleData,
+      block,
+      collection
+    })), /* @__PURE__ */ React50.createElement("div", {
+      className: "notion-list-item-body"
+    }, (_d = (_c = collectionView.format) == null ? void 0 : _c.list_properties) == null ? void 0 : _d.filter((p) => p.visible).map((p) => {
+      var _a2;
+      const schema = collection.schema[p.property];
+      const data = block && ((_a2 = block.properties) == null ? void 0 : _a2[p.property]);
+      if (!schema) {
+        return null;
+      }
+      return /* @__PURE__ */ React50.createElement("div", {
+        className: "notion-list-item-property",
+        key: p.property
+      }, /* @__PURE__ */ React50.createElement(Property, {
+        schema,
+        data,
+        block,
+        collection
+      }));
+    })));
   }))));
 }
 
 // src/third-party/collection-view-table.tsx
-import * as React53 from "react";
+import * as React51 from "react";
 var defaultBlockIds3 = [];
 var CollectionViewTable = ({
   collection,
@@ -6380,44 +6385,41 @@ var CollectionViewTable = ({
       padding,
       width
     );
-    return collectionGroups.map((group, index) => /* @__PURE__ */ React53.createElement(
-      CollectionGroup,
-      __spreadProps(__spreadValues({
-        key: index
-      }, group), {
-        collectionViewComponent: (props) => /* @__PURE__ */ React53.createElement(Table, __spreadProps(__spreadValues({}, props), { padding, width })),
-        summaryProps: {
-          style: {
-            paddingLeft: padding,
-            paddingRight: padding
-          }
+    return collectionGroups.map((group, index) => /* @__PURE__ */ React51.createElement(CollectionGroup, __spreadProps(__spreadValues({
+      key: index
+    }, group), {
+      collectionViewComponent: (props) => /* @__PURE__ */ React51.createElement(Table, __spreadProps(__spreadValues({}, props), {
+        padding,
+        width
+      })),
+      summaryProps: {
+        style: {
+          paddingLeft: padding,
+          paddingRight: padding
         }
-      })
-    ));
+      }
+    })));
   }
   const blockIds = ((_c = (_b = collectionData["collection_group_results"]) == null ? void 0 : _b.blockIds) != null ? _c : collectionData.blockIds) || defaultBlockIds3;
-  return /* @__PURE__ */ React53.createElement(
-    Table,
-    {
-      blockIds,
-      collection,
-      collectionView,
-      padding,
-      width
-    }
-  );
+  return /* @__PURE__ */ React51.createElement(Table, {
+    blockIds,
+    collection,
+    collectionView,
+    padding,
+    width
+  });
 };
 function Table({ blockIds = [], collection, collectionView, width, padding }) {
   var _a;
   const { recordMap, linkTableTitleProperties } = useNotionContext();
-  const tableStyle = React53.useMemo(
+  const tableStyle = React51.useMemo(
     () => ({
       width,
       maxWidth: width
     }),
     [width]
   );
-  const tableViewStyle = React53.useMemo(
+  const tableViewStyle = React51.useMemo(
     () => ({
       paddingLeft: padding,
       paddingRight: padding
@@ -6434,7 +6436,17 @@ function Table({ blockIds = [], collection, collectionView, width, padding }) {
       Object.keys(collection.schema).filter((p) => p !== "title").map((property) => ({ property }))
     );
   }
-  return /* @__PURE__ */ React53.createElement("div", { className: "notion-table", style: tableStyle }, /* @__PURE__ */ React53.createElement("div", { className: "notion-table-view", style: tableViewStyle }, !!properties.length && /* @__PURE__ */ React53.createElement(React53.Fragment, null, /* @__PURE__ */ React53.createElement("div", { className: "notion-table-header" }, /* @__PURE__ */ React53.createElement("div", { className: "notion-table-header-inner" }, properties.map((p) => {
+  return /* @__PURE__ */ React51.createElement("div", {
+    className: "notion-table",
+    style: tableStyle
+  }, /* @__PURE__ */ React51.createElement("div", {
+    className: "notion-table-view",
+    style: tableViewStyle
+  }, !!properties.length && /* @__PURE__ */ React51.createElement(React51.Fragment, null, /* @__PURE__ */ React51.createElement("div", {
+    className: "notion-table-header"
+  }, /* @__PURE__ */ React51.createElement("div", {
+    className: "notion-table-header-inner"
+  }, properties.map((p) => {
     var _a2;
     const schema = (_a2 = collection.schema) == null ? void 0 : _a2[p.property];
     const isTitle = p.property === "title";
@@ -6446,15 +6458,25 @@ function Table({ blockIds = [], collection, collectionView, width, padding }) {
     } else {
       style.width = 200;
     }
-    return /* @__PURE__ */ React53.createElement("div", { className: "notion-table-th", key: p.property }, /* @__PURE__ */ React53.createElement(
-      "div",
-      {
-        className: "notion-table-view-header-cell",
-        style
-      },
-      /* @__PURE__ */ React53.createElement("div", { className: "notion-table-view-header-cell-inner" }, /* @__PURE__ */ React53.createElement(CollectionColumnTitle, { schema }))
-    ));
-  }))), /* @__PURE__ */ React53.createElement("div", { className: "notion-table-header-placeholder" }), /* @__PURE__ */ React53.createElement("div", { className: "notion-table-body" }, blockIds == null ? void 0 : blockIds.map((blockId) => /* @__PURE__ */ React53.createElement("div", { className: "notion-table-row", key: blockId }, properties.map((p) => {
+    return /* @__PURE__ */ React51.createElement("div", {
+      className: "notion-table-th",
+      key: p.property
+    }, /* @__PURE__ */ React51.createElement("div", {
+      className: "notion-table-view-header-cell",
+      style
+    }, /* @__PURE__ */ React51.createElement("div", {
+      className: "notion-table-view-header-cell-inner"
+    }, /* @__PURE__ */ React51.createElement(CollectionColumnTitle, {
+      schema
+    }))));
+  }))), /* @__PURE__ */ React51.createElement("div", {
+    className: "notion-table-header-placeholder"
+  }), /* @__PURE__ */ React51.createElement("div", {
+    className: "notion-table-body"
+  }, blockIds == null ? void 0 : blockIds.map((blockId) => /* @__PURE__ */ React51.createElement("div", {
+    className: "notion-table-row",
+    key: blockId
+  }, properties.map((p) => {
     var _a2, _b, _c;
     const schema = (_a2 = collection.schema) == null ? void 0 : _a2[p.property];
     const block = (_b = recordMap.block[blockId]) == null ? void 0 : _b.value;
@@ -6468,27 +6490,20 @@ function Table({ blockIds = [], collection, collectionView, width, padding }) {
     } else {
       style.width = 200;
     }
-    return /* @__PURE__ */ React53.createElement(
-      "div",
-      {
-        key: p.property,
-        className: cs(
-          "notion-table-cell",
-          `notion-table-cell-${schema.type}`
-        ),
-        style
-      },
-      /* @__PURE__ */ React53.createElement(
-        Property,
-        {
-          schema,
-          data,
-          block,
-          collection,
-          linkToTitlePage: linkTableTitleProperties
-        }
-      )
-    );
+    return /* @__PURE__ */ React51.createElement("div", {
+      key: p.property,
+      className: cs(
+        "notion-table-cell",
+        `notion-table-cell-${schema.type}`
+      ),
+      style
+    }, /* @__PURE__ */ React51.createElement(Property, {
+      schema,
+      data,
+      block,
+      collection,
+      linkToTitlePage: linkTableTitleProperties
+    }));
   })))))));
 }
 
@@ -6497,24 +6512,24 @@ var CollectionViewImpl = (props) => {
   const { collectionView } = props;
   switch (collectionView.type) {
     case "table":
-      return /* @__PURE__ */ React54.createElement(CollectionViewTable, __spreadValues({}, props));
+      return /* @__PURE__ */ React52.createElement(CollectionViewTable, __spreadValues({}, props));
     case "gallery":
-      return /* @__PURE__ */ React54.createElement(CollectionViewGallery, __spreadValues({}, props));
+      return /* @__PURE__ */ React52.createElement(CollectionViewGallery, __spreadValues({}, props));
     case "list":
-      return /* @__PURE__ */ React54.createElement(CollectionViewList, __spreadValues({}, props));
+      return /* @__PURE__ */ React52.createElement(CollectionViewList, __spreadValues({}, props));
     case "board":
-      return /* @__PURE__ */ React54.createElement(CollectionViewBoard, __spreadValues({}, props));
+      return /* @__PURE__ */ React52.createElement(CollectionViewBoard, __spreadValues({}, props));
     default:
       console.warn("unsupported collection view", collectionView);
       return null;
   }
 };
-var CollectionView = React54.memo(CollectionViewImpl);
+var CollectionView = React52.memo(CollectionViewImpl);
 
 // src/third-party/collection.tsx
 var isServer2 = typeof window === "undefined";
 var Collection = ({ block, className, ctx: ctx2 }) => {
-  const context = React55.useMemo(
+  const context = React53.useMemo(
     () => __spreadValues({}, ctx2),
     [ctx2]
   );
@@ -6522,16 +6537,18 @@ var Collection = ({ block, className, ctx: ctx2 }) => {
     if (block.parent_table !== "collection") {
       return null;
     }
-    return /* @__PURE__ */ React55.createElement(NotionContextProvider, __spreadValues({}, context), /* @__PURE__ */ React55.createElement("div", { className: "notion-collection-page-properties" }, /* @__PURE__ */ React55.createElement(
-      CollectionRow,
-      {
-        block,
-        pageHeader: true,
-        className
-      }
-    )));
+    return /* @__PURE__ */ React53.createElement(NotionContextProvider, __spreadValues({}, context), /* @__PURE__ */ React53.createElement("div", {
+      className: "notion-collection-page-properties"
+    }, /* @__PURE__ */ React53.createElement(CollectionRow, {
+      block,
+      pageHeader: true,
+      className
+    })));
   } else {
-    return /* @__PURE__ */ React55.createElement(NotionContextProvider, __spreadValues({}, context), /* @__PURE__ */ React55.createElement(CollectionViewBlock, { block, className }));
+    return /* @__PURE__ */ React53.createElement(NotionContextProvider, __spreadValues({}, context), /* @__PURE__ */ React53.createElement(CollectionViewBlock, {
+      block,
+      className
+    }));
   }
 };
 var CollectionViewBlock = ({ block, className }) => {
@@ -6539,8 +6556,8 @@ var CollectionViewBlock = ({ block, className }) => {
   const { recordMap, showCollectionViewDropdown } = useNotionContext();
   const { view_ids: viewIds } = block;
   const collectionId = getBlockCollectionId(block, recordMap);
-  const [isMounted, setIsMounted] = React55.useState(false);
-  React55.useEffect(() => {
+  const [isMounted, setIsMounted] = React53.useState(false);
+  React53.useEffect(() => {
     setIsMounted(true);
   }, []);
   const defaultCollectionViewId = viewIds[0];
@@ -6548,7 +6565,7 @@ var CollectionViewBlock = ({ block, className }) => {
     collectionViewId: defaultCollectionViewId
   });
   const collectionViewId = isMounted && viewIds.find((id) => id === collectionState.collectionViewId) || defaultCollectionViewId;
-  const onChangeView = React55.useCallback(
+  const onChangeView = React53.useCallback(
     (collectionViewId2) => {
       console.log("change collection view", collectionViewId2);
       setCollectionState(__spreadProps(__spreadValues({}, collectionState), {
@@ -6565,7 +6582,7 @@ var CollectionViewBlock = ({ block, className }) => {
   const collectionView = (_b = recordMap.collection_view[collectionViewId]) == null ? void 0 : _b.value;
   const collectionData = (_c = recordMap.collection_query[collectionId]) == null ? void 0 : _c[collectionViewId];
   const parentPage = getBlockParentPage2(block, recordMap);
-  const { width, padding } = React55.useMemo(() => {
+  const { width, padding } = React53.useMemo(() => {
     var _a2;
     const style = {};
     if ((collectionView == null ? void 0 : collectionView.type) !== "table" && (collectionView == null ? void 0 : collectionView.type) !== "board") {
@@ -6609,65 +6626,58 @@ var CollectionViewBlock = ({ block, className }) => {
       page_icon: collection.icon
     });
   }
-  return /* @__PURE__ */ React55.createElement(React55.Fragment, null, /* @__PURE__ */ React55.createElement("div", null, /* @__PURE__ */ React55.createElement("div", null, viewIds.length > 1 && showCollectionViewDropdown && /* @__PURE__ */ React55.createElement(
-    CollectionViewTabs,
-    {
-      collectionViewId,
-      viewIds,
-      onChangeView
-    }
-  )), showTitle && /* @__PURE__ */ React55.createElement("div", { className: "notion-collection-header" }, /* @__PURE__ */ React55.createElement("div", { className: "notion-collection-header-title" }, /* @__PURE__ */ React55.createElement(
-    PageIcon,
-    {
-      block,
-      className: "notion-page-title-icon",
-      hideDefaultIcon: true
-    }
-  ), title))), /* @__PURE__ */ React55.createElement("div", { className: cs("notion-collection", className) }, /* @__PURE__ */ React55.createElement(
-    CollectionView,
-    {
-      collection,
-      collectionView,
-      collectionData,
-      padding,
-      width
-    }
-  )));
+  return /* @__PURE__ */ React53.createElement(React53.Fragment, null, /* @__PURE__ */ React53.createElement("div", null, /* @__PURE__ */ React53.createElement("div", null, viewIds.length > 1 && showCollectionViewDropdown && /* @__PURE__ */ React53.createElement(CollectionViewTabs, {
+    collectionViewId,
+    viewIds,
+    onChangeView
+  })), showTitle && /* @__PURE__ */ React53.createElement("div", {
+    className: "notion-collection-header"
+  }, /* @__PURE__ */ React53.createElement("div", {
+    className: "notion-collection-header-title"
+  }, /* @__PURE__ */ React53.createElement(PageIcon, {
+    block,
+    className: "notion-page-title-icon",
+    hideDefaultIcon: true
+  }), title))), /* @__PURE__ */ React53.createElement("div", {
+    className: cs("notion-collection", className)
+  }, /* @__PURE__ */ React53.createElement(CollectionView, {
+    collection,
+    collectionView,
+    collectionData,
+    padding,
+    width
+  })));
 };
 var CollectionViewTabs = ({ collectionViewId, viewIds, onChangeView }) => {
   const { recordMap } = useNotionContext();
-  return /* @__PURE__ */ React55.createElement("div", { className: "notion-collection-view-tabs-row" }, viewIds.map((viewId) => {
+  return /* @__PURE__ */ React53.createElement("div", {
+    className: "notion-collection-view-tabs-row"
+  }, viewIds.map((viewId) => {
     var _a;
-    return /* @__PURE__ */ React55.createElement(
-      "button",
-      {
-        onClick: () => onChangeView(viewId),
-        key: viewId,
-        className: cs(
-          "notion-collection-view-tabs-content-item",
-          collectionViewId === viewId && "notion-collection-view-tabs-content-item-active"
-        )
-      },
-      /* @__PURE__ */ React55.createElement(
-        CollectionViewColumnDesc,
-        {
-          collectionView: (_a = recordMap.collection_view[viewId]) == null ? void 0 : _a.value
-        }
+    return /* @__PURE__ */ React53.createElement("button", {
+      onClick: () => onChangeView(viewId),
+      key: viewId,
+      className: cs(
+        "notion-collection-view-tabs-content-item",
+        collectionViewId === viewId && "notion-collection-view-tabs-content-item-active"
       )
-    );
+    }, /* @__PURE__ */ React53.createElement(CollectionViewColumnDesc, {
+      collectionView: (_a = recordMap.collection_view[viewId]) == null ? void 0 : _a.value
+    }));
   }));
 };
 var CollectionViewColumnDesc = (_a) => {
   var _b = _a, { collectionView, className, children } = _b, rest = __objRest(_b, ["collectionView", "className", "children"]);
   const { type } = collectionView;
   const name = collectionView.name || `${type[0].toUpperCase()}${type.slice(1)} view`;
-  return /* @__PURE__ */ React55.createElement("div", __spreadValues({ className: cs("notion-collection-view-type", className) }, rest), /* @__PURE__ */ React55.createElement(
-    CollectionViewIcon,
-    {
-      className: "notion-collection-view-type-icon",
-      type
-    }
-  ), /* @__PURE__ */ React55.createElement("span", { className: "notion-collection-view-type-title" }, name), children);
+  return /* @__PURE__ */ React53.createElement("div", __spreadValues({
+    className: cs("notion-collection-view-type", className)
+  }, rest), /* @__PURE__ */ React53.createElement(CollectionViewIcon, {
+    className: "notion-collection-view-type-icon",
+    type
+  }), /* @__PURE__ */ React53.createElement("span", {
+    className: "notion-collection-view-type-title"
+  }, name), children);
 };
 export {
   Collection,

@@ -37,7 +37,13 @@ var Pdf = (_a) => {
   function onDocumentLoadSuccess({ numPages: numPages2 }) {
     setNumPages(numPages2);
   }
-  return /* @__PURE__ */ React.createElement(Document, __spreadValues({ file, onLoadSuccess: onDocumentLoadSuccess }, rest), Array.from(new Array(numPages), (_, index) => /* @__PURE__ */ React.createElement(Page, { key: `page_${index + 1}`, pageNumber: index + 1 })));
+  return /* @__PURE__ */ React.createElement(Document, __spreadValues({
+    file,
+    onLoadSuccess: onDocumentLoadSuccess
+  }, rest), Array.from(new Array(numPages), (_, index) => /* @__PURE__ */ React.createElement(Page, {
+    key: `page_${index + 1}`,
+    pageNumber: index + 1
+  })));
 };
 export {
   Pdf
